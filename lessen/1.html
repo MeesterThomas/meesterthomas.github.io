@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 1</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" src="../img/HomeIcon.png" width=8%></a>
+<!--            <a href=../games.html><img class="navBarItem" src="../img/GamesIcon.png" width=8%></a>-->
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 1: Open Visual Studio Code</b></p>
+                    </div>
+                    <p>Open de online app "Visual Studio Code" op je Chromebook. Hierin ga je alle code schrijven voor je website. Deze online app is te vinden via <a href="https://vscode.dev/?vscode-lang=nl-nl" target="_blank">vscode.dev</a>.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/VSCode.png" width="15%">
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 2: Maak een map aan voor je website</b></p>
+                    </div>
+                    <p>Ga naar "bestanden" op je Chromebook. Maak een nieuwe map aan om de bestanden voor je website in op te slaan. Je kan deze map noemen zoals je zelf wilt, maar de naam "Website" is het meest duidelijk.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/Bestanden.png" width="15%">
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Bestandsnamen</b></p>
+                    </div>
+                    <p>Voor het maken van een website zal je veel mapjes en bestanden moeten aanmaken. De namen van deze bestanden zijn bijna nooit van belang, maar het is handig om ze een duidelijke naam te geven. Als je dit niet doet, wordt alles namelijk erg onoverzichtelijk, en weet je niet welk bestand voor wat is.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/Les1_Extra1.png" width="35%">
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 3: Open map</b></p>
+                    </div>
+                    <p>Klik op "Open Folder" en kies de map die je zojuist hebt aangemaakt. Als het goed is, is deze map nog leeg. Hier moet je een paar keer toestemming geven om je map te openen in Visual Studio Code.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/Les1_Stap3.png" width="100%">
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Maak een nieuwe webpagina aan.</b></p>
+                    </div>
+                    <p>Klik links op het icoontje met het bestandteken en een plusje. Hier kan je een nieuw bestand aanmaken. Dit wordt je eerste HTML bestand. Dit bestand bevat de code voor je website. Je kan hem zelf een naam geven, <b>maar het is belangrijk dat je afsluit met het stukje ".html".</b> Anders wordt het niet herkent als HTML bestand.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: HTML</b></p>
+                    </div>
+                    <p>HTML staat voor "HyperText Markup Language". Dit is een programmeertaal voor het maken van webpagina's.<br><br>De landingspagina voor een website wordt vaak index.html genoemd. Dit komt omdat deze titel makkelijker te zoeken is in een zoekbalk. Je hoeft het stukje "index.html" namelijk nooit erachter te schrijven!</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/HTML5.png" width="25%">
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 5: Open de webpagina</b></p>
+                    </div>
+                    <p>Ga naar je bestanden en zoek het html bestand dat je net hebt aangemaakt. Klik hier twee keer op om hem te openen. Als het goed is zie je nu een witte pagina.<br><br>Als je terug gaat naar je code, kan je hier iets intypen. Als je dit doet en je website ververst, kan je controleren of je de webpagina goed hebt opgezet!</p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 6: HTML opzet</b></p>
+                    </div>
+                    <p>Kopieer het stukje code hiernaast en zet het in je html bestand. Dit stukje is het standaard begin stukje voor elk HTML bestand. Wat alles precies betekent is voor nu niet belangrijk. Als je extra tekst zou willen typen, dan kan dat tussen de "body" tags.</p>
+                </div>
+                <div class="lessonListItemText">
+                    <p>
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titel van je website&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </pre></code>
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak je website!</b></p>
+                    </div>
+                    <p>Volg de stappen zoals hierboven beschreven en zorg ervoor dat je website werkt! Probeer eens tekst toe te voegen tussen <code>&lt;body&gt;</code> en <code>&lt;/body&gt;</code>. Krijg je die tekst te zien op je website?</p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Visual Studio Code</b></p>
+                    </div>
+                    <p>Visual Studio Code is een programma waarin je kunt programmeren. De online versie slaat automatisch je werk op, dus je hoeft niet bang te zijn dat je werk verloren gaat! Verder is het programma ontworpen om het coderen makkelijker te maken. Hier zal je vanzelf achter komen tijdens het maken van je website! Pas wel op dat je Visual Studio Code niet ververst, want dan moet je je map weer opnieuw koppelen.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/VSCode.png" width="15%">
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" width=20%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+<!--                <a href=../games.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>-->
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
