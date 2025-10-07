@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Games</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <div class="characterSelection">
+                <p font-size="20px"><b>Kies een vechter!</b></p>
+            </div>
+            <div class="characterSelection">
+                <button class="characterSelectionButton" id="characterSelection0" onclick="onCharacterSelectButton('0000')"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection1"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection2"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection3"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection4"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection5"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection6"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection7"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection8"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection9"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection10"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection11"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+            </div>
+            <div class="characterSelection">
+                <button class="characterSelectionButton" id="characterSelection12"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection13"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection14"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+            </div>
+            <div class="characterSelection">
+                <button class="gameButtonStart" id="battleStartButton"><p style="margin:0.25%">Start</p></button>
+            </div>
+            <div class="characterSelection">
+                <div class="gameBackground">
+                    <div>
+                        <button class="gameButtonLeft" id="battleActionButtonL0"><p style="margin:0%">Aanval 1</p></button><br>
+                        <button class="gameButtonLeft" id="battleActionButtonL1"><p style="margin:0%">Aanval 2</p></button><br>
+                        <button class="gameButtonLeft" id="battleActionButtonL2"><p style="margin:0%">Aanval 3</p></button><br>
+                        <button class="gameButtonLeft" id="battleActionButtonL3"><p style="margin:0%">Aanval 4</p></button><br>
+                        <img src="../img/Characters/MeesterThomas.png" id="battlePortraitL" width=60%><br>
+                        <div class="gameButtonLeft"><p style="margin:0%" id="battleNameL">Naam<br>HP: </p><meter class="gameHPBar" id="battleHPBarL" value="1" max="1">32/51</meter></div>
+                    </div>
+                    <div class="gameBackgroundRight">
+                        <div class="gameButtonRight"><p style="margin:0%" id="battleNameR">Naam<br>HP: <meter class="gameHPBarRight" id="battleHPBarR" value="1" max="1">32/51</meter></p></div>
+                        <img src="../img/Characters/MeesterThomas.png" id="battlePortraitR" width=60%><br>
+                        <button class="gameButtonRight" id="battleActionButtonR0"><p style="margin:0%">Aanval 1</p></button><br>
+                        <button class="gameButtonRight" id="battleActionButtonR1"><p style="margin:0%">Aanval 2</p></button><br>
+                        <button class="gameButtonRight" id="battleActionButtonR2"><p style="margin:0%">Aanval 3</p></button><br>
+                        <button class="gameButtonRight" id="battleActionButtonR3"><p style="margin:0%">Aanval 4</p></button><br>
+                    </div>
+                </div>
+            </div>
+            <div class="characterSelection">
+                <br>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" width=20%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+<!--                <a href=../games.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>-->
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
