@@ -17,45 +17,54 @@
                 <p font-size="20px"><b>Kies een vechter!</b></p>
             </div>
             <div class="characterSelection">
-                <button class="characterSelectionButton" id="characterSelection0" onclick="onCharacterSelectButton('0000')"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection1"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection2"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection3"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection4"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection5"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection6"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection7"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection8"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection9"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection10"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-                <button class="characterSelectionButton" id="characterSelection11"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection0" onclick="OnCharacterSelectButton('0000')"><img src="../img/Characters/0000.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection1" onclick="OnCharacterSelectButton('0001')"><img src="../img/Characters/0001.png" width=100%></button>
+<!--                <button class="characterSelectionButton" id="characterSelection2" onclick="OnCharacterSelectButton('0002')"><img src="../img/Characters/0002.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection3" onclick="OnCharacterSelectButton('0003')"><img src="../img/Characters/0003.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection4" onclick="OnCharacterSelectButton('0004')"><img src="../img/Characters/0004.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection5" onclick="OnCharacterSelectButton('0005')"><img src="../img/Characters/0005.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection6" onclick="OnCharacterSelectButton('0006')"><img src="../img/Characters/0006.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection7" onclick="OnCharacterSelectButton('0007')"><img src="../img/Characters/0007.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection8" onclick="OnCharacterSelectButton('0008')"><img src="../img/Characters/0008.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection9" onclick="OnCharacterSelectButton('0009')"><img src="../img/Characters/0009.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection10" onclick="OnCharacterSelectButton('0010')"><img src="../img/Characters/0010.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection11" onclick="OnCharacterSelectButton('0011')"><img src="../img/Characters/0011.png" width=100%></button>-->
             </div>
-            <div class="characterSelection">
+<!--            <div class="characterSelection">
                 <button class="characterSelectionButton" id="characterSelection12"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
                 <button class="characterSelectionButton" id="characterSelection13"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
                 <button class="characterSelectionButton" id="characterSelection14"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
-            </div>
+            </div>-->
             <div class="characterSelection">
-                <button class="gameButtonStart" id="battleStartButton"><p style="margin:0.25%">Start</p></button>
+                <button class="gameButtonStart" id="battleStartButton" onclick="OnBattleStartButton()"><p style="margin:0.25%">Start</p></button>
             </div>
             <div class="characterSelection">
                 <div class="gameBackground">
-                    <div>
-                        <button class="gameButtonLeft" id="battleActionButtonL0"><p style="margin:0%">Aanval 1</p></button><br>
-                        <button class="gameButtonLeft" id="battleActionButtonL1"><p style="margin:0%">Aanval 2</p></button><br>
-                        <button class="gameButtonLeft" id="battleActionButtonL2"><p style="margin:0%">Aanval 3</p></button><br>
-                        <button class="gameButtonLeft" id="battleActionButtonL3"><p style="margin:0%">Aanval 4</p></button><br>
-                        <img src="../img/Characters/MeesterThomas.png" id="battlePortraitL" width=60%><br>
-                        <div class="gameButtonLeft"><p style="margin:0%" id="battleNameL">Naam<br>HP: </p><meter class="gameHPBar" id="battleHPBarL" value="1" max="1">32/51</meter></div>
+                    <div class="gameBackgroundLeft">
+                        <button class="gameButtonLeft" id="battleActionButtonL0" onclick="OnAttackButton(0)"><p style="margin:0%">???</p></button><br>
+                        <button class="gameButtonLeft" id="battleActionButtonL1" onclick="OnAttackButton(1)"><p style="margin:0%">???</p></button><br>
+                        <button class="gameButtonLeft" id="battleActionButtonL2" onclick="OnAttackButton(2)"><p style="margin:0%">???</p></button><br>
+                        <button class="gameButtonLeft" id="battleActionButtonL3" onclick="OnAttackButton(3)"><p style="margin:0%">???</p></button><br>
+                        <img src="../img/Characters/0000.png" id="battlePortraitL" width=60%><br>
+                        <div class="gameButtonLeft"><p style="margin:0%" id="battleNameL">Willekeurig</p><meter class="gameHPBar" id="battleHPBarL" value="1" max="1"><p style="color: black;">1/1</p></meter></div>
                     </div>
                     <div class="gameBackgroundRight">
-                        <div class="gameButtonRight"><p style="margin:0%" id="battleNameR">Naam<br>HP: <meter class="gameHPBarRight" id="battleHPBarR" value="1" max="1">32/51</meter></p></div>
-                        <img src="../img/Characters/MeesterThomas.png" id="battlePortraitR" width=60%><br>
-                        <button class="gameButtonRight" id="battleActionButtonR0"><p style="margin:0%">Aanval 1</p></button><br>
-                        <button class="gameButtonRight" id="battleActionButtonR1"><p style="margin:0%">Aanval 2</p></button><br>
-                        <button class="gameButtonRight" id="battleActionButtonR2"><p style="margin:0%">Aanval 3</p></button><br>
-                        <button class="gameButtonRight" id="battleActionButtonR3"><p style="margin:0%">Aanval 4</p></button><br>
+                        <div class="gameButtonRight"><p style="margin:0%" id="battleNameR">Willekeurig<meter class="gameHPBarRight" id="battleHPBarR" value="1" max="1"></meter></p></div>
+                        <img src="../img/Characters/0000.png" id="battlePortraitR" width=60%><br>
+                        <button class="gameButtonRight" id="battleActionButtonR0" onclick="OnAttackButton(4)"><p style="margin:0%">???</p></button><br>
+                        <button class="gameButtonRight" id="battleActionButtonR1" onclick="OnAttackButton(5)"><p style="margin:0%">???</p></button><br>
+                        <button class="gameButtonRight" id="battleActionButtonR2" onclick="OnAttackButton(6)"><p style="margin:0%">???</p></button><br>
+                        <button class="gameButtonRight" id="battleActionButtonR3" onclick="OnAttackButton(7)"><p style="margin:0%">???</p></button><br>
                     </div>
+                </div>
+            </div>
+            <div class="characterSelection">
+                <div class="gameComments">
+                    <p class="gameCommentsNew">Klik op de startknop!</p>
+                    <p class="gameCommentsOld"></p>
+                    <p class="gameCommentsOld"></p>
+                    <p class="gameCommentsOld"></p>
+                    <p class="gameCommentsOld"></p>
                 </div>
             </div>
             <div class="characterSelection">
