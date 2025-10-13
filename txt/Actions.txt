@@ -1,1 +1,13 @@
 0000;???;
+0001;Aanval;
+0002;Korfbalworp;
+0003;Instructie;
+0004;Nablijven!;
+0005;Zwaard Aanval;
+0006;Zaadkanon;
+0007;Koninklijke Snelheid;
+0008;Aanval;
+0009;Aanval;
+0010;Aanval;
+0011;Aanval;
+0012;Aanval;
