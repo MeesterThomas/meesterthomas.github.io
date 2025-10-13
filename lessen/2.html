@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 2</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" src="../img/HomeIcon.png" width=8%></a>
+<!--            <a href=../games.html><img class="navBarItem" src="../img/GamesIcon.png" width=8%></a>-->
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 2: Tekst, titels en kopjes</b></p><br>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML Tags</b></p>
+                    </div>
+                    <p>Pak je HTML bestand van de vorige les erbij. Een HTML document is de basis voor je website. In dit document komt alles te staan wat je op je website wilt zetten, van tekst tot plaatjes en video's. Deze elementen die je toe kan voegen hebben een bepaalde HTML "tag". Een HTML tag is een bepaalde code die aan je chromebook doorgeeft wat je op de website te zien krijgt. De tags die je gebruikt om je website op te bouwen zet je bijna altijd in de <code>&lt;Body&gt;</code> tag.<br><br>Een HTML tag begint altijd met een &lt; en eindigt met een &gt;. In deze les zal je verschillende tags tegenkomen die je kan gebruiken voor je website.</en></p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Geordend werken</b></p>
+                    </div>
+                    <p>Nu zal je HTML bestand nog kort zijn, maar als je nieuwe tags toe gaat voegen kan het bestand al snel langer worden. Als er zoveel staat, wordt het lastig om de het bestand te lezen. Daarom zijn er een paar belangrijke regels om het overzicht te houden. Hier komt een zo'n regel.<br><br>Veel tags zien er zo uit: <code>&lt;tag&gt;inhoud&lt;/tag&gt;</code>. Soms kan de inhoud ertussen op 1 regel blijven staan, zoals bij tekst. Als dit niet gaat, dan is het gebruikelijk om de inhoud op een aparte regel te plaatsen en hem een stukje te laten inspringen met tab, zoals hiernaast:</p>
+                </div>
+                <pre style="background-color: rgb(34, 34, 34);"><code>
+&lt;tag&gt;
+    inhoud
+&lt;/tag&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML Tags: &lt;header&gt;, &lt;div&gt; en &lt;footer&gt;</b></p>
+                    </div>
+                    <p>De tags header, div en footer helpen je om overzicht te houden in je HTML bestand. De header is vaak het bovenste deel van een webpagina, en een footer is het onderste deel. Een div kan je gebruiken om een bepaald stuk van je webpagina aan te geven. Je kan meerdere div tags gebruiken op je webpagina. Je kan zelfs een div gebruiken in een div! Je moet deze tags zien als de inleiding, de alinea's en het slot van een tekst.</p>
+                </div>
+                <pre style="background-color: rgb(34, 34, 34);"><code>
+&lt;header&gt;
+    &lt;p&gt;Dit is de header van de website.&lt;/p&gt;
+&lt;/header&gt;
+&lt;div&gt;
+    &lt;p&gt;Dit is een div van de website.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;Dit is een div van de website.&lt;/p&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+    &lt;p&gt;Dit is de footer van de website.&lt;/p&gt;
+&lt;/footer&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML Tag: &lt;p&gt;</b></p>
+                    </div>
+                    <p>De p tag wordt gebruikt voor simpele tekst op je website. Je kan de tekst zo lang maken als je zelf wilt.</p>
+                </div>
+                <pre style="background-color: rgb(34, 34, 34);"><code>
+&lt;p&gt;
+    Hier komt simpele tekst te staan.
+&lt;/p&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML Tags: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt; en &lt;h6&gt;</b></p>
+                    </div>
+                    <p>De h tags worden gebruikt als titels en tussenkopjes. h1 is de grootste en h6 is de kleinste.</p>
+                </div>
+                <pre style="background-color: rgb(34, 34, 34);"><code>
+&lt;h1&gt;
+    Deze tekst is groot.
+&lt;/h1&gt;
+&lt;h2&gt;
+    Deze tekst is iets kleiner.
+&lt;/h2&gt;
+&lt;h3&gt;
+    Deze tekst is weer kleiner.
+&lt;/h3&gt;
+&lt;h4&gt;
+    En zo wordt deze tekst weer kleiner...
+&lt;/h4&gt;
+&lt;h5&gt;
+    En kleiner...
+&lt;/h5&gt;
+&lt;h6&gt;
+    En kleiner...
+&lt;/h6&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML Tag: &lt;br&gt;</b></p>
+                    </div>
+                    <p>De br tag wordt gebruikt als "enter". Na een br tag gaat de tekst verder op de volgende regel. Deze tag wordt niet afgesloten met &lt;/br&gt;, alleen &lt;br&gt; is genoeg.</p>
+                </div>
+                <pre style="background-color: rgb(34, 34, 34);"><code>
+&lt;p&gt;
+    Hier komt simpele tekst te staan.&lt;br&gt;En dit komt op de volgende regel.
+&lt;/p&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Opmerkingen</b></p>
+                    </div>
+                    <p>Soms is het handig om een opmerking te zetten in je HTML website om overzicht te geven. Dit kan bijvoorbeeld zijn om duidelijk te maken waar een stukje code voor is. Dit kan je doen met opmerkingen. Opmerkingen hebben geen invloed op de webpagina zelf en zie je alleen terug in de code. Opmerkingen begin je met <code>&lt;!--</code> en eindig je met <code>--&gt;</code>.</p>
+                </div>
+                <pre style="background-color: rgb(34, 34, 34);"><code>
+&lt;p&gt; &lt;!--Dit is een opmerking. Hier staat simpele tekst.--&gt;
+    Hier komt simpele tekst te staan.
+&lt;/p&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Gebruik de tags</b></p>
+                    </div>
+                    <p>Probeer de tags die hierboven beschreven staan te gebruiken in je website. Probeer alle h tags eens uit en zet ze onder elkaar. Zie je het verschil?</p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: De betekenis van de tags</b></p>
+                    </div>
+                    <p>Hier komen de tags die voorbij zijn gekomen met hun betekenis:<br>Header: kop(tekst) in het Nederlands.<br>Div: division, of in het Nederlands verdeling.<br>Footer: voet(tekst) in het Nederlands.<br>P: paragraph, of in het Nederlands paragraaf.<br>H1 t/m h6: heading, of in het Nederlands (tussen)kopje.<br>Br: break, of in het Nederlands afbreken (van de zin).</p>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" width=20%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+<!--                <a href=../games.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>-->
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
