@@ -295,9 +295,18 @@ a
     color: white;
     font-size: 20px;
     padding: 1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
     margin-right: 0%;
     margin-left: auto;
     box-sizing: border-box;
+}
+.attackDataLeft
+{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    display: none;
 }
 .gameHPBar
 {
@@ -308,6 +317,19 @@ a
 {
     width: 100%;
     border-radius: 0;
+}
+.gameHPBarText
+{
+    position: absolute;
+    color: black;
+    top: 0%;
+    margin: 0%;
+    font-size: 100%;
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
 }
 meter::-webkit-meter-bar 
 {
@@ -327,6 +349,19 @@ meter.gameHPBarRight::-webkit-meter-optimum-value
     background: none;
     background-color: rgb(177, 11, 11);
     box-shadow: 0;
+}
+.gameButtonPortraitLeft
+{
+    background: rgb(102, 102, 200) center/cover url("../img/SelectLeft.png") no-repeat;
+    border: none;
+    box-sizing: border-box;
+    padding: 0%;
+    padding-block: 0%;
+    padding-inline: 0%;
+}
+.gameButtonPortraitLeft:disabled
+{
+    background: none;
 }
 .gameComments
 {
