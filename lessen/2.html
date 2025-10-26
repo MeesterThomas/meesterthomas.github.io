@@ -8,9 +8,11 @@
     </head>
     <body class="background">
         <div class="navBar">
-            <a href=../index.html><img class="navBarIcon" src="../img/HomeIcon.png" width=8%></a>
-<!--            <a href=../games.html><img class="navBarItem" src="../img/GamesIcon.png" width=8%></a>-->
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <!--<a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>-->
+            <!--<a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>-->
             <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
         </div>
         <div class="lessonList">
             <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 2: Tekst, titels en kopjes</b></p><br>
@@ -29,7 +31,7 @@
                     </div>
                     <p>Nu zal je HTML bestand nog kort zijn, maar als je nieuwe tags toe gaat voegen kan het bestand al snel langer worden. Als er zoveel staat, wordt het lastig om de het bestand te lezen. Daarom zijn er een paar belangrijke regels om het overzicht te houden. Hier komt een zo'n regel.<br><br>Veel tags zien er zo uit: <code>&lt;tag&gt;inhoud&lt;/tag&gt;</code>. Soms kan de inhoud ertussen op 1 regel blijven staan, zoals bij tekst. Als dit niet gaat, dan is het gebruikelijk om de inhoud op een aparte regel te plaatsen en hem een stukje te laten inspringen met tab, zoals hiernaast:</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;tag&gt;
     inhoud
 &lt;/tag&gt;
@@ -42,7 +44,7 @@
                     </div>
                     <p>De tags header, div en footer helpen je om overzicht te houden in je HTML bestand. De header is vaak het bovenste deel van een webpagina, en een footer is het onderste deel. Een div kan je gebruiken om een bepaald stuk van je webpagina aan te geven. Je kan meerdere div tags gebruiken op je webpagina. Je kan zelfs een div gebruiken in een div! Je moet deze tags zien als de inleiding, de alinea's en het slot van een tekst.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;header&gt;
     &lt;p&gt;Dit is de header van de website.&lt;/p&gt;
 &lt;/header&gt;
@@ -64,7 +66,7 @@
                     </div>
                     <p>De p tag wordt gebruikt voor simpele tekst op je website. Je kan de tekst zo lang maken als je zelf wilt.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;p&gt;
     Hier komt simpele tekst te staan.
 &lt;/p&gt;
@@ -91,7 +93,7 @@
                     </div>
                     <p>De h tags worden gebruikt als titels en tussenkopjes. h1 is de grootste en h6 is de kleinste.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;h1&gt;
     Deze tekst is groot.
 &lt;/h1&gt;
@@ -119,7 +121,7 @@
                     </div>
                     <p>De br tag wordt gebruikt als "enter". Na een br tag gaat de tekst verder op de volgende regel. Deze tag wordt niet afgesloten met &lt;/br&gt;, alleen &lt;br&gt; is genoeg.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;p&gt;
     Hier komt simpele tekst te staan.&lt;br&gt;En dit komt op de volgende regel.
 &lt;/p&gt;
@@ -132,7 +134,7 @@
                     </div>
                     <p>Soms is het handig om een opmerking te zetten in je HTML website om overzicht te geven. Dit kan bijvoorbeeld zijn om duidelijk te maken waar een stukje code voor is. Dit kan je doen met opmerkingen. Opmerkingen hebben geen invloed op de webpagina zelf en zie je alleen terug in de code. Opmerkingen begin je met <code>&lt;!--</code> en eindig je met <code>--&gt;</code>.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;p&gt; &lt;!--Dit is een opmerking. Hier staat simpele tekst.--&gt;
     Hier komt simpele tekst te staan.
 &lt;/p&gt;
@@ -161,25 +163,41 @@
         </div>
         <footer class="footer">
             <div class="footerNavBar">
-                <a href=../index.html class="footerButton">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
                     <div class="footerButtonImage">
-                        <img src="../img/HomeIconSmall.png" width=20%>
+                        <img src="../img/HomeIconSmall.png" style="width: 50%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Home</p>
                     </div>
                 </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
                 <a href=../lessen.html class="footerButton">
                     <div class="footerButtonImage">
-                        <img src="../img/LessenIconSmall.png" width=30%>
+                        <img src="../img/LessenIconSmall.png" style="width: 50%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Lessen</p>
                     </div>
                 </a>
-<!--                <a href=../games.html class="footerButton">
+                <!--<a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
                     <div class="footerButtonImage">
-                        <img src="../img/GamesIconSmall.png" width=30%>
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>-->
+                <!--<a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 60%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Games</p>

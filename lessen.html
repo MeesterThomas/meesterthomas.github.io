@@ -8,9 +8,11 @@
     </head>
     <body class="background">
         <div class="navBar">
-            <a href=index.html><img class="navBarIcon" src="img/HomeIcon.png" width=8%></a>
-<!--            <a href=games.html><img class="navBarItem" src="img/GamesIcon.png" width=8%></a>-->
+            <a href=index.html><img class="navBarIcon" id="navBarIconHome" src="img/HomeIcon.png" width=8%></a>
+            <!--<a href=games.html><img class="navBarItem" id="navBarIconGames" src="img/GamesIcon.png" width=8%></a>-->
+            <!--<a href=extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="img/ExtraLessenIcon.png" width=8%></a>-->
             <a href=lessen.html><img class="navBarItem" src="img/LessenIcon.png" width=8%></a>
+            <!--<a href=codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="img/CodeboekIcon.png" width=8%></a>-->
         </div>
         <div class="lessonChoice">
             <a href="lessen/1.html" class="lessonChoiceLink"><div class="lessonChoiceItem">
@@ -37,28 +39,60 @@
                     <p>In deze les leer je:<br>- Hoe je afbeeldingen, videos en geluidsfragmenten aan je website toevoegt.<br>- Hoe je tekst verder kan opmaken.<br>- De HTML tags: img, video, audio, b, i, s, u en mark.</p>
                 </div>
             </div></a>
+            <a href="lessen/4.html" class="lessonChoiceLink"><div class="lessonChoiceItem">
+                <div class="lessonChoiceItemText">
+                    <div class="lessonChoiceItemTextHeader">
+                        <p font-size="20px"><b>Les 4: CSS en opmaak</b></p>
+                    </div>
+                    <p>In deze les leer je:<br>- Wat een CSS bestand is en hoe je deze aan je website moet koppelen.<br>- Wat classes en id's zijn en hoe je ze kan gebruiken.<br>- Simpele voorbeelden van opmaak door CSS.<br>- De CSS properties: color, background-color, font-family en font-size.</p>
+                </div>
+            </div></a>
+            <a href="lessen/5.html" class="lessonChoiceLink"><div class="lessonChoiceItem">
+                <div class="lessonChoiceItemText">
+                    <div class="lessonChoiceItemTextHeader">
+                        <p font-size="20px"><b>Les 5: Het box model</b></p>
+                    </div>
+                    <p>In deze les leer je:<br>- Wat het box model is en waaruit het model bestaat.<br>- Hoe je je webpagina beter vorm kan geven.<br>- De CSS properties: padding, border-width, border-style, border-color, border-radius, margin en text-align.</p>
+                </div>
+            </div></a>
         </div>
         <footer class="footer">
             <div class="footerNavBar">
-                <a href=index.html class="footerButton">
+                <a href=index.html class="footerButton" id="navBarIconHome">
                     <div class="footerButtonImage">
-                        <img src="img/HomeIconSmall.png" width=20%>
+                        <img src="img/HomeIconSmall.png" style="width: 50%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Home</p>
                     </div>
                 </a>
+                <!--<a href=codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
                 <a href=lessen.html class="footerButton">
                     <div class="footerButtonImage">
-                        <img src="img/LessenIconSmall.png" width=30%>
+                        <img src="img/LessenIconSmall.png" style="width: 50%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Lessen</p>
                     </div>
                 </a>
-<!--                <a href=games.html class="footerButton">
+                <!--<a href=extralessen.html class="footerButton" id="navBarIconExtraLessen">
                     <div class="footerButtonImage">
-                        <img src="img/GamesIconSmall.png" width=30%>
+                        <img src="img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>-->
+                <!--<a href=games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="img/GamesIconSmall.png" style="width: 60%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Games</p>
@@ -68,5 +102,4 @@
             <br><br><br><br><br><br>
         </footer>
     </body>
-
 </html>

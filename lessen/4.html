@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <!--<a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>-->
+            <!--<a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>-->
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 4: CSS en opmaak</b></p><br>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opmaak met CSS</b></p>
+                    </div>
+                    <p>
+                        In deze les ga je leren hoe je je website kan opmaken met de opmaaktaal CSS. CSS werkt anders dan HTML. Volg dus goed de stappen om te kijken hoe het werkt.
+                        <br><br>
+                        Als eerste ga je een CSS bestand aanmaken. Dit werkt hetzelfde als het aanmaken van een HTML bestand, alleen eindigt je bestand met het stukje ".css". Het is handig om een apart mapje aan te maken voor je CSS bestanden. Vaak wordt een CSS bestand styles.css genoemd.
+                        <br><br>
+                        Vervolgens ga je je CSS bestand koppelen aan je HTML bestand (je webpagina dus). Dit doe je door een regel toe te voegen in de "head" van je HTML bestand. Hiernaast zie je een stukje wat je als het goed is in je HTML bestand hebt staan. Voeg de regel toe die er nieuw bijstaat. Het stukje "css/styles.css" kan je vervangen door de juiste map en bestandsnaam.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;head&gt;
+    &lt;title&gt;Titel van je website&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt; &lt;!--Deze regel voeg je toe--&gt;
+&lt;/head&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Tags opmaken</b></p>
+                    </div>
+                    <p>
+                        In CSS kan je tags makkelijk opmaken. Dit doe je door properties, oftewel eigenschappen, toe te kennen aan tags, classes of id's. Als eerste gaan we de achtergrond kleur van de tekst veranderen.
+                        <br>
+                        <br>
+                        Ga naar je CSS bestand. Als het goed is is deze nog leeg. Vervolgens zet je op de eerste regel een tag neer. Dit is de tag die je op gaat maken. In het voorbeeld hiernaast is gekozen voor de h1 tag. Vervolgens druk je enter, en gebruik een accolade (deze -> { }). Druk daarna weer enter.
+                        <br>
+                        <br>
+                        Nu zit je als het goed is in het stuk tussen de accolades. Hier ga je properties toekennen. Om de achtergrond kleur te veranderen, gebruiken we de property "background-color:". Kies een kleur (engelstalig) en eindig met een puntkomma (deze -> ;). Zie je op je pagina dat de kleur verandert?
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+h1
+{
+    background-color: blue;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Classes</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu geleerd hoe je een tag op kan maken, maar soms wil je dat de tag h1 de ene keer blauw is, en de andere keer groen. Of je wilt dat de h1 tags en de p tags allemaal een roze achtergrond krijgen. Daarvoor gebruiken we classes.
+                        <br>
+                        <br>
+                        Als eerste moet je een HTML tag een class toekennen. Om dit te doen ga je naar je HTML bestand. Tussen de hoekhaken (deze -> &lt; &gt;) heb je de naam van de tag staan, bijvoorbeeld h1. Nog tussen de hoekhaken maar na de tag, kan je class="" schrijven. Tussen de aanhalingstekens kan je vervolgens de naam van de class schrijven. Deze naam mag je zelf kiezen, maar kies iets duidelijks. Je kan dezelfde class aan meerdere HTML tags toekennen, ook als de tag niet hetzelfde is!
+                        <br>
+                        <br>
+                        Vervolgens kunnen we de class in het CSS bestand opmaken. Dit doe je op dezelfde manier als het opmaken van een tag, maar je gebruikt een punt voor de naam van de class. Kan jij de classes toekennen aan je HTML tags en de achtergrond kleur veranderen?
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;h1 class="standaardtekst"&gt;Hallo!&lt;/h1&gt;
+&lt;p class="standaardtekst"&gt;daar...&lt;/p&gt;
+
+-------------------------------
+
+.standaardTekst
+{
+    background-color: blue;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>id's</b></p>
+                    </div>
+                    <p>
+                        Je kan ook id's toekennen aan HTML tags op dezelfde manier als classes. Dit kan handig zijn als je binnen een class onderscheid wilt maken tussen tags.
+                        <br>
+                        <br>
+                        Id's moet je toekennen aan HTML tags. Dit doe je op bijna dezelfde manier als classes. Je gebruikt niet class="", maar je gebruikt id="".
+                        <br>
+                        <br>
+                        In CSS werkt het ook weer bijna hetzelfde. Het enige verschil is dat je bij een id begint met een hashtag (deze -> #) in plaats van een punt.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;h1 class="standaardTekst" id="titel"&gt;Hallo!&lt;/h1&gt;
+&lt;p class="standaardTekst"&gt;daar...&lt;/p&gt;
+
+-------------------------------
+
+.standaardTekst
+{
+    background-color: blue;
+}
+#titel
+{
+    font-size: 40px;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Individuele tags opmaken</b></p>
+                    </div>
+                    <p>
+                        Soms is het handig om in 1 geval iets te veranderen aan de opmaak. Als je dit zou willen doen, heb je het CSS bestand niet nodig.
+                        <br>
+                        <br>
+                        Je kan net na de tag het volgende toevoegen: style="". Vervolgens kan je tussen de aanhalingstekens de opmaak zetten die je nodig hebt. Met een puntkomma (;) onderscheid je verschillende CSS properties.
+                        <br>
+                        <br>
+                        <b>Let op!</b> Er is een CSS bestand voor een reden. Het kan snel rommelig worden als je je CSS in je HTML gaat vermelden. Probeer dit daarom zo min mogelijk te doen!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;h1 style="background-color: blue;"&gt;Hallo!&lt;/h1&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Tags, classes en id's: welke gaat nou voor?</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu 4 verschillende manieren geleerd om CSS properties toe te voegen aan tekst, maar wat nou als je ze allemaal gebruikt? Welke van de 4 methoden heeft voorrang, en welke daarna? Probeer hier voor jezelf eens achter te komen!
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS properties</b></p>
+                    </div>
+                    <p>
+                        Nu weet je wat classes en id's zijn, en hoe je CSS properties kan toevoegen. Nu is het tijd om eens te kijken naar een aantal CSS properties die je toe kan voegen aan jouw tekst!
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: background-color</b></p>
+                    </div>
+                    <p>
+                        Je hebt al kennis gemaakt met de property background-color, maar wat kan je er verder mee? Je kan een (engelstalige) kleur toevoegen, maar je kan ook een rgb code toevoegen. Een rgb code staat ook voor een kleur. Als je in Visual Studio Code op de kleur klikt, kan je de kleur handmatig aanpassen!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: rgb(11, 11, 177);
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: color</b></p>
+                    </div>
+                    <p>
+                        Naast background-color, is er ook nog color. Deze property geeft de kleur van de tekst aan. Je kan de kleur op dezelfde manier aangeven als bij background-color.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    color: rgb(11, 11, 177);
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Geheimschrift</b></p>
+                    </div>
+                    <p>
+                        Als je de color en background-color properties van een tag dezelfde kleur maakt, dan maak je geheimschrift. Je kan de tekst namelijk niet lezen! De enige manier waarop je de tekst wel kan lezen, is door de tekst te selecteren.
+                        <br>
+                        <br>
+                        <p style="background-color: rgb(11, 11, 177);color: rgb(11, 11, 177);">Goed gedaan! Je hebt geheimschrift gelezen!</p>
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: rgb(11, 11, 177);
+    color: rgb(11, 11, 177);
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: font-size</b></p>
+                    </div>
+                    <p>
+                        Met de property font-size kan je de lettergrootte aanpassen. Je moet hier wel de eenheid bijzetten. Vaak doe je dit in px (pixels).
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    font-size: 20px;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: font-family</b></p>
+                    </div>
+                    <p>
+                        Je kan ook het lettertype aanpassen. Dit doe je met font-family. Als je dit intoetst in Visual Studio Code, krijg je suggesties van lettertypes. Het lettertype hiernaast wordt vaak gebruikt.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak je tekst mooi!</b></p>
+                    </div>
+                    <p>
+                        Gebruik de CSS properties die hierboven beschreven staan om je tekst op te maken!
+                    </p>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 50%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 50%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <!--<a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>-->
+                <!--<a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 60%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>-->
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

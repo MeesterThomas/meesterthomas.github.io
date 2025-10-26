@@ -8,9 +8,11 @@
     </head>
     <body class="background">
         <div class="navBar">
-            <a href=../index.html><img class="navBarIcon" src="../img/HomeIcon.png" width=8%></a>
-<!--            <a href=../games.html><img class="navBarItem" src="../img/GamesIcon.png" width=8%></a>-->
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <!--<a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>-->
+            <!--<a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>-->
             <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
         </div>
         <div class="lessonList">
             <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 3: Belangrijke HTML tags</b></p><br>
@@ -36,8 +38,8 @@
                     </div>
                     <p>Je kan een plaatje toevoegen aan je website met de &lt;img&gt; tag. Hiernaast zie je hoe je die tag moet gebruiken. Om een afbeelding te plaatsen, heb je natuurlijk ook de afbeelding zelf nodig. Daarvoor gebruik je "src", wat staat voor source, of oorsprong. Hiermee geef je aan via welke link je de afbeelding kan vinden. Als je een afbeelding gedownload hebt, kan je ernaar verwijzen op de manier zoals hierboven beschreven.<br><br><b>Let op!</b> Een bestand eindigt altijd op een bestandstype, ook als het van een linkje komt. Check dus goed of je link eindigt met ".png", ".jpg" of een ander bestandstype.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
-&lt;img src="img/afbeelding.png"&gt&lt;/img&gt;
+                <pre class="lessonCode"><code>
+&lt;img src="img/afbeelding.png"&gt;&lt;/img&gt;
                 </code></pre>
             </div>
             <div class="lessonListItemExtra">
@@ -55,8 +57,8 @@
                     </div>
                     <p>Het toevoegen van een filmpje werkt op dezelfde manier als het toevoegen van een afbeelding. Het enige verschil is de tag. Je gebruikt voor filmpjes namelijk de &lt;video&gt; tag. Wel moet je "controls" er nog tussen zetten, anders krijg je hem niet te zien (zie hiernaast).</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
-&lt;video src="video/filmpje.mp4" controls&gt&lt;/video&gt;
+                <pre class="lessonCode"><code>
+&lt;video src="video/filmpje.mp4" controls&gt;&lt;/video&gt;
                 </code></pre>
             </div>
             <div class="lessonListItemExtra">
@@ -64,7 +66,7 @@
                     <div class="lessonListItemTextHeader">
                         <p font-size="20px"><b>Extra: Video van Youtube kiezen</b></p>
                     </div>
-                    <p>Als je een video van Youtube op je website wilt zetten, maar je wilt of kunt hem niet downloaden, moet je het een beetje anders doen. De link van een Youtube filmpje gebruiken lukt niet bij een &lt;video&gt; tag. In plaats daarvan heb je een &lt;iframe&gt; tag nodig. Gelukkig voor ons, heeft Youtube het ons heel makkelijk gemaakt. Als je een video aanklikt, en vervolgens klik je met de rechterkant van je muis mousepad, dan krijg je wat opties. Als je op de optie "Copy embed code" kiest, dan kan je deze met ctrl c plakken in je code, en hoef je er niet meer naar te kijken. Dat is nog eens makkelijk!</p>
+                    <p>Als je een video van Youtube op je website wilt zetten, maar je wilt of kunt hem niet downloaden, moet je het een beetje anders doen. De link van een Youtube filmpje gebruiken lukt niet bij een &lt;video&gt; tag. In plaats daarvan heb je een &lt;iframe&gt; tag nodig. Gelukkig voor ons, heeft Youtube het ons heel makkelijk gemaakt. Als je een video aanklikt, en vervolgens klik je met de rechterkant van je muis mousepad, dan krijg je wat opties. Als je op de optie "Copy embed code" (of "insluitcode kopiëren") kiest, dan kan je deze met ctrl c plakken in je code, en hoef je er niet meer naar te kijken. Dat is nog eens makkelijk!</p>
                 </div>
             </div>
             <div class="lessonListItem">
@@ -74,9 +76,9 @@
                     </div>
                     <p>Als je hebt geprobeerd om een afbeelding of video toe te voegen, is hij misschien wel veel te groot of veel te klein. Om het formaat te wijzigen, kan je de elementen "width" of "height" toevoegen. Zie hiernaast hoe dat eruit komt te zien. Het nummer wat erachter komt kan je zelf instellen (het getal staat voor het aantal pixels). "Width" staat voor de breedte en "height" staat voor de hoogte. Als je een van de twee weg laat, dan zal de afbeelding of de video dezelfde verhouding behouden als het oorspronkelijke formaat.</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
-&lt;img src="img/afbeelding.png" width="400"&gt&lt;/img&gt;
-&lt;video src="video/filmpje.mp4" controls height= "300"&gt&lt;/video&gt;
+                <pre class="lessonCode"><code>
+&lt;img src="img/afbeelding.png" width="400"&gt;&lt;/img&gt;
+&lt;video src="video/filmpje.mp4" controls height= "300"&gt;&lt;/video&gt;
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -86,8 +88,8 @@
                     </div>
                     <p>Het toevoegen van een audiofragment lijkt weer heel erg op het toevoegen van een afbeelding of filmpje. Je gebruikt dit keer de &lt;audio&gt; tag. Je moet hier weer "controls" ertussen zetten (zie hiernaast).</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
-&lt;audio src="audio/geluid.mp3" controls&gt&lt;/audio&gt;
+                <pre class="lessonCode"><code>
+&lt;audio src="audio/geluid.mp3" controls&gt;&lt;/audio&gt;
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -97,7 +99,7 @@
                     </div>
                     <p>De tags die hierboven benoemt staan zorgen er allemaal voor dat de tekst wordt opgemaakt. In plaats van een overzicht maken wat welke tag doet, daag ik je uit om ze allemaal eens te proberen in je webpagina. Zo maak je gelijk kennis met wat ze doen!</p>
                 </div>
-                <pre style="background-color: rgb(34, 34, 34);"><code>
+                <pre class="lessonCode"><code>
 &lt;p&gt;
     &lt;b&gt;Deze&lt;/b&gt; 
     &lt;i&gt;tekst&lt;/i&gt; 
@@ -123,25 +125,41 @@
         </div>
         <footer class="footer">
             <div class="footerNavBar">
-                <a href=../index.html class="footerButton">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
                     <div class="footerButtonImage">
-                        <img src="../img/HomeIconSmall.png" width=20%>
+                        <img src="../img/HomeIconSmall.png" style="width: 50%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Home</p>
                     </div>
                 </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
                 <a href=../lessen.html class="footerButton">
                     <div class="footerButtonImage">
-                        <img src="../img/LessenIconSmall.png" width=30%>
+                        <img src="../img/LessenIconSmall.png" style="width: 50%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Lessen</p>
                     </div>
                 </a>
-<!--                <a href=../games.html class="footerButton">
+                <!--<a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
                     <div class="footerButtonImage">
-                        <img src="../img/GamesIconSmall.png" width=30%>
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>-->
+                <!--<a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 60%">
                     </div>
                     <div class="footerButtonText">
                         <p style="margin: 1%;">Games</p>

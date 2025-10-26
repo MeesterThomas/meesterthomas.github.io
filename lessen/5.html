@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 5</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <!--<a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>-->
+            <!--<a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>-->
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 5: Het box model</b></p><br>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Wat is het box model?</b></p>
+                    </div>
+                    <p>
+                        Tot nu toe hebben we een aantal CSS properties behandeld om de opmaak van je website vorm te geven. Vandaag ga je leren over het box model. Dit gaat je helpen om je website er echt netjes uit te laten zien!
+                        <br><br>
+                        Het box model bestaat uit een aantal elementen. "Content" is de inhoud van je element HTML tag, dus een afbeelding of een stuk tekst. "Border" is de rand rondom deze tag. "Padding" is de ruimte tussen je content en de border. Tot slot is "Margin" de afstand van de tag tot een andere tag, dus rondom de border.
+                    </p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/BoxModel.png" width="90%">
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS properties: width en height</b></p>
+                    </div>
+                    <p>
+                        De content van je tag kan je dus groter en kleiner maken met de properties width en height. Deze properties zie je het beste terug als je tag ook een achtergrond kleur heeft. Je kan de grootte in meerdere vormen aangeven, waaronder het percentage van het scherm, en de grootte in pixels (px).
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    width: 100%;
+    height: 50px;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS properties: border-width, border-style, border-color en border-radius</b></p>
+                    </div>
+                    <p>
+                        Zonder CSS te gebruiken, heeft een tekst tag geen border (rand). Deze kan je toevoegen met de property border-width. Deze kan je weer aangeven in percentage of in pixels.
+                        <br>
+                        <br>
+                        Je hebt ook een border-style nodig om aan te geven wat voor patroon de border zal krijgen. Als je een standaard border wilt, gebruik je "solid". Kijk eens welke opties Visual Studio Code heeft en probeer ze eens uit!
+                        <br>
+                        <br>
+                        Vervolgens kan je je border een kleur geven met border-color. Dit werkt hetzelfde als het kiezen van een achtergrond kleur.
+                        <br>
+                        <br>
+                        Tot slot kan je de hoeken van je border rond maken. Dit doe je met border-radius. Probeer maar eens te kijken hoe rond je de hoeken kan maken!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    border-width: 5px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: padding</b></p>
+                    </div>
+                    <p>
+                        Als je de afstand van je tekst tot de border groter wilt maken, kan je de padding aanpassen. Je kan dit op meerdere manieren doen.
+                        <br>- Als je maar 1 maat invult, dan is dit de padding aan alle 4 de kanten.
+                        <br>- Als je 2 maten invult, is de eerste maat voor de padding aan de boven- en onderkant, en de tweede voor de linker- en rechterkant.
+                        <br>- Als je 4 maten invult, is de eerste voor de bovenkant, de tweede voor de rechterkant, de derde voor de onderkant en de vierde voor de linkerkant. De maten gaan dus met de klok mee.
+                        <br>
+                        <br>
+                        Als je maar 1 deel van de padding wilt aanpassen, kan je ook de properties padding-top, padding-bottom, padding-left en padding-right gebruiken.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    border-width: 5px;
+    border-style: solid;
+    padding: 10px 5px 2px 8px;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: margin</b></p>
+                    </div>
+                    <p>
+                        De margin van een tag werkt precies hetzelfde als de padding, maar dan gaat het om de ruimte buiten de border. Hoe je deze benoemt is hetzelfde als padding.
+                        <br>- Als je maar 1 maat invult, dan is dit de margin aan alle 4 de kanten.
+                        <br>- Als je 2 maten invult, is de eerste maat voor de margin aan de boven- en onderkant, en de tweede voor de linker- en rechterkant.
+                        <br>- Als je 4 maten invult, is de eerste voor de bovenkant, de tweede voor de rechterkant, de derde voor de onderkant en de vierde voor de linkerkant. De maten gaan dus met de klok mee.
+                        <br>
+                        <br>
+                        Als je maar 1 deel van de margin wilt aanpassen, kan je ook de properties margin-top, margin-bottom, margin-left en margin-right gebruiken.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    border-width: 5px;
+    border-style: solid;
+    margin: 10px 5px 2px 8px;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: text-align</b></p>
+                    </div>
+                    <p>
+                        Nu je het box model gebruikt, wil je misschien dat je tekst in het midden van de box komt te staan. Dat kan met de CSS property text-align! Je maakt hem vervolgens "left" als je de tekst aan de linkerkant wilt, "right" als je de tekst aan de rechterkant wilt of "center" als je de tekst in het midden wilt hebben.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    border-width: 5px;
+    border-style: solid;
+    text-align: center;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak een nette website met het box model!</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu geleerd hoe je het box model kan gebruiken in je webpagina. Probeer het eens uit, en kijk eens wat je er mee kan doen! Lukt het jou ook om afbeeldingen en video's in een box te plaatsen?
+                    </p>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 50%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 50%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <!--<a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>-->
+                <!--<a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 60%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>-->
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
