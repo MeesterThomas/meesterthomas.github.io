@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Games</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/battle.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=index.html><img class="navBarIcon" id="navBarIconHome" src="img/HomeIcon.png" width=8%></a>
+            <a href=games.html><img class="navBarItem" id="navBarIconGames" src="img/GamesIcon.png" width=8%></a>
+            <!--<a href=extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="img/ExtraLessenIcon.png" width=8%></a>-->
+            <a href=lessen.html><img class="navBarItem" src="img/LessenIcon.png" width=8%></a>
+            <!--<a href=codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="lessonList">
+            <div class="gameContent">
+                <div style="display: flex; width: 40%;">
+                    <button class="characterSelectedButton" id="characterSelected0" onclick="OnCharacterSelectedButton('characterSelected0')"><img src="../img/Characters/0000.png" width=100%></button>
+                    <button class="characterSelectedButton" id="characterSelected1" onclick="OnCharacterSelectedButton('characterSelected1')"><img src="../img/Characters/0000.png" width=100%></button>
+                </div>
+                <p font-size="20px" width="20%" style="text-align: center;"><b>Kies een vechter!</b></p>
+                <div style="justify-content: flex-end; display: flex; width: 40%;">
+                    <button class="characterSelectedButton" id="characterSelected2" onclick="OnCharacterSelectedButton('characterSelected2')"><img src="../img/Characters/0000.png" width=100%></button>
+                    <button class="characterSelectedButton" id="characterSelected3" onclick="OnCharacterSelectedButton('characterSelected3')"><img src="../img/Characters/0000.png" width=100%></button>
+                </div>
+            </div>
+            <div class="gameContent">
+                <button class="characterSelectionButton" id="characterSelection0" onclick="OnCharacterSelectButton('0000')"><img src="../img/Characters/0000.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection1" onclick="OnCharacterSelectButton('0001')"><img src="../img/Characters/0001.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection2" onclick="OnCharacterSelectButton('0002')"><img src="../img/Characters/0002.png" width=100%></button>
+<!--                <button class="characterSelectionButton" id="characterSelection3" onclick="OnCharacterSelectButton('0003')"><img src="../img/Characters/0003.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection4" onclick="OnCharacterSelectButton('0004')"><img src="../img/Characters/0004.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection5" onclick="OnCharacterSelectButton('0005')"><img src="../img/Characters/0005.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection6" onclick="OnCharacterSelectButton('0006')"><img src="../img/Characters/0006.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection7" onclick="OnCharacterSelectButton('0007')"><img src="../img/Characters/0007.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection8" onclick="OnCharacterSelectButton('0008')"><img src="../img/Characters/0008.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection9" onclick="OnCharacterSelectButton('0009')"><img src="../img/Characters/0009.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection10" onclick="OnCharacterSelectButton('0010')"><img src="../img/Characters/0010.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection11" onclick="OnCharacterSelectButton('0011')"><img src="../img/Characters/0011.png" width=100%></button>-->
+            </div>
+<!--            <div class="gameContent">
+                <button class="characterSelectionButton" id="characterSelection12"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection13"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+                <button class="characterSelectionButton" id="characterSelection14"><img src="../img/Characters/MeesterThomas.png" width=100%></button>
+            </div>-->
+            <div class="gameContent">
+                <button class="gameButtonStart" id="battleStartButton" onclick="OnBattleStartButton()"><p style="margin:0.25%">Start</p></button>
+            </div>
+            <div class="gameContent">
+                <div class="gameBackground">
+                    <div class="gameBackgroundLeft">
+                        <div class="gameBackgroundLeftPlayer0">
+                            <div style="position: relative;">
+                                <button class="gameButtonLeft" id="battleActionButton0L0" onclick="OnActButton(0)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                                <button class="gameButtonLeft" id="battleActionButton1L0" onclick="OnActButton(1)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                                <button class="gameButtonLeft" id="battleActionButton2L0" onclick="OnActButton(2)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                                <button class="gameButtonLeft" id="battleActionButton3L0" onclick="OnActButton(3)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                                <div class="attackDataLeft" id="attackDataL0">
+                                    <div class="gameButtonLeft">
+                                        <p style="margin:0%" id="attackDataNameL0">Aanval</p>
+                                        <p style="margin:0%;font-size: 16px;" id="attackDataPowerL0">Kracht: 888</p>
+                                        <p style="margin:0%;font-size: 16px;" id="attackDataDescL0">Deze aanval doet dit en dat en dit en dat en dit en ook nog eens dat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="gameButtonPortraitLeft" id="battlePortraitButtonL0"><img src="../img/Characters/0000.png" id="battlePortraitL0" width=80%></button><br>
+                            <div class="gameButtonLeft"><p style="margin:0%" id="battleNameL0">Willekeurig</p><div style="position: relative;"><meter class="gameHPBar" id="battleHPBarL0" value="1" max="1"></meter><p class="gameHPBarText" id="battleHPBarTextL0">1/1</p></div></div>
+                            <div class="gameButtonLeft" style="display: flex;"><p style="margin:0%;font-size: 14px;width: 50%;">Aanval:</p><p style="margin:0%;font-size: 14px;text-align: right;width: 50%;" id="attackValueL0">0</p></div>
+                            <div class="gameButtonLeft" style="display: flex;"><p style="margin:0%;font-size: 14px;width: 50%;">Verdediging:</p><p style="margin:0%;font-size: 14px;text-align: right;width: 50%;" id="defenseValueL0">0</p></div>
+                            <div class="gameButtonLeft" style="display: flex;"><p style="margin:0%;font-size: 14px;width: 50%;">Snelheid:</p><p style="margin:0%;font-size: 14px;text-align: right;width: 50%;" id="speedValueL0">0</p></div>
+                        </div>
+                        <div class="gameBackgroundLeftPlayer1">
+                            <button class="gameButtonLeft" id="battleActionButton0L1" onclick="OnActButton(4)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonLeft" id="battleActionButton1L1" onclick="OnActButton(5)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonLeft" id="battleActionButton2L1" onclick="OnActButton(6)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonLeft" id="battleActionButton3L1" onclick="OnActButton(7)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <img src="../img/Characters/0000.png" id="battlePortraitL1" width=80%><br>
+                            <div class="gameButtonLeft"><p style="margin:0%" id="battleNameL1">Willekeurig</p><div style="position: relative;"><meter class="gameHPBar" id="battleHPBarL1" value="1" max="1"></meter><p class="gameHPBarText" id="battleHPBarTextL1">1/1</p></div></div>
+                            <div class="gameButtonLeft" style="display: flex;"><p style="margin:0%;font-size: 14px;width: 50%;">Aanval:</p><p style="margin:0%;font-size: 14px;text-align: right;width: 50%;" id="attackValueL1">0</p></div>
+                            <div class="gameButtonLeft" style="display: flex;"><p style="margin:0%;font-size: 14px;width: 50%;">Verdediging:</p><p style="margin:0%;font-size: 14px;text-align: right;width: 50%;" id="defenseValueL1">0</p></div>
+                            <div class="gameButtonLeft" style="display: flex;"><p style="margin:0%;font-size: 14px;width: 50%;">Snelheid:</p><p style="margin:0%;font-size: 14px;text-align: right;width: 50%;" id="speedValueL1">0</p></div>
+                        </div>
+                    </div>
+                    <div class="gameBackgroundRight">
+                        <div class="gameBackgroundRightPlayer0">
+                            <div class="gameButtonRight"><p style="margin:0%" id="battleNameR0">Willekeurig</p><div style="position: relative;"><meter class="gameHPBarRight" id="battleHPBarR0" value="1" max="1"></meter><p class="gameHPBarText" id="battleHPBarTextR0">1/1</p></div></div>
+                            <div class="gameButtonRight" style="display: flex;"><p style="margin:0%;font-size: 14px;text-align: left;width: 50%;">Aanval:</p><p style="margin:0%;font-size: 14px;width: 50%;" id="attackValueR0">0</p></div>
+                            <div class="gameButtonRight" style="display: flex;"><p style="margin:0%;font-size: 14px;text-align: left;width: 50%;">Verdediging:</p><p style="margin:0%;font-size: 14px;width: 50%;" id="defenseValueR0">0</p></div>
+                            <div class="gameButtonRight" style="display: flex;"><p style="margin:0%;font-size: 14px;text-align: left;width: 50%;">Snelheid:</p><p style="margin:0%;font-size: 14px;width: 50%;" id="speedValueR0">0</p></div>
+                            <img src="../img/Characters/0000.png" id="battlePortraitR0" width=80%><br>
+                            <button class="gameButtonRight" id="battleActionButton0R0" onclick="OnActButton(8)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonRight" id="battleActionButton1R0" onclick="OnActButton(9)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonRight" id="battleActionButton2R0" onclick="OnActButton(10)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonRight" id="battleActionButton3R0" onclick="OnActButton(11)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                        </div>
+                        <div class="gameBackgroundRightPlayer1">
+                            <div class="gameButtonRight"><p style="margin:0%" id="battleNameR1">Willekeurig</p><div style="position: relative;"><meter class="gameHPBarRight" id="battleHPBarR1" value="1" max="1"></meter><p class="gameHPBarText" id="battleHPBarTextR1">1/1</p></div></div>
+                            <div class="gameButtonRight" style="display: flex;"><p style="margin:0%;font-size: 14px;text-align: left;width: 50%;">Aanval:</p><p style="margin:0%;font-size: 14px;width: 50%;" id="attackValueR1">0</p></div>
+                            <div class="gameButtonRight" style="display: flex;"><p style="margin:0%;font-size: 14px;text-align: left;width: 50%;">Verdediging:</p><p style="margin:0%;font-size: 14px;width: 50%;" id="defenseValueR1">0</p></div>
+                            <div class="gameButtonRight" style="display: flex;"><p style="margin:0%;font-size: 14px;text-align: left;width: 50%;">Snelheid:</p><p style="margin:0%;font-size: 14px;width: 50%;" id="speedValueR1">0</p></div>
+                            <img src="../img/Characters/0000.png" id="battlePortraitR1" width=80%><br>
+                            <button class="gameButtonRight" id="battleActionButton0R1" onclick="OnActButton(12)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonRight" id="battleActionButton1R1" onclick="OnActButton(13)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonRight" id="battleActionButton2R1" onclick="OnActButton(14)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                            <button class="gameButtonRight" id="battleActionButton3R1" onclick="OnActButton(15)" style="display: flex;margin: 0%;"><p style="margin:0%;font-size: 18px;width: 85%;">???</p><img src="../img/Elements/0.png" style="width: 15%;"></img></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gameContent">
+                <div class="gameComments">
+                    <p class="gameCommentsNew" id="gameComment0">Klik op de startknop!</p>
+                    <p class="gameCommentsOld" id="gameComment1"></p>
+                    <p class="gameCommentsOld" id="gameComment2"></p>
+                    <p class="gameCommentsOld" id="gameComment3"></p>
+                    <p class="gameCommentsOld" id="gameComment4"></p>
+                </div>
+            </div>
+            <div class="gameContent">
+                <br>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" width=20%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+<!--                <a href=../games.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" width=30%>
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>-->
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

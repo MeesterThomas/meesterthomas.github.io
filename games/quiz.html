@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 5</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/quiz.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <!--<a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>-->
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="gameContent">
+            <div class="quiz">
+                <button class="gameButtonStart" id="quizButtonStart" onclick="StartQuiz()">Start Quiz!</button>
+                <p id="quizVraag" font-size="20px" style="text-align: center;display: none;"><b>Quizvraag</b></p>
+                <br><input type="text" size="25" name="name" class="quizForm" id="quizForm" style="display: none;">
+                <br><button class="quizButton" id="quizButton0" onclick="AnswerQuestion('0')" style="display: none;">Verstuur antwoord</button>
+                <br><button class="quizButton" id="quizButton1" onclick="AnswerQuestion('1')" style="display: none;">Antwoord 1</button>
+                <br><button class="quizButton" id="quizButton2" onclick="AnswerQuestion('2')" style="display: none;">Antwoord 2</button>
+                <br><button class="quizButton" id="quizButton3" onclick="AnswerQuestion('3')" style="display: none;">Antwoord 3</button>
+                <br><button class="quizButton" id="quizButton4" onclick="AnswerQuestion('4')" style="display: none;">Antwoord 4</button>
+            </div>
+            <div class="quizScore">
+                <div class="quizScoreItem" style="border-color: white;">
+                    <p class="quizScoreItemText" id="totaalScore">Totaal: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(177, 11, 11);">
+                    <p class="quizScoreItemText" id="rekenenScore">Rekenen: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(251, 251, 72);">
+                    <p class="quizScoreItemText" id="taalScore">Taal: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(140, 28, 136);">
+                    <p class="quizScoreItemText" id="geschiedenisScore">Geschiedenis: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(246, 132, 51);">
+                    <p class="quizScoreItemText" id="aardrijkskundeScore">Aardrijkskunde: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(11, 177, 11);">
+                    <p class="quizScoreItemText" id="natuurScore">Natuur: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(11, 11, 177);">
+                    <p class="quizScoreItemText" id="coderenScore">Coderen: 0/0</p>
+                </div>
+                <div class="quizScoreItem" style="border-color: rgb(251, 72, 224);">
+                    <p class="quizScoreItemText" id="algemeenScore">Algemeen: 0/0</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 50%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 50%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <!--<a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>-->
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 60%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
