@@ -33,7 +33,7 @@ const questions = [
     ["0031", "7", "1", "2", "Welke kleur krijg je als je rood en geel mengt?", "Oranje", "Blauw", "Groen", "Paars"],
     ["0032", "7", "1", "2", "Wat gebruik je om te meten hoeveel graden het is?", "Thermometer", "Weegschaal", "Liniaal", "Kompas"],
     ["0033", "7", "1", "2", "Wat vieren we op 27 april in Nederland?", "Koningsdag", "Sinterklaas", "Kerst", "Pasen"],
-    ["0034", "7", "1", "2", "Hoeveel letters heeft het alfebet?", "26", "23", "21", "2"]
+    ["0034", "7", "1", "2", "Hoeveel letters heeft het alfabet?", "26", "23", "21", "2"]
 ]
 const maxPerCategorie = 2;
 const maxVragen = 14;
