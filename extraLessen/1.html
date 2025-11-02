@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Extra les 1</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Extra les 1: Bestandspaden</b></p><br>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Bestandspaden</b></p>
+                    </div>
+                    <p>
+                        In deze extra les krijg je extra uitleg over bestandspaden en hoe je ze kan gebruiken om naar een bestand te verwijzen.
+                        <br><br>
+                        Een bestandspad is een volgorde aan instructies voor de computer om een bestand te zoeken. Deze instructies beschrijf je op een bepaalde manier. De makkelijkste manier om een bestandspad te noteren, is om de instructie eerst zelf uit te voeren.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 1: Zoek je huidige bestand op</b></p>
+                    </div>
+                    <p>
+                        Als eerst ga je in je website map je huidige bestand zoeken. Dit is het bestand waarin de verwijzing te staan komt. Deze zit voor mij in de map "extraLessen".
+                        <br><br>
+                        Voor mijn voorbeeld ga ik een afbeelding toevoegen op deze webpagina. Deze afbeelding staat in een andere map.
+                        <br><br>
+                        <i>De HTML tag om een afbeelding te maken komt in les 3 aan bod.</i>
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+De opmaak van mijn mappen voor deze website:
+
+Website (map)
+    extraLessen (map)
+        1.html (html bestand) Dit is het huidige HTML bestand
+        2.html (html bestand)
+    img (map)
+        Lessen (map)
+            Bestanden.png (png bestand) Dit is de afbeelding
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 2: Een map verlaten</b></p>
+                    </div>
+                    <p>
+                        Als je naar mijn mappenstructuur in het voorbeeld kijkt, zie je dat de afbeelding die ik wil gebruiken niet binnen de map "extraLessen" te vinden is. Dat betekent dat ik een stapje "omhoog" moet, naar de map "Website".
+                        <br><br>
+                        Om dit te doen, moet ik het volgende aan mijn bestandspad toevoegen: ../
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;img src="../"&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 3: Een map openen</b></p>
+                    </div>
+                    <p>
+                        Ik zit nu dus in de map "Website". Ik hoef deze map niet te verlaten, want de afbeelding zit binnen deze map. Om naar de afbeelding toe te gaan, moet ik eerst een map openen, in dit geval de map "img".
+                        <br><br>
+                        Om dit te doen, moet ik de naam van de map aan het bestandspad toevoegen, gevolgd door /
+                        <br><br>
+                        In mijn voorbeeld, moet ik vervolgens nog een map openen. Dit doe ik op dezelfde manier.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;img src="../img/Lessen/"&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Het goede bestand kiezen</b></p>
+                    </div>
+                    <p>
+                        Ik zit nu in de map "Lessen". In deze map zit het bestand wat ik zoek. Nu ga ik het goede bestand kiezen. In mijn geval "Bestanden.png".
+                        <br><br>
+                        Om dit te doen, moet ik de naam van het bestand toevoegen, inclusief het bestandstype. Dit sluit je <b>niet</b> af met /
+                        <br><br>
+                        Nu heb je het juiste bestandspad!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;img src="../img/Lessen/Bestanden.png"&gt;
+                </code></pre>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 6</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 6: Extra CSS</b></p><br>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: display</b></p>
+                    </div>
+                    <p>
+                        Met de display property kan je de opmaak op de pagina van een HTML element regelen. Er zijn meerdere opties voor de display van een element.
+                        <br><br>
+                        "display: block;" is voor de meeste tags de standaard. Dit betekent dat een HTML tag (als dat mogelijk is) een hele regel in beslag neemt, en dat de tag dus altijd begint op een nieuwe regel.
+                        <br><br>
+                        "display: inline;" is het tegenovergestelde. Dit betekent dat een HTML tag midden in een zin wordt toegevoegd, en dus niet een nieuwe regel in beslag neemt.
+                        <br><br>
+                        "display: flex;" zit er een beetje tussenin. Zoals de naam al zegt, wordt het element flexibel met deze property. Alle elementen binnen dit element worden op 1 regel gepropt, maakt niet uit hoeveel het er zijn!
+                        <br><br>
+                        Deze property kan je dus aan een element toevoegen. Een &lt;p&gt; tag bijvoorbeeld, is van zichzelf een block-element. Maar, als je de property "display: inline;" toevoegt, dan wordt het een "inline" element.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    display: block;
+}
+.cssVoorbeeld
+{
+    background-color: blue;
+    display: inline;
+}
+.cssVoorbeeld
+{
+    background-color: blue;
+    display: flex;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Ouders en kinderen</b></p>
+                    </div>
+                    <p>
+                        In een HTML bestand heb je te maken met tags binnen een andere tag. Om deze te omschrijven, wordt erg verwarrend. Vandaar dat we deze tags met een relatie tot elkaar "parents" (ouders) en "children" (kinderen) noemen. Een tag binnen een andere tag, is een child, en het element waar de child in zit, is de parent.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;div id="parent"&gt; &lt;!--Dit is de parent van "child1" en "child2"--&gt;
+    &lt;div id="child1"&gt; &lt;!--Dit is de child van "parent" en de parent van de 2 p tags--&gt;
+        &lt;p&gt;Hier staat tekst&lt;/p&gt;
+        &lt;p&gt;Hier staat nog meer tekst&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="child2"&gt; &lt;!--Dit is de child van "parent" en de parent van de 2 p tags--&gt;
+        &lt;p&gt;Hier staat tekst&lt;/p&gt;
+        &lt;p&gt;Hier staat nog meer tekst&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Laat display zien!</b></p>
+                    </div>
+                    <p>
+                        Je hebt gelezen over de 3 belangrijkste vormen van de display property. Probeer ze eens uit! Kijk wat je kan met alle 3 de vormen.
+                        <br>Tip: Geef de verschillende elementen met de display property een andere achtergrondkleur om makkelijker het verschil te zien.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS properties: justify-content en align-items</b></p>
+                    </div>
+                    <p>
+                        Als je "display: flex;" hebt gebruikt voor een element, kan het zijn dat je child elementen niet op de goede plaats terechtkomen. Dit gebeurt vooral als je child element een vaste width of height hebben.
+                        <br><br>
+                        Met "justify-content" kan je de horizontale positie bepalen. Dit kan zijn "center", "left" of "right".
+                        <br><br>
+                        Met "align-items" kan je de verticale positie bepalen. Dit kan zijn "center", "start" en "end".
+                        <br><br>
+                        Als je deze properties nog niet helemaal snapt, probeer ze eens uit. Let op: de parent moet de "display: flex;" property en de bovenstaande properties hebben. Het gaat dan om de positie van het child element.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+.cssVoorbeeld
+{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: position</b></p>
+                    </div>
+                    <p>
+                        Met de position property kan je de positie van een element bepalen. Er zijn verschillende mogelijkheden:
+                        <br><br>
+                        Met "position: static;" wordt een element op de normale manier op de webpagina geplaatst. Dit is de standaard voor alle HTML tags.
+                        <br><br>
+                        Met "position: relative;" wordt een element ook op de normale manier op de webpagina geplaatst, maar deze kan je vervolgens aanpassen met de CSS properties left, right, top en bottom. Daarmee kan je dus de positie een klein beetje aanpassen.
+                        <br><br>
+                        Met "position: fixed;" wordt de positie van een element relatief gezien van het scherm. Dit betekent dat het element altijd op het scherm blijft staan, ook als je gaat scrollen op de webpagina. De positie kan je aanpassen met de CSS properties left, right, top en bottom.
+                        <br><br>
+                        Met "position: absolute;" wordt een element op de webpagina geplaatst relatief gezien van de parent van het element. Het element wordt dus in het parent element geplaatst. De positie binnen het parent element kan je aanpassen met de CSS properties left, right, top en bottom. Het parent element kan niet "position: static;" hebben.
+                        <br><br>
+                        Met "position: sticky;" wordt een element op dezelfde manier op de webpagina gezet als bij "position: relative;". Het enige verschil is dat het element zich vervolgens gaat gedragen als "position: fixed" als je gaat scrollen. Hiervoor moet je minimaal een van de volgende CSS properties gebruiken, anders werkt het niet: left, right, top en bottom.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    position: relative;
+    left: 20%;
+}
+.cssVoorbeeld
+{
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.cssVoorbeeld
+{
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+.cssVoorbeeld
+{
+    background-color: yellow;
+    position: sticky;
+    top: 0;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>CSS property: float</b></p>
+                    </div>
+                    <p>
+                        Met float kan je een element laten "zweven" aan de linker of rechterkant van het element. Dit kan ervoor zorgen dat tekst of "display: inline;" elementen er rondom uitkomen.
+                        <br><br>
+                        Je hebt "float: left;" en "float: right;" hiervoor die een element aan de linker- of rechterkant laten "zweven".
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-color: blue;
+    float: left;
+}
+.cssVoorbeeld
+{
+    background-color: blue;
+    float: right;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Probeer position en property eens uit!</b></p>
+                    </div>
+                    <p>
+                        Je hebt gelezen over position, float en wat deze properties doen. Probeer ze eens uit om te kijken wat de verschillen zijn. Kan jij ze allemaal aan de praat krijgen? Probeer maar gewoon en kijk eens wat er wel lukt!
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra CSS property: background-image</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu al vaak genoeg geoefend met de property background-color, maar wist je dat je je achtergrond ook een foto kan maken? Dat kan je doen met de property "background-image". Zie het voorbeeld hiernaast hoe het werkt.
+                        <br><br>
+                        Let op: De link naar je bestand kan anders zijn. Let er goed op dat je op de juiste manier naar je bestand verwijst!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.cssVoorbeeld
+{
+    background-image: url("../img/backgroundImage.png"); 
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak de landingspagina van je website!</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu de belangrijkste CSS properties en HTML tags gehad. Je bent al een heel eind op weg! Het is tijd om eens te gaan beginnen met het opzetten van je website. Vergeet niet de succescriteria door te lezen op de homepagina! Probeer maar eens een mooie landingspagina, of homepagina te maken. Hij hoeft nog niet af te zijn, maar ga eens nadenken welke HTML tags en CSS properties je wilt toevoegen.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

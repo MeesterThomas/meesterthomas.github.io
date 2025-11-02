@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 7</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <!--<a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>-->
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 7: Nieuwe webpagina's</b></p><br>
+            <div class="lessonListItem" id="begin">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Nieuwe webpagina's aanmaken</b></p>
+                    </div>
+                    <p>
+                        In deze les ga je alles leren over nieuwe webpagina's en hoe je van de ene naar de andere webpagina gaat. Daarvoor is het wel belangrijk om te weten hoe je een nieuwe webpagina aanmaakt.
+                        <br><br>
+                        Het aanmaken van een nieuwe webpagina is eigenlijk heel simpel, je hebt het namelijk al eens gedaan. Je gaat naar Visual Studio Code, en je klikt op het icoontje met het bestandteken en een plusje. Let erop dat je nieuwe bestand eindigt met ".html".
+                    </p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Terugblik: Bestandsnamen</b></p>
+                    </div>
+                    <p>Voor het maken van een website zal je veel mapjes en bestanden moeten aanmaken. De namen van deze bestanden zijn bijna nooit van belang, maar het is handig om ze een duidelijke naam te geven. Als je dit niet doet, wordt alles namelijk erg onoverzichtelijk, en weet je niet welk bestand voor wat is.</p>
+                </div>
+                <div class="lessonListItemImage">
+                    <img src="../img/Lessen/Les1_Extra1.png" width="35%">
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML tag: &lt;a&gt;</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu meerdere webpagina's gemaakt, maar hoe kom je nou van de ene naar de andere webpagina? Dat doe je met een hyperlink. Deze kan je aanmaken met de &lt;a&gt; tag.
+                        <br><br>
+                        Zie het voorbeeld hiernaast hoe je de &lt;a&gt; tag gebruikt. Tussen &lt;a&gt; en &lt;/a&gt; zet je het element waar je op moet drukken. Dit kan tekst zijn, maar je kan hier ook een afbeelding of een div plaatsen.
+                        <br><br>
+                        Nu heb je misschien een hyperlink, maar hij verwijst nog nergens naartoe. Om dat te doen moet je href="" tussen de haken zetten (zie voorbeeld hiernaast). Tussen de aanhalingstekens kan je de link van een andere website zetten, of je kan het bestandspad van je huidige HTML bestand naar het nieuwe HTML bestand neerzetten.
+                        <br><br>
+                        Tip: Weet je niet goed hoe je een bestandspad moet vermelden of vind je dit nog lastig? Check extra les 1 over bestandspaden!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;a href="index.html"&gt;&lt;img src="img/afbeelding.png"&gt;&lt;/a&gt;
+&lt;a href="meesterthomas.github.io"&gt;Hallo, deze tekst is een hyperlink!&lt;/a&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Verwijzen op dezelfde pagina</b></p>
+                    </div>
+                    <p>
+                        Je kan ook verwijzen naar een element op dezelfde webpagina. Om dit te doen moet je het element waar je naar wilt verwijzen een id geven. Vervolgens zet je bij href de id van het element en daarvoor een hashtag. Zie het voorbeeld hiernaast.
+                        <br><br>
+                        <a href="#begin">Klik hier om naar het begin te gaan!</a>
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;a href="#begin"&gt;Klik hier om naar het begin te gaan!&lt;/a&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Openen in nieuw tabblad</b></p>
+                    </div>
+                    <p>
+                        Als je wilt dat een link wordt geopend in een nieuw tabblad, zodat het huidige tabblad niet verloren gaat, kan dat ook! Daarvoor zet je target="_blank" tussen de haken. Zo simpel is het!
+                        <br><br>
+                        <a href="../index.html" target="_blank">Klik hier om te openen in nieuw tabblad!</a>
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;a href="../index.html" target="_blank"&gt;Klik hier om te openen in nieuw tabblad!&lt;/a&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Linkjes opmaken</b></p>
+                    </div>
+                    <p>
+                        Linkjes kan je niet zo opmaken als andere tekst. Om alle linkjes aan te passen, kan je in CSS de tag a gebruiken om aan te passen hoe een link wordt vormgegeven.
+                        <br><br>
+                        Je kan de a tag op meerdere momenten aanpassen. Zo kan je de normale kleur van de link aanpassen door :link erachter te zetten. Door :visited achter a te zetten, kan je de opmaak van de link aanpassen als de gebruiker de link al een keer heeft bezocht. Je kan zelfs de opmaak veranderen als de gebruiker met de muis over de link zweeft! Dit doe je door :hover erachter te zetten.
+                        <br><br>
+                        Deze verschillende fasen van a kan je ook los van elkaar opmaken. Zie daarvoor het voorbeeld hiernaast.
+                        <br><br>
+                        Tip: Je kan elk element een andere opmaak geven als je eroverheen zweeft met je muis. Hiervoor moet je in CSS :hover toevoegen, net zoals hoe je dat bij het a element doet!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+a
+{
+    text-decoration: none; &lt;!-- Hiermee haal ik de streep onder een linkje weg--&gt;
+}
+a:link
+{
+    color: green;
+}
+a:visited
+{
+    color: red;
+}
+a:hover
+{
+    color: yellow;
+    background-color: blue;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak je nieuwe webpagina's aan en verwijs ernaar!</b></p>
+                    </div>
+                    <p>
+                        Nu weet je hoe je een nieuwe webpagina aan moet maken, en op welke manieren je naar andere webpagina's gaat verwijzen. Bedenk voor jezelf het volgende:
+                        <br>- Hoeveel webpagina's wil je hebben en wat komt er op elke pagina te staan?
+                        <br>- Hoe ga je naar de verschillende webpagina's verwijzen?
+                        <br><br>
+                        Denk over deze punten na, en verwerk ze alvast in je website. Maak de goede webpagina's aan en kijk eens of je ze al mooi kan maken.
+                        <br><br>
+                        Tip: Sommige websites gebruiken een navigatiebalk boven of onder in het scherm of op de webpagina. Deze kan jij ook maken! Bekijk daarvoor extra les 3.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <!--<a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>-->
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
