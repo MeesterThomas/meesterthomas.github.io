@@ -123,7 +123,7 @@ a
     width: 90%;
     min-height: 15%;
     padding: 1%;
-    margin: 0.5% 0px 0.5% 5%;
+    margin: 0.5% 0px 0.5% 4.5%;
     border: 5px solid rgb(177, 11, 11);
     box-sizing: border-box;
     display: flex;
@@ -221,6 +221,125 @@ a
 .lessonCode
 {
     background-color: rgb(34, 34, 34);
+}
+.codebookLink
+{
+    width: 90%;
+    display: block;
+}
+.codebookListItem
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+    min-height: 15%;
+    padding: 1%;
+    margin: 0.5% 0px 0.5% 5%;
+    border: 5px solid rgb(11, 177, 11);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.codebookListItemText
+{
+    color: white;
+    width: 30%;
+    margin: 0.5% 0px;
+}
+.codebookListItemDesc
+{
+    color: white;
+    width: 70%;
+    margin: 0.5% 0px;
+}
+.codebookMenu
+{
+    width: 90%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0.5% 0px;
+    font-size: 32px;
+    position: sticky;
+    top: 0%;
+    left: 4.5%;
+}
+.codebookMenuEx
+{
+    width: 90%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0.5% 0px 0.5% 4.5%;
+    font-size: 32px;
+}
+.codebookMenu a:hover
+{
+    background-color: rgb(70, 70, 70);
+}
+.codebookMenuEx a:hover
+{
+    background-color: rgb(70, 70, 70);
+}
+.codebookMenuItem
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+    border: 5px solid rgb(11, 177, 11);
+    box-sizing: border-box;
+    text-align: center;
+}
+.codebookMenuItemEx
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+    border: 5px solid rgb(11, 177, 11);
+    box-sizing: border-box;
+    text-align: center;
+}
+.cbExample
+{
+    background-color: black;
+    color: white;
+    width: 90%;
+    margin: 0.5% 0px 0.5% 4.5%;
+    border: 5px solid rgb(11, 177, 11);
+    box-sizing: border-box;
+}
+.cbExampleBlock
+{
+    display: flex;
+}
+.cbExampleBlockCodeL
+{
+    width: 50%;
+    border: 5px solid rgb(11, 177, 11);
+    border-left: 0px solid rgb(11, 177, 11);
+    border-right: 2.5px solid rgb(11, 177, 11);
+    border-bottom: 0px solid rgb(11, 177, 11);
+    font-size: 12px;
+}
+.cbExampleBlockCodeR
+{
+    width: 50%;
+    border: 5px solid rgb(11, 177, 11);
+    border-left: 2.5px solid rgb(11, 177, 11);
+    border-right: 0px solid rgb(11, 177, 11);
+    border-bottom: 0px solid rgb(11, 177, 11);
+    font-size: 12px;
+}
+.cbExampleBlockRes
+{
+    width: 50%;
+    border: 5px solid rgb(11, 177, 11);
+    border-left: 2.5px solid rgb(11, 177, 11);
+    border-right: 0px solid rgb(11, 177, 11);
+    border-bottom: 0px solid rgb(11, 177, 11);
+    background-color: white;
+    color: black;
+    font-family: initial;
 }
 .quiz
 {
@@ -507,4 +626,26 @@ meter.gameHPBarRight::-webkit-meter-optimum-value
 {
     width: 60%;
     text-align: left;
+}
+#exampleP
+{
+    color: rgb(11, 11, 177);
+}
+.tekstClass
+{
+    background-color: rgb(255, 146, 146);
+    color: rgb(11, 11, 177);
+}
+#tekstID
+{
+    font-size: 32px;
+}
+.boxModel
+{
+    width: 50%;
+    background-color: blue;
+    border: 3px solid red;
+    border-radius: 5px;
+    padding: 0.5% 5% 2% 1%;
+    margin: 2%;
 }

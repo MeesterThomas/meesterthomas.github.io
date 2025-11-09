@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Codeboek Voorbeelden</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Codeboek Voorbeelden</b></p><br>
+            <div class="cbExample" id="cbEx_0">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>p, h1, h2, h3, h4, h5, h6 en br</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titel van je website&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Dit is normale tekst (p).&lt;/p&gt;
+        &lt;h1&gt;Dit is h1 tekst.&lt;/h1&gt;
+        &lt;h2&gt;Dit is h2 tekst.&lt;/h2&gt;
+        &lt;h3&gt;Dit is h3 tekst.&lt;/h3&gt;
+        &lt;h4&gt;Dit is h4 tekst.&lt;/h4&gt;
+        &lt;h5&gt;Dit is h5 tekst.&lt;/h5&gt;
+        &lt;h6&gt;Dit is h6 tekst.&lt;/h6&gt;
+        &lt;p&gt;Deze tekst gaat door&lt;br&gt;op de volgende regel.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <p>Dit is normale tekst (p).</p>
+                        <h1>Dit is h1 tekst.</h1>
+                        <h2>Dit is h2 tekst.</h2>
+                        <h3>Dit is h3 tekst.</h3>
+                        <h4>Dit is h4 tekst.</h4>
+                        <h5>Dit is h5 tekst.</h5>
+                        <h6>Dit is h6 tekst.</h6>
+                        <p>Deze tekst gaat door<br>op de volgende regel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cbExample" id="cbEx_1">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Opmaak van tags, classes en id's</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titel van je website&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="../css/index.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Deze tag wordt alleen via de tag opgemaakt.&lt;/p&gt;
+        &lt;p class="tekstClass"&gt;Deze tag wordt via de tag en de class opgemaakt.&lt;/p&gt;
+        &lt;p class="tekstClass" id="tekstID"&gt;Deze tag wordt via de tag, class en id opgemaakt.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+p
+{
+    color: rgb(11, 11, 177);
+}
+.tekstClass
+{
+    background-color: rgb(255, 146, 146);
+}
+#tekstID
+{
+    font-size: 32px;
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <p id="exampleP">Deze tag wordt alleen via de tag opgemaakt.</p>
+                        <p class="tekstClass">Deze tag wordt via de tag en de class opgemaakt.</p>
+                        <p class="tekstClass" id="tekstID">Deze tag wordt via de tag, class en id opgemaakt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cbExample" id="cbEx_2">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Het box model</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titel van je website&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="../css/index.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p class="boxModel"&gt;Deze tekst zit in het box model!&lt;/p&gt;
+        &lt;p&gt;Deze tekst zit niet in het box model!&lt;/p&gt;
+        &lt;p&gt;Neem de code over en verander de CSS. Ontdek wat alle properties nou betekenen.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+.boxModel
+{
+    width: 50%;
+    background-color: blue;
+    border: 3px solid red;
+    border-radius: 5px;
+    padding: 0.5% 5% 2% 1%;
+    margin: 2%;
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <p class="boxModel">Deze tekst zit in het box model</p>
+                        <p>Deze tekst zit niet in het box model!</p>
+                        <p>Neem de code over en verander de CSS. Ontdek wat alle properties nou betekenen.</p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="cbExample" id="cbEx_0">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Tag</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titel van je website&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

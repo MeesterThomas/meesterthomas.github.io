@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Extra les 3</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Extra les 3: Navigatiebalk</b></p><br>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Navigatiebalk</b></p>
+                    </div>
+                    <p>
+                        In deze les leer je hoe je een navigatiebalk kan maken voor jouw website. Een navigatiebalk kan erg handig zijn om de bezoekers van je website naar verschillende webpagina's te sturen.
+                        <br><br>
+                        Het is dus wel belangrijk dat je al verschillende webpagina's hebt, anders wordt het lastig om een navigatiebalk te maken!
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 1: Een balk aanmaken</b></p>
+                    </div>
+                    <p>
+                        We beginnen met het aanmaken van een balk waar de elementen in komen te staan. Dit doen we in een div tag in een HTML bestand. Deze div kan je vervolgens overal op je webpagina plaatsen. We geven deze div een class. Ik geef hem de classnaam "navBalk".
+                        <br><br>
+                        Nu we de navBalk in ons HTML bestand hebben, gaan we hem opmaken in CSS. Als eerste wil ik dat de balk de hele breedte van de webpagina inneemt. Dat doe ik met "width: 100%". Ook geef ik hem een achtergrondkleur. Dit wordt voor mij zwart.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;div class="navBalk"&gt;
+&lt;/div&gt;
+
+-------------------------------
+.navBalk
+{
+    width: 100%;
+    background-color: black;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 2: De balk vullen</b></p>
+                    </div>
+                    <p>
+                        Nu is het tijd om de balk te vullen met elementen. Dit kan tekst zijn, of dit kunnen afbeeldingen zijn. Ik raad niet aan om buttons te gebruiken.
+                        <br><br>
+                        Voor mijn voorbeeld gebruik ik tekst, maar het werkt ook met afbeeldingen (gebruik daarvoor de img tag). Elk element van de balk krijgt van mij 1 regel.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;div class="navBalk"&gt;
+    &lt;p&gt;Home&lt;/p&gt;
+    &lt;p&gt;Codeboek&lt;/p&gt;
+    &lt;p&gt;Lessen&lt;/p&gt;
+    &lt;p&gt;Extra Lessen&lt;/p&gt;
+    &lt;p&gt;Games&lt;/p&gt;
+&lt;/div&gt;
+
+-------------------------------
+.navBalk
+{
+    width: 100%;
+    background-color: black;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 3: De elementen opmaken</b></p>
+                    </div>
+                    <p>
+                        Je hebt je elementen nu aangemaakt, nu is het tijd om ze mooi te maken. Hoe je dit doet is natuurlijk aan jezelf, maar ik omschrijf welke stappen ik neem. Het handigst is om een nieuwe class aan te maken voor de elementen. Dit kan dezelfde class zijn. Mijn naam wordt "navBalkElement".
+                        <br><br>
+                        Mijn achtergrond is zwart, dus wil ik mijn tekst wit maken. Dit doe ik met color.
+                        <br><br>
+                        Ik wil mijn elementen naast elkaar hebben, niet onder elkaar. Daarvoor verander ik de "display" property van de balk naar "flex". Dit zorgt ervoor dat alle elementen naast elkaar gepropt worden. Om het netjes te verdelen, gebruik ik de "width" property bij de elementen zodat ze elk 20% van de balk innemen.
+                        <br><br>
+                        Ik wil mijn tekst in het midden van elk element. Daarvoor gebruik ik de property "text-align" bij de elementen van de balk.
+                        <br><br>
+                        Mijn tekst mag nog iets groter worden. Daarvoor gebruik ik de property "font-size".
+                        <br><br>
+                        Tot slot wil ik een rand rondom de elementen. Dit wil ik in de kleur blauw. Dit doe ik met de "border" properties.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;div class="navBalk"&gt;
+    &lt;p class="navBalkElement"&gt;Home&lt;/p&gt;
+    &lt;p class="navBalkElement"&gt;Codeboek&lt;/p&gt;
+    &lt;p class="navBalkElement"&gt;Lessen&lt;/p&gt;
+    &lt;p class="navBalkElement"&gt;Extra Lessen&lt;/p&gt;
+    &lt;p class="navBalkElement"&gt;Games&lt;/p&gt;
+&lt;/div&gt;
+
+-------------------------------
+.navBalk
+{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    display: flex;
+}
+.navBalkElement
+{
+    width: 20%;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: De linkjes maken</b></p>
+                    </div>
+                    <p>
+                        Je navigatiebalk ziet er nu helemaal goed uit, maar hij werkt nog niet. Daar gaan we verandering in brengen!
+                        <br><br>
+                        Met een a tag kan je een link maken naar een andere webpagina. Dat doen we door de a tag om het element heen te zetten. Zie het voorbeeld hiernaast om te kijken wat ik ermee bedoel.
+                        <br><br>
+                        Als we dit doen, kan het zijn dat de opmaak verandert. Om dit te voorkomen, kan je de class toekennen aan de a tag in plaats van de p tag. Als het goed is moet de opmaak verder gewoon blijven kloppen.
+                        <br><br>
+                        Nu ziet mijn opmaak er weer bijna hetzelfde uit, alleen is mijn tekst nu blauw geworden met een streep eronder. Dat komt omdat het een linkje is geworden. Ook weet een gebruiker niet snel of je op de knop kan drukken, aangezien hij niet verandert als je eroverheen beweegt met je muis.
+                        <br><br>
+                        Dit kunnen we allemaal regelen in CSS. Binnen de class "navBalkElement" zet ik de volgende 2 dingen. Met text-decoration kunnen we de streep verwijderen, en met color kunnen we de kleur van de tekst aanpassen.
+                        <br><br>
+                        Tot slot wil ik dus dat de knop verandert van kleur als ik eroverheen beweeg met mijn muis. Hiervoor heb ik een nieuw kopje nodig bij mijn CSS. Een kopje wat alleen activeert als ik eroverheen beweeg. Gelukkig kunnen we dat doen door ":hover" achter een class (of tag of id) te zetten. Bij dit kopje verander ik de "background-color".
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;div class="navBalk"&gt;
+    &lt;a href="https://meesterthomas.github.io/index.html" class="navBalkElement"&gt;&lt;p&gt;Home&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/codeboek.html" class="navBalkElement"&gt;&lt;p&gt;Codeboek&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/lessen.html" class="navBalkElement"&gt;&lt;p&gt;Lessen&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/extralessen.html" class="navBalkElement"&gt;&lt;p&gt;Extra Lessen&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/games.html" class="navBalkElement"&gt;&lt;p&gt;Games&lt;/p&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+-------------------------------
+.navBalk
+{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    display: flex;
+}
+.navBalkElement
+{
+    width: 20%;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    text-decoration: none;
+    color: white;
+}
+.navBalkElement:hover
+{
+    background-color: grey;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 5 (Extra): De balk in beeld houden</b></p>
+                    </div>
+                    <p>
+                        Nu blijft je navigatiebalk op een plaats op de webpagina staan. Als je een lange webpagina hebt, kan het handig zijn als de navigatiebalk mee scrollt.
+                        <br><br>
+                        Dat kunnen we doen door de "position" property van de navBalk class te veranderen naar "sticky". Dit zorgt ervoor dat hij meescrollt. Om dit voor elkaar te krijgen, moeten we wel benoemen waar op het scherm de navigatiebalk moet komen. Dit doe je met de properties "top", "bottom", "left" en "right". Ik wil hem bovenaan, dus zet ik mijn "top" naar 0.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;div class="navBalk"&gt;
+    &lt;a href="https://meesterthomas.github.io/index.html" class="navBalkElement"&gt;&lt;p&gt;Home&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/codeboek.html" class="navBalkElement"&gt;&lt;p&gt;Codeboek&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/lessen.html" class="navBalkElement"&gt;&lt;p&gt;Lessen&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/extralessen.html" class="navBalkElement"&gt;&lt;p&gt;Extra Lessen&lt;/p&gt;&lt;/a&gt;
+    &lt;a href="https://meesterthomas.github.io/games.html" class="navBalkElement"&gt;&lt;p&gt;Games&lt;/p&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+-------------------------------
+.navBalk
+{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    position: sticky;
+    top: 0px;
+}
+.navBalkElement
+{
+    width: 20%;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    text-decoration: none;
+    color: white;
+}
+.navBalkElement:hover
+{
+    background-color: grey;
+}
+                </code></pre>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
