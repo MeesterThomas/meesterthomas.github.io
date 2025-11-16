@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 9</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 9: Programmeren met javascript</b></p><br>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Variabelen</b></p>
+                    </div>
+                    <p>
+                        Variabelen zijn ontzettend belangrijk bij programmeren. Variabelen moet je zien als een soort doosje. In het doosje kan van alles zitten en hoeveel ervan als je maar kan bedenken. Deze doosjes bewaart de computer goed, en je kan altijd kijken wat erin zit en soms aanpassen wat er in het doosje zit.
+                        <br><br>
+                        Dit is ontzettend handig in een function, oftewel een stappenplan. Soms wil je alleen een stap laten uitvoeren als iets zo is. Bijvoorbeeld, misschien wil je een quiz maken met punten. Je geeft natuurlijk alleen punten als het antwoord ook goed is. Je kan dus niet standaard de punten uitdelen, maar alleen als het antwoord goed is.
+                        <br><br>
+                        Deze les gaan jullie aan de slag met variabelen en if, else if en else statements. We beginnen met variabelen, de doosjes. Er zijn twee verschillende soorten doosjes, dus laten we eens kijken.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Javascript code: let en const</b></p>
+                    </div>
+                    <p>
+                        Variabelen werken op een bepaalde manier binnen een script of javascript bestand. Een variabele bestaat namelijk alleen maar binnen de {} haken waarin hij benoemd is. 
+                        <br><br>
+                        Kijk naar het voorbeeld hiernaast. nummer0 wordt benoemd buiten alle {} haken. Dat betekent dat hij bestaat binnen al die {} haken. nummer1  daarentegen, wordt benoemd binnen de {} haken van de function SchrijfNummer(). Buiten deze function bestaat deze variabele dus niet. Daarom geeft voorbeeldTekst3 een error.
+                        <br><br>
+                        Om terug te gaan naar het voorbeeld van de doosjes, laten we zeggen dat een function een kamer is. Het doosje van nummer0 wordt benoemd binnen het bestand, dus binnen het gebouw. Dit doosje staat dus in de berging van het gebouw. Het doosje nummer1 wordt benoemd binnen de kamer SchrijfNummer(). In die kamer staat het doosje dus ook. Dat betekent dat ik niet bij het doosje van nummer1 kan als ik in de kamer van SchrijfNummerOpnieuw() zit.
+                        <br><br>
+                        Variabelen kan je benoemen met let en const. 
+                        <br>- Met const kan je een variabele benoemen die constant is, en die dus niet veranderd hoeft te worden. De waarde van een const variabele kan je namelijk ook niet veranderen.
+                        <br>- Met let kan je andere variabelen benoemen. Deze variabelen kan je later nog eens veranderen. Als je dit doet, moet je let er <b>niet</b> voorzetten.
+                        <br><br>
+                        Variabelen kunnen ook meerdere soorten waardes hebben. Denk hierbij aan wat er in het doosje zit. Dit zijn de 3 belangrijkste:
+                        <br>- Een "string" oftewel een stuk tekst. Dit kan zo lang of kort zijn als je maar wilt. <b>Let op:</b> een string zet je altijd tussen ""!
+                        <br>- Een nummer. Deze spreekt voor zich. Met nummers kan je de computer laten rekenen. <b>Let op:</b> als je nummers met decimale getallen gebruikt, moet je een . gebruiken in plaats van een ,!
+                        <br>- Een bool (of boolean). Dit is een variabele die true (goed) is, of false (fout). 
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let nummer0 = 0;
+
+function SchrijfNummer()
+{
+    let nummer1 = 1;
+    document.getElementById("voorbeeldTekst0").innerHTML = nummer0;
+    document.getElementById("voorbeeldTekst1").innerHTML = nummer1;
+    SchrijfNummerOpnieuw();
+}
+
+function SchrijfNummerOpnieuw()
+{
+    document.getElementById("voorbeeldTekst2").innerHTML = nummer0;
+    document.getElementById("voorbeeldTekst3").innerHTML = nummer1;
+}
+
+//voorbeeldTekst0 = 0
+//voorbeeldTekst1 = 1
+//voorbeeldTekst2 = 0
+//voorbeeldTekst3 = error: bestaat niet!
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Variabelen toekennen</b></p>
+                    </div>
+                    <p>
+                        Variabelen hebben een bepaalde waarde. Denk aan wat er in die doosjes zit. Deze waarde kan je veranderen. Hiervoor heb je bepaalde manieren.
+                        <br>- =: Met = zeg je de waarde van een variabele. De nieuwe waarde vervangt de oude waarde.
+                        <br>- +=: Hiermee gebruik je de oude waarde, en tel je er een bepaald getal bij op. 
+                        <br>- -=: Hiermee gebruik je de oude waarde, en haal je er een bepaald getal vanaf.
+                        <br>- *=: Hiermee gebruik je de oude waarde, en vermenigvuldig je het met een bepaald getal.
+                        <br>- /=: Hiermee gebruik je de oude waarde, en deel je het door een bepaald getal.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let nummer0 = 0;
+nummer0 = 1;
+nummer0 += 2;
+nummer0 -= 2;
+nummer0 *= 1;
+nummer0 /= 1;
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak een "cookie clicker game"</b></p>
+                    </div>
+                    <p>
+                        Maak een cookie clicker game met de informatie uit les 8 en de informatie die je nu hebt gehad. Hiervoor heb je een knop nodig, en een tekst element als score. In je javascript heb je een variabele nodig voor je score. Elke keer als je op de knop drukt, moet de score 1 omhoog gaan, en moet de score geüpdated worden.
+                        <br><br>
+                        <i>Opdracht gemaakt of kom je er niet uit? Bekijk het voorbeeld hieronder!</i>
+                    </p>
+                </div>
+            </div>
+            <div class="codebookMenuEx">
+                <a href="../codeboek/voorbeelden.html#cbEx_7" class="codebookMenuItemEx">Voorbeeld van de opdracht</a>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Javascript code: if, else if en else</b></p>
+                    </div>
+                    <p>
+                        Met de if, else if of else statements kan je ervoor zorgen dat maar een deel van een stappenplan wordt gevolgd. Hiernaast zie je een voorbeeld hoe deze statements in je code komen te staan.
+                        <br><br>
+                        Als je een stukje code alleen wilt laten lezen bij een bepaalde voorwaarde, gebruik je if. 
+                        <br><br>
+                        Als je if hebt gebruikt, is het mogelijk dat een deel van je code wordt overgeslagen als de voorwaarde niet klopt. Als je een stuk code alleen wilt laten uitvoeren onder een andere voorwaarde, maar alleen als de eerste if wordt overgeslagen, dan gebruik je else if.
+                        <br><br>
+                        Zolang je if of else if statements gebruikt, zal er altijd de mogelijkheid zijn dat geen van de voorwaarde kloppen. Als je dan toch wilt dat er code wordt uitgevoerd, kan je een else statement gebruiken.
+                        <br><br>
+                        Je kan altijd if statements gebruiken wanneer je wilt. Je hebt wel eerst een if statement nodig voordat je een else if statement gebruikt. Als er een if statement is, kan je zoveel else if statements maken als je wil. Voor een else statement is een if statement eerst nodig, maar een else if statement is daar niet voor nodig.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+if (nummer0 == 0)
+{
+    nummer0 = 1;
+}
+else if (nummer0 == 1)
+{
+    nummer0 = 2;
+}
+else if (nummer0 == 2)
+{
+    nummer0 = 3;
+}
+else
+{
+    nummer0 = 0;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Operators</b></p>
+                    </div>
+                    <p>
+                        We zijn er bijna doorheen! We hebben geleerd hoe if, else if en else statements werken, maar nu moeten we die statements nog invullen. Dat doen we met operators. Dat klinkt ingewikkeld, maar is eigenlijk heel simpel. Een operator geeft aan wat de relatie moet zijn tussen 2 variabelen.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Javascript code: ==, !=, &lt;, &lt;=, &gt;, &gt;=, &&, ||</b></p>
+                    </div>
+                    <p>
+                        ==: Hiermee geef je aan dat de waardes aan beide kanten precies hetzelfde moet zijn.
+                        <br>!=: Hiermee geef je aan dat de waardes aan beide kanten juist niet hetzelfde mogen zijn.
+                        <br>&lt;: Hiermee geef je aan dat de waarde rechts groter moet zijn dan de waarde links.
+                        <br>&lt;=: Hiermee geef je aan dat de waarde rechts groter dan of hetzelfde moet zijn als de waarde links.
+                        <br>&lt;: Hiermee geef je aan dat de waarde links groter moet zijn dan de waarde rechts.
+                        <br>&lt;=: Hiermee geef je aan dat de waarde links groter dan of hetzelfde moet zijn als de waarde rechts.
+                        <br><br>
+                        Je kan ook meerdere voorwaardes stellen. Daarvoor kan je de volgende gebruiken.
+                        <br>&&: De voorwaarde hiervoor en hierna moeten allebei kloppen.
+                        <br>||: De voorwaarde hiervoor of hierna moet kloppen. Het mag ook allebei kloppen.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+if (x == y)
+if (x != y)
+if (x &lt; y)
+if (x &lt;= y)
+if (x &gt; y)
+if (x &gt;= y)
+if (x == y && a == z)
+if (x == y || a == z)
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Maak je cookie clicker game af</b></p>
+                    </div>
+                    <p>
+                        Je hebt eerder een cookie clicker game gemaakt. Nu is het tijd om hem af en mooi te maken! Doe dat op je eigen manier. Je kan hem mooi maken met CSS. Kijk ook eens of je je javascript code kan uitbereiden. Misschien kan hij vanaf een score van 50 met stappen van 10 tellen? Wees creatief!
+                    </p>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

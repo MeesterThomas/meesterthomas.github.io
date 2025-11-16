@@ -19,7 +19,7 @@
             <div class="codebookMenu">
                 <a href="#codebookHTML" class="codebookMenuItem">HTML</a>
                 <a href="#codebookCSS" class="codebookMenuItem">CSS</a>
-                <!--<a href="#codebookJS" class="codebookMenuItem">Javascript</a>-->
+                <a href="#codebookJS" class="codebookMenuItem">Javascript</a>
             </div>
             <div class="codebookMenuEx">
                 <a href="codeboek/voorbeelden.html" class="codebookMenuItemEx">Voorbeelden</a>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="codebookListItemDesc">
                     <p>
-                        Hierin zitten alle tags voor je webspagina.
+                        Hierin zitten alle tags voor je webpagina.
                         <br><i>Deze tag komt aan bod in les 1.</i>
                     </p>
                     <pre class="lessonCode"><code>&lt;html lang="en"&gt;
@@ -81,6 +81,20 @@
                         <br><i>Deze tag komt aan bod in les 4.</i>
                     </p>
                     <pre class="lessonCode"><code>&lt;link rel="stylesheet" href="css/styles.css"&gt;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/8.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>&lt;script&gt;</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee link je een javascript bestand. Gebruik hiervoor het juiste bestandspad. Dit zet je in de head van je webpagina.
+                        <br><i>Deze tag komt aan bod in les 8.</i>
+                    </p>
+                    <pre class="lessonCode"><code>&lt;script src="js/script.js"&gt;&lt;/script&gt;</code></pre>
                 </div>
             </div></a>
             <a href="lessen/1.html" class="codebookLink"><div class="codebookListItem">
@@ -384,6 +398,35 @@
 &lt;a href="#beginID"&gt;Dit is een link het id "beginID" op deze pagina.&lt;/a&gt;</code></pre>
                 </div>
             </div></a>
+            <a href="lessen/8.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>&lt;button&gt;</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Met deze tag kan je een knop aanmaken voor op je webpagina. Door onclick="" te gebruiken, kan je een javascript function gebruiken die wordt uitgevoerd als je op de knop drukt.
+                        <br><i>Deze tag komt aan bod in les 8.</i>
+                    </p>
+                    <pre class="lessonCode"><code>&lt;button onclick="function()"&gt;Tekst op de knop&lt;/button&gt;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/8.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>&lt;input&gt;</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Met deze tag kan je een link aanmaken naar een andere pagina, of een id op dezelfde pagina. Door target="_blank" toe te voegen tussen de haken, wordt de nieuwe webpagina in een nieuw tabblad geopend.
+                        <br><i>Deze tag komt aan bod in les 8.</i>
+                    </p>
+                    <pre class="lessonCode"><code>&lt;a href="https://meesterthomas.github.io/lessen/7.html" target="_blank"&gt;Dit is een link naar les 7.&lt;/a&gt;
+&lt;a href="#beginID"&gt;Dit is een link het id "beginID" op deze pagina.&lt;/a&gt;</code></pre>
+                </div>
+            </div></a>
             <p style="color: black; font-size: 32px; margin: 1%;text-align: center;" id="codebookCSS"><b>CSS</b></p><br>
             <a href="lessen/4.html" class="codebookLink"><div class="codebookListItem">
                 <div class="codebookListItemText">
@@ -636,7 +679,139 @@ margin-left: 8px;</code></pre>
                     <pre class="lessonCode"><code>text-align: center;</code></pre>
                 </div>
             </div></a>
-            <!--<p style="color: black; font-size: 32px; margin: 1%;text-align: center;" id="codebookJS"><b>Javascript</b></p><br>-->
+            <a href="lessen/6.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>display</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je aangeven hoe je element op je webpagina komt te staan. Visual Studio Code geeft je meerdere opties om dit te doen. Block betekent dat een element een hele regel in beslag neemt. Inline betekent dat een element alleen de ruimte inneemt die hij nodig heeft, dus niet gelijk een hele regel. Flex betekent dat hij een hele regel in beslag neemt, en dat alle kindelementen binnen die regel worden gepropt, ongeacht hoeveel ruimte ze nodig hebben.
+                        <br><i>Deze property komt aan bod in les 6.</i>
+                    </p>
+                    <pre class="lessonCode"><code>display: flex;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/6.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>justify-content</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je de horizontale positie aangeven van een kindelement van een "display: flex" element. Je kan de positie aanpassen naar "left" (links), "right" (rechts) of "center" (midden).
+                        <br><i>Deze property komt aan bod in les 6.</i>
+                    </p>
+                    <pre class="lessonCode"><code>justify-content: center;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/6.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>align-items</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je de verticale positie aangeven van een kindelement van een "display: flex" element. Je kan de positie aanpassen naar "start" (boven), "end" (onder) of "center" (midden).
+                        <br><i>Deze property komt aan bod in les 6.</i>
+                    </p>
+                    <pre class="lessonCode"><code>align-items: center;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/6.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>position</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je de positie van een element bepalen. Visual Studio Code geeft je meerdere opties om dit te doen. Lees wat de verschillende opties doen in les 6.
+                        <br><i>Deze property komt aan bod in les 6.</i>
+                    </p>
+                    <pre class="lessonCode"><code>position: sticky;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/6.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>float</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je een element aan een kant laten "zweven". Dit betekent dat andere elementen om dit element heen worden weergegeven. Dit kan je doen met "left" (links) of "right" (rechts).
+                        <br><i>Deze property komt aan bod in les 6.</i>
+                    </p>
+                    <pre class="lessonCode"><code>float: right;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/6.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>background-image</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je de achtergrond een afbeelding maken. Dit kan je doen door te verwijzen naar een bestand op je Chromebook, of een bestand online.
+                        <br><i>Deze property komt aan bod in les 6.</i>
+                    </p>
+                    <pre class="lessonCode"><code>background-image: url("../img/backgroundImage.png");</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/7.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>:link</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je een niet-bezochte link opmaken. Dit stuk zet je dan achter een tag, class of id in CSS.
+                        <br><i>Dit komt aan bod in les 7.</i>
+                    </p>
+                    <pre class="lessonCode"><code>a:link
+{
+}</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/7.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>:visited</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je een bezochte link opmaken. Dit stuk zet je dan achter een tag, class of id in CSS.
+                        <br><i>Dit komt aan bod in les 7.</i>
+                    </p>
+                    <pre class="lessonCode"><code>a:visited
+{
+}</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/7.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>:hover</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee kan je een element opmaken als je eroverheen beweegt met je muis. Dit stuk zet je dan achter een tag, class of id in CSS.
+                        <br><i>Dit komt aan bod in les 7.</i>
+                    </p>
+                    <pre class="lessonCode"><code>a:hover
+{
+}</code></pre>
+                </div>
+            </div></a>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;" id="codebookJS"><b>Javascript</b></p><br>
         </div>
         <footer class="footer">
             <div class="footerNavBar">

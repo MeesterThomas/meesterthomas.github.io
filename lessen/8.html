@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Les 8</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Les 8: Introductie javascript</b></p><br>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Programmeren met javascript</b></p>
+                    </div>
+                    <p>
+                        In deze les ga je leren hoe je kan programmeren met javascript. Javascript is een programmeertaal die wij gaan gebruiken bij het maken van een website.
+                        <br><br>
+                        Net zoals bij CSS, gaan we de javascript code in een apart bestand zetten. Dit wordt een javascript bestand. Het is handig om een apart mapje aan te maken voor je javascript bestanden (vaak genaamd "js"). Vaak wordt een javascript bestand script.js genoemd.
+                        <br><br>
+                        Nu je een javascript bestand hebt, moet je deze nog linken aan je HTML bestand(en). Dit doe je met een script tag, net zoals hiernaast is aangegeven. Het stukje "js/script.js" kan je vervangen door het juiste bestandspad.
+                        <br><br>
+                        Tip: Weet je niet goed hoe je een bestandspad moet vermelden of vind je dit nog lastig? Check extra les 1 over bestandspaden!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;head&gt;
+    &lt;title&gt;Titel van je website&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt; 
+    &lt;script src="js/script.js"&gt;&lt;script&gt; &lt;!--Deze regel voeg je toe--&gt;
+&lt;/head&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Wat is programmeren?</b></p>
+                    </div>
+                    <p>
+                        Bij programmeren geef je de computer een stappenplan om uit te voeren. Dit stappenplan schrijf je in Javascript. In deze les ga je vooral leren hoe je de computer bepaalde taken uit kan laten voeren. Dit is de simpelste versie van programmeren. We beginnen met het ervoor zorgen dat de computer een stappenplan gaat volgen als er op een knop wordt gedrukt.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML tag: &lt;button&gt;</b></p>
+                    </div>
+                    <p>
+                        Deze HTML tag staat voor een knop op je webpagina. Van zichzelf doet de knop nog niks, maar daar kan je met Javascript aanpassen.
+                        <br><br>
+                        De tekst binnen een button tag staat voor de tekst die op de knop komt te staan. Met CSS kan je het uiterlijk van de button verder aanpassen. Dit heb je al eerder geleerd.
+                        <br><br>
+                        Tussen de haakjes kan je ook een "onclick" element toevoegen. Deze hebben we later nodig om de knop iets te laten doen als je erop klikt.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;button onclick=""&gt;Deze tekst komt op de knop te staan!&lt;/button&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Javascript code: function</b></p>
+                    </div>
+                    <p>
+                        Javascript code is opgebouwd uit een heleboel verschillende functions. Je moet een function zien als een stappenplan wat kan worden uitgevoerd. Je kan meerdere functions of stappenplannen in een javascript bestand.
+                        <br><br>
+                        Om een function te beginnen in javascript, schrijf je function met daarachter de naam van de function. Deze naam mag je zelf verzinnen, maar probeer een duidelijke naam te kiezen die vertelt wat de function doet. De naam van de function sluit je altijd af met (). Later leer je dat je hier wat in kan zetten, maar voor nu is dat niet belangrijk.
+                        <br><br>
+                        Als je die regel hebt, ga je naar de volgende regel met enter, en gebruik je een {. Hiermee open je de function. Je sluit de function weer af met }. Hiertussen komt het stappenplan te staan.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+function DrukKnop()
+{
+    ;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: haakjes</b></p>
+                    </div>
+                    <p>
+                        Je zult veel verschillende haakjes moeten gebruiken bij javascript. Allemaal hebben ze een andere functie. Wel is het belangrijk dat je een haakje altijd ook weer afsluit.
+                        <br><br>
+                        (): Deze gebruik je voor de variabele van een function, of bij een if, else if of else statement. Hierover leren jullie meer in les 9.
+                        <br><br>
+                        {}: Deze gebruik de code tussen functions, of de code in een if, else if of else statement. Over het tweede leren jullie meer in les 9.
+                        <br><br>
+                        []: Deze gebruik je bij arrays. Hierover leren jullie meer in les 10.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Javascript code: document.getElementById()</b></p>
+                    </div>
+                    <p>
+                        Met function hebben we een stappenplan aangemaakt, maar welke stappen kunnen we nou eigenlijk meegeven? Er zijn heel veel stappen om mee te geven, maar laten we beginnen met het veranderen van een ander element op de webpagina.
+                        <br><br>
+                        Om een element te veranderen, moet de computer eerst weten welk element dat is. Daarvoor gebruiken we "document.getElementById()". Hiermee kunnen we een element van de webpagina te pakken krijgen met een bepaalde id. Tussen de haakjes zet je tussen "" de naam van het id.
+                        <br><br>
+                        <i>Weet je niet meer hoe je een element een id moet geven? Dit staat uitgelegd in les 4.</i>
+                        <br><br>
+                        We hebben nu het element wat we gaan veranderen, maar de computer moet nog wel weten wat we eraan moeten veranderen. Dat komt nu aan bod! Er zijn een aantal opties.
+                        <br><br>- Je kan de tekst veranderen. Hiervoor gebruik je ".innerHTML". Vervolgens kan je met = aangeven wat de tekst moet worden (vergeet de tekst niet tussen "" te zetten!). De innerHTML verandert het stuk binnen de begin en eindtags van het element.
+                        <br><br>- Je kan de CSS van de tekst veranderen. Hiervoor gebruik je ".style." en vervolgens de CSS property die je wilt veranderen. Na de = geef je de nieuwe toestand van de property aan (vergeet de toestand niet tussen "" te zetten!).
+                        <br><br>
+                        <b>Belangrijk:</b> Sluit een opdracht zoals deze in javascript <s>altijd</s> af met een puntkomma (;)!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+function DrukKnop()
+{
+    document.getElementById("veranderTekst").innerHTML = "De tekst is veranderd!";
+    document.getElementById("veranderTekst").style.color = "rgb(11, 11, 177)";
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Probeer eens een tekst element te veranderen</b></p>
+                    </div>
+                    <p>
+                        Je hebt nu geleerd hoe je een element kan veranderen door op een knop te drukken. Probeer het eens uit! Lukt het jou om een p tag van kleur te veranderen of om andere tekst neer te zetten?
+                        <br><br>
+                        <i>Opdracht gemaakt of kom je er niet uit? Bekijk het voorbeeld hieronder!</i>
+                    </p>
+                </div>
+            </div>
+            <div class="codebookMenuEx">
+                <a href="../codeboek/voorbeelden.html#cbEx_6" class="codebookMenuItemEx">Voorbeeld van de opdracht</a>
+            </div>
+            <div class="lessonListItem">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>HTML tag: &lt;input&gt;</b></p>
+                    </div>
+                    <p>
+                        Misschien wil je dat de gebruiker van je website informatie moet invullen. Dit kan met de input tag. <b>Deze tag heeft geen eindtag</b>. Deze tag kan een heleboel verschillende vormen aannemen. Dit wordt geregeld met type="" tussen de haakjes. Hieronder staan een aantal voorbeelden.
+                        <br><br>
+                        type="text": Hier kan de gebruiker tekst schrijven en invullen. Met minLength="" en maxLength="" kan je het minimaal en maximaal aantal tekens bepalen.
+                        <br><br>
+                        type="checkbox": Dit geeft een checkbox. De gebruiker kan de checkbox waar of niet waar maken door erop te klikken.
+                        <br><br>
+                        type="number": Dit geeft een veld waar de gebruiker een nummer in kan toetsen. Letters en andere symbolen zijn niet toegestaan. met min="" en max="" kan je het minimum en maximum getal kiezen.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;input type="text" minLength="1" maxLength="10"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="text" min="0" max="100"&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemTask">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Opdracht: Verander tekst in de ingevoerde tekst</b></p>
+                    </div>
+                    <p>
+                        Je weet nu hoe je tekst moet veranderen door op een knop te drukken. Ook weet je hoe je een tekstbox kan maken. Nu gaan we die twee dingen combineren! Hoe kan je ervoor zorgen dat de tekst op de webpagina verandert naar de ingevoerde tekst? Gebruik het voorbeeld hiernaast. Zou jij ook nog de kleur kunnen veranderen?
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;input id="invoerTekst" type="text" minLength="1" maxLength="10"&gt;
+&lt;button onclick="DrukKnopTekst"&gt;Verander tekst!&lt;/button&gt;
+&lt;p id="veranderTekst"&gt;Dit is normale tekst.&lt;/p&gt;
+
+-------------------------------
+
+function DrukKnopTekst()
+{
+    document.getElementById("veranderTekst").innerHTML = document.getElementById("invoerTekst").value;
+}
+                </code></pre>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

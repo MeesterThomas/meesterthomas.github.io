@@ -37,10 +37,10 @@ const questions = [
 ]
 const maxPerCategorie = 2;
 const maxVragen = 14;
-var questionList;
-var score = [0, 0, 0, 0, 0, 0, 0, 0]
-var questionCount = [0, 0, 0, 0, 0, 0, 0, 0];
-var currentQuestion = 0;
+let questionList;
+let score = [0, 0, 0, 0, 0, 0, 0, 0]
+let questionCount = [0, 0, 0, 0, 0, 0, 0, 0];
+let currentQuestion = 0;
 
 function StartQuiz()
 {
@@ -118,7 +118,6 @@ function GetQuestion()
 }
 function AnswerQuestion(buttonNumber)
 {
-    console.log(document.getElementById("quizForm").value);
     if (document.getElementById("quizButton" + buttonNumber).innerHTML == questionList[currentQuestion][5] || CheckAnswer(questionList[currentQuestion][5]) == true)
     {
         score[0] += parseInt(questionList[currentQuestion][3]);
