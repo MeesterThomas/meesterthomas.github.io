@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Website Maken -> Quiz</title>
+        <title>Website Maken -> Boter, kaas en eieren</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/index.css">
-        <script src="../js/quiz.js"></script>
+        <script src="../js/boterkaaseieren.js"></script>
     </head>
     <body class="background">
         <div class="navBar">
@@ -15,42 +15,35 @@
             <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
         </div>
         <div class="gameBG">
+            <p id="BKEText" style="font-size: 32px;text-align: center;display: block;"><b>Kies hoe je wilt spelen:</b></p>
             <div class="gameContent">
-                <div class="quiz">
-                    <button class="gameButtonStart" id="quizButtonStart" onclick="StartQuiz()">Start Quiz!</button>
-                    <p id="quizVraag" font-size="20px" style="text-align: center;display: none;"><b>Quizvraag</b></p>
-                    <br><input type="text" size="25" name="name" class="quizForm" id="quizForm" style="display: none;">
-                    <br><button class="quizButton" id="quizButton0" onclick="AnswerQuestion('0')" style="display: none;">Verstuur antwoord</button>
-                    <br><button class="quizButton" id="quizButton1" onclick="AnswerQuestion('1')" style="display: none;">Antwoord 1</button>
-                    <br><button class="quizButton" id="quizButton2" onclick="AnswerQuestion('2')" style="display: none;">Antwoord 2</button>
-                    <br><button class="quizButton" id="quizButton3" onclick="AnswerQuestion('3')" style="display: none;">Antwoord 3</button>
-                    <br><button class="quizButton" id="quizButton4" onclick="AnswerQuestion('4')" style="display: none;">Antwoord 4</button>
+                <div class="gameOption">
+                    <button class="gameOptionQ" id="gameOptionBKE0" onclick="StartBKE(0)">Tegen de computer</button>
+                    <button class="gameOptionQ" id="gameOptionBKE1" onclick="StartBKE(1)">Tegen iemand naast je</button>
                 </div>
-                <div class="quizScore">
-                    <div class="quizScoreItem" style="border-color: white;">
-                        <p class="quizScoreItemText" id="totaalScore">Totaal: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(177, 11, 11);">
-                        <p class="quizScoreItemText" id="rekenenScore">Rekenen: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(251, 251, 72);">
-                        <p class="quizScoreItemText" id="taalScore">Taal: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(140, 28, 136);">
-                        <p class="quizScoreItemText" id="geschiedenisScore">Geschiedenis: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(246, 132, 51);">
-                        <p class="quizScoreItemText" id="aardrijkskundeScore">Aardrijkskunde: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(11, 177, 11);">
-                        <p class="quizScoreItemText" id="natuurScore">Natuur: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(11, 11, 177);">
-                        <p class="quizScoreItemText" id="coderenScore">Coderen: 0/0</p>
-                    </div>
-                    <div class="quizScoreItem" style="border-color: rgb(251, 72, 224);">
-                        <p class="quizScoreItemText" id="algemeenScore">Algemeen: 0/0</p>
-                    </div>
+            </div>
+            <div class="gameContent">
+                <button class="gameOptionQ" id="gameResetBKE" onclick="ResetBKE()" style="display: none;">Reset</button>
+            </div>
+            <div class="gameContent">
+                <div class="BKEGameRow" id="BKEGameRow0">
+                    <button class="BKEGameButton" id="BKEGameButton0" onclick="BKEGameButton(0)"></button>
+                    <button class="BKEGameButton" id="BKEGameButton1" onclick="BKEGameButton(1)"></button>
+                    <button class="BKEGameButton" id="BKEGameButton2" onclick="BKEGameButton(2)"></button>
+                </div>
+            </div>
+            <div class="gameContent">
+                <div class="BKEGameRow" id="BKEGameRow1">
+                    <button class="BKEGameButton" id="BKEGameButton3" onclick="BKEGameButton(3)"></button>
+                    <button class="BKEGameButton" id="BKEGameButton4" onclick="BKEGameButton(4)"></button>
+                    <button class="BKEGameButton" id="BKEGameButton5" onclick="BKEGameButton(5)"></button>
+                </div>
+            </div>
+            <div class="gameContent">
+                <div class="BKEGameRow" id="BKEGameRow2">
+                    <button class="BKEGameButton" id="BKEGameButton6" onclick="BKEGameButton(6)"></button>
+                    <button class="BKEGameButton" id="BKEGameButton7" onclick="BKEGameButton(7)"></button>
+                    <button class="BKEGameButton" id="BKEGameButton8" onclick="BKEGameButton(8)"></button>
                 </div>
             </div>
         </div>
