@@ -38,7 +38,7 @@ const questions = [
 const maxPerCategorie = 2;
 const maxVragen = 14;
 let questionList;
-let score = [0, 0, 0, 0, 0, 0, 0, 0]
+let score = [0, 0, 0, 0, 0, 0, 0, 0];
 let questionCount = [0, 0, 0, 0, 0, 0, 0, 0];
 let currentQuestion = 0;
 

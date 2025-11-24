@@ -22,15 +22,9 @@
                         <p font-size="20px"><b>Nieuwe javascript code</b></p>
                     </div>
                     <p>
-                        .
+                        In deze les krijg je meer te weten over hoe je javascript in kan zetten. De voorbeelden in deze les zijn soms wat specifieker of ingewikkelder dan die in les 9. Wel kunnen ze heel goed helpen om voor elkaar te krijgen wat je op je website wilt.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
-                <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
-                </code></pre>
             </div>
             <div class="lessonListItem">
                 <div class="lessonListItemText">
@@ -38,15 +32,35 @@
                         <p font-size="20px"><b>Javascript code: return</b></p>
                     </div>
                     <p>
-                        .
+                        Als je wilt dat de rest van de code in je function niet wordt uitgevoerd (bijvoorbeeld bij een if statement), dan kan je return gebruiken. Met return stop je de function.
+                        <br><br>
+                        Je kan ook een function aanmaken om informatie te krijgen. Een function die een stuk tekst terug geeft bijvoorbeeld. Als je zo'n function wilt gebruiken, moet je de function eindigen met een return, gevolgd door de informatie die je terug wilt krijgen. Een voorbeeld hiervan is in het codeboek te zien.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+let teller = 0;
+
+function ZingKnop()
+{
+    teller += 1;
+    if (teller >= 5)
+        return; //De function stopt hier als het lied al voorbij is.
+    document.getElementById("scoreTekst").innerHTML = KrijgLiedTekst();
+}
+
+function KrijgLiedTekst() //Deze function geeft tekst terug bij return.
+{
+    if (teller == 1 || teller == 2 || teller = 4)
+        return "Hoofd, schouders, knie en teen, knie en teen!";
+    else if (teller == 3)
+        return "Oren, ogen, puntje van je neus!";
+    else
+        return "";
+}
                 </code></pre>
+            </div>
+            <div class="codebookMenuEx">
+                <a href="../codeboek/voorbeelden.html#cbEx_8" class="codebookMenuItemEx">Voorbeeld van return</a>
             </div>
             <div class="lessonListItem">
                 <div class="lessonListItemText">
@@ -54,14 +68,27 @@
                         <p font-size="20px"><b>Javascript code: array</b></p>
                     </div>
                     <p>
-                        .
+                        Je weet inmiddels wat variabelen zijn. Soms wil je misschien meerdere variabelen in een lijst hebben staan, bijvoorbeeld een lijst met quizvragen. Hiervoor kan je een array gebruiken.
+                        <br><br>
+                        Een array is eigenlijk gewoon een lijst van variabelen. Zie het voorbeeld hiernaast hoe je de variabele uit een array moet veranderen.
+                        <br><br>
+                        - Wil je weten hoe lang een array is? Gebruik dan arrayNaam.length.
+                        <br>- Wil je een nieuwe variabele toevoegen aan het einde van de array? Gebruik dan arrayNaam.push(waardeVanNieuweVariabele).
+                        <br>- Wil je een variabele uit een array verwijderen? Gebruik arrayNaam.pop() als je de laatste variabele wilt verwijderen, en arrayNaam.shift() als je de eerste variabele wilt verwijderen.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+let score = [0, 2];
+
+function Doelpunt(team)
+{
+    document.getElementById("team0Score").innerHTML = score[0]; //"0"
+    document.getElementById("team1Score").innerHTML = score[1]; //"2"
+    if (team == 0)
+        score[0] += 1;
+    if (team == 1)
+        score[1] += 1;
+}
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -70,15 +97,11 @@
                         <p font-size="20px"><b>Loops</b></p>
                     </div>
                     <p>
-                        .
+                        Loops kunnen handig zijn om bepaalde code meerdere keren te herhalen. Hiervoor kan je ook een bepaalde variabele elke keer veranderen. Loops kunnen lastig zijn om te begrijpen, dus lees goed waar je elke loop voor kunt gebruiken.
+                        <br><br>
+                        Als loops niet goed worden toegepast, kan een bepaald stukje code oneindig vaak worden herhaald, wat ertoe leidt dat je Chromebook vastloopt. Check je code bij een loop dus altijd extra goed! Mocht je Chromebook vastlopen, sluit dan het tabblad van je webpagina. Als dat niet gaat, moet je je Chromebook opnieuw opstarten.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
-                <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
-                </code></pre>
             </div>
             <div class="lessonListItem">
                 <div class="lessonListItemText">
@@ -86,14 +109,17 @@
                         <p font-size="20px"><b>Javascript code: loops met while</b></p>
                     </div>
                     <p>
-                        .
+                        Een while loop loopt door zijn code heen zolang een bepaalde voorwaarde waar is. Eigenlijk werkt het hetzelfde als een if statement, maar dan loopt hij door zijn code heen.
+                        <br><br>
+                        Een while loop eindigt niet uit zichzelf. Het is belangrijk dat je dit zelf in de loop verwerkt. Misschien door een teller omhoog te laten gaan als de code wordt doorlopen.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+while (nummer &lt;= 10)
+{
+    CodeOmUitTeVoeren();
+    nummer += 1;
+}
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -102,47 +128,56 @@
                         <p font-size="20px"><b>Javascript code: loops met for</b></p>
                     </div>
                     <p>
-                        .
+                        Een for loop is al iets veiliger dan een while loop, maar heeft meer regels om rekening mee te houden.
+                        <br><br>
+                        Een for loop heeft zelf een ingebouwde teller die je benoemt aan het begin van de loop. Tussen de haakjes komen 3 onderdelen te staan. De onderdelen worden gescheiden door een ;. 
+                        <br>- Bij het eerste onderdeel wordt een nieuwe variabele als teller benoemd. In het voorbeeld is dat i.
+                        <br>- Bij het tweede onderdeel wordt aangegeven hoelang de loop door blijft gaan. In het voorbeeld is dat zolang de teller i onder de lengte van de array blijft.
+                        <br>- Bij het derde onderdeel wordt aangegeven wat er gebeurt na 1 loop. In het voorbeeld komt er 1 bij de teller i erbij. Op die manier gaat de loop dus niet oneindig door.
+                        <br><br>
+                        Vaak wordt een for loop gebruikt op de manier van het voorbeeld hiernaast. 
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+for (let i = 0; i &lt; array.length; i++) 
+{
+    CodeOmUitTeVoeren();
+}
                 </code></pre>
             </div>
             <div class="lessonListItem">
                 <div class="lessonListItemText">
                     <div class="lessonListItemTextHeader">
-                        <p font-size="20px"><b>Javascript code: loops met foreach</b></p>
+                        <p font-size="20px"><b>Javascript code: loops met forEach</b></p>
                     </div>
                     <p>
-                        .
+                        Een forEach loop kan alleen gebruikt worden bij een array. Deze loop loopt namelijk door alle elementen van een array. Je zal dus ook niet zo snel problemen krijgen omdat de computer oneindig vaak loopt.
+                        <br><br>
+                        Je ziet in het voorbeeld hiernaast hoe je een forEach loop aangeeft. Het stukje array moet je vervangen met de naam van de array. Het stukje element kan je zelf een naam geven. Dit wordt de variabele van het huidige element van de array.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+array.forEach(element => 
+{
+    CodeOmUitTeVoeren();
+});
                 </code></pre>
             </div>
-            <div class="lessonListItem">
+            <div class="codebookMenuEx">
+                <a href="../codeboek/voorbeelden.html#cbEx_9" class="codebookMenuItemEx">Voorbeeld van loops</a>
+            </div>
+            <div class="lessonListItemExtra">
                 <div class="lessonListItemText">
                     <div class="lessonListItemTextHeader">
-                        <p font-size="20px"><b>Soorten variabelen</b></p>
+                        <p font-size="20px"><b>Terugblik: Soorten variabelen</b></p>
                     </div>
                     <p>
-                        .
+                        Variabelen kunnen ook meerdere soorten waardes hebben. Denk hierbij aan wat er in het doosje zit. Dit zijn de 3 belangrijkste:
+                        <br>- Een "string" oftewel een stuk tekst. Dit kan zo lang of kort zijn als je maar wilt. <b>Let op:</b> een string zet je altijd tussen ""!
+                        <br>- Een nummer. Deze spreekt voor zich. Met nummers kan je de computer laten rekenen. <b>Let op:</b> als je nummers met decimale getallen gebruikt, moet je een . gebruiken in plaats van een ,!
+                        <br>- Een bool (of boolean). Dit is een variabele die true (goed) is, of false (fout). 
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
-                <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
-                </code></pre>
             </div>
             <div class="lessonListItem">
                 <div class="lessonListItemText">
@@ -150,14 +185,11 @@
                         <p font-size="20px"><b>Javascript code: toString()</b></p>
                     </div>
                     <p>
-                        .
+                        Als een variabele een nummer of een bool is, kan je hem soms niet gelijk als tekst op je website zetten. Als dit niet lukt, kan je .toString() erachter zetten. Hiermee wordt de waarde een stukje tekst!.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+score.toString();
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -166,30 +198,54 @@
                         <p font-size="20px"><b>Javascript code: parseInt()</b></p>
                     </div>
                     <p>
-                        .
+                        Als je de waarde van een string (een stuk tekst) om wilt zetten naar een nummer, bijvoorbeeld om ermee te rekenen, kan je parseInt(string) gebruiken. Het stukje string moet je dan vervangen met het stukje tekst.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+parseInt(scoreTekst);
                 </code></pre>
             </div>
             <div class="lessonListItem">
                 <div class="lessonListItemText">
                     <div class="lessonListItemTextHeader">
-                        <p font-size="20px"><b>Javascript code: Math</b></p>
+                        <p font-size="20px"><b>Javascript code: Math.</b></p>
                     </div>
                     <p>
-                        .
+                        Met Math. kan je verschillende dingen doen die te maken hebben met rekenen en wiskunde. Er zijn een paar voorbeelden die we hier behandelen.
+                        <br><br>
+                        Als je een kommagetal wilt afronden, kan je de volgende gebruiken:
+                        <br>- Math.round(getal) rond het getal tussen de haakjes af volgens de normale afrondingsregels.
+                        <br>- Math.ceil(getal) rond het getal tussen de haakjes altijd naar boven af (1.0001 wordt 2).
+                        <br>- Math.floor(getal) rond het getal tussen de haakjes altijd naar beneden af (1.9999 wordt 1).
+                        <br><br>
+                        Ook kan je een willekeurig getal gebruiken met Math.random(). De computer genereert een getal van 0 tot 1. 0 is wel mogelijk, maar 1 niet.
+                        <br><br>
+                        Let op: In code gebruik je een punt om een decimaal getal (kommagetal) aan te wijzen. Je zegt dus 1.5 en niet 1,5.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
+                <pre class="lessonCode"><code>
+let getal = 1.5;
+Math.round(getal); //Dit wordt 2
+Math.ceil(getal); //Dit wordt 2
+Math.floor(getal); //Dit wordt 1
+getal = Math.random; //Nu is getal een willekeurig getal tussen de 0 en 1
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Extra: Willekeurige optie kiezen</b></p>
+                    </div>
+                    <p>
+                        Nu je weet hoe je een willekeurig getal kan aanmaken, kan je ook de computer een willekeurige keuze laten maken. Hiervoor kan je de code gebruiken die hiernaast staat.
+                        <br><br>
+                        We hebben hiermee een variabele genaamd "willekeurig" aangemaakt. Deze variabele gaat een getal krijgen. Je ziet dat hij een willekeurig getal krijgt, en dat deze vermenigvuldigd wordt met het aantal opties. Door dit vervolgens af te ronden naar beneden, wordt "willekeurig" een willekeurig getal tussen de 0 en de waarde van aantalOpties.
+                        <br><br>
+                        Vervolgens kan je met if statements voor elke mogelijke (hele) waarde van willekeurig een uitkomst beschrijven in code. 
+                    </p>
                 </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+let willekeurig = Math.floor(Math.random() * aantalOpties);
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -198,14 +254,11 @@
                         <p font-size="20px"><b>Javascript code: .split</b></p>
                     </div>
                     <p>
-                        .
+                        Met .split() kan je van een variabele een array maken door hem in stukjes te hakken. Tussen de haakjes geef je aan bij welk teken de tekst in stukken wordt gehakt. Let op dat je dit gebruikt om een array variabele te vullen.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+arrayNaam = vragenLijst.split('?');
                 </code></pre>
             </div>
             <div class="lessonListItem">
@@ -214,14 +267,18 @@
                         <p font-size="20px"><b>Javascript code: .includes</b></p>
                     </div>
                     <p>
-                        .
+                        Als je wilt weten of een array een bepaalde waarde bevat, of als je wilt weten of er bepaalde tekst binnen een tekst variabele staat, kan je string.includes("tekst") gebruiken. Het stukje string moet je vervangen door de naam van de array, of de naam van de string die je wilt onderzoeken. Het stukje "tekst" tussen de haakjes moet je vervangen door de tekst die je zoekt. Dit geeft true of false aan, dus dit kan je gebruiken in een if statement.
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+if (teamNamen.includes("Blauw-Wit"))
+{
+    codeOmUitTeVoeren();
+}
+else if (teamNamen[0].includes(":"))
+{
+    codeOmUitTeVoeren();
+}
                 </code></pre>
             </div>
             <div class="lessonListItemExtra">
@@ -230,14 +287,13 @@
                         <p font-size="20px"><b>Extra: console.log</b></p>
                     </div>
                     <p>
-                        .
+                        Let op: Dit kan je niet doen op de Chromebook van school, aangezien deze beveiligd is voor deze functie. Dit moet je dus thuis proberen op een andere laptop of computer.
+                        <br><br>
+                        Soms wil je eens zien welke waarde een variabele heeft binnen je code, bijvoorbeeld als er iets niet werkt hoe het hoort. Daarvoor kan je console.log() gebruiken. Tussen de haakjes kan je de variabele zetten die je wilt weten. Als je de website vervolgens de code laat uitvoeren, kan je via inspecteren de waarde van de variabele zien in de console (onderaan).
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
                 <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
+console.log(score);
                 </code></pre>
             </div>
             <div class="lessonListItemTask">
@@ -251,28 +307,6 @@
                         Heel veel succes!
                     </p>
                 </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
-                <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
-                </code></pre>
-            </div>
-            <div class="lessonListItem">
-                <div class="lessonListItemText">
-                    <div class="lessonListItemTextHeader">
-                        <p font-size="20px"><b>Titel</b></p>
-                    </div>
-                    <p>
-                        .
-                    </p>
-                </div>
-                <div class="lessonListItemImage">
-                    <img src="../img/Lessen/Les1_Stap4.png" width="35%">
-                </div>
-                <pre class="lessonCode"><code>
-&lt;code&gt;&lt;/code&gt;
-                </code></pre>
             </div>
             <br>
             <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>

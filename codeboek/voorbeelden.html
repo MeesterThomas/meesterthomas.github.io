@@ -351,8 +351,8 @@ function CookieKnop()
                     </div>
                 </div>
             </div>
-            <!--<div class="cbExample" id="cbEx_0">
-                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Tag</b></p><br>
+            <div class="cbExample" id="cbEx_8">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Return</b></p><br>
                 <div class="cbExampleBlock">
                     <div class="cbExampleBlockCodeL">
                         <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
@@ -364,6 +364,8 @@ function CookieKnop()
         &lt;meta charset="utf-8"&gt;
     &lt;/head&gt;
     &lt;body&gt;
+        &lt;button onclick="ZingKnop()"&gt;Zing!&lt;/button&gt;
+        &lt;p id="liedTekst0"&gt;&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;
                         </code></pre>
@@ -378,12 +380,85 @@ function CookieKnop()
                     <div class="cbExampleBlockCodeL">
                         <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
                         <pre class="lessonCode"><code>
+let teller = 0;
+
+function ZingKnop()
+{
+    teller += 1;
+    if (teller >= 5)
+        return; //De function stopt hier als het lied al voorbij is.
+    document.getElementById("liedTekst0").innerHTML = KrijgLiedTekst();
+}
+
+function KrijgLiedTekst() //Deze function geeft tekst terug bij return.
+{
+    if (teller == 1 || teller == 2 || teller = 4)
+        return "Hoofd, schouders, knie en teen, knie en teen!";
+    else if (teller == 3)
+        return "Oren, ogen, puntje van je neus!";
+    else
+        return "";
+}
                         </code></pre>
                     </div>
                     <div class="cbExampleBlockRes">
+                        <button onclick="ZingKnop()">Zing!</button>
+                        <p id="liedTekst0"></p>
                     </div>
                 </div>
-            </div>-->
+            </div>
+            <div class="cbExample" id="cbEx_9">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Loops</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Titel van je website&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button onclick="TekstKnop()"&gt;Tekst!&lt;/button&gt;
+        &lt;p id="liedTekst1"&gt;&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+const liedTekst = 
+[
+    "Hoofd, schouder, knie en teen, knie en teen!", 
+    "Hoofd, schouder, knie en teen, knie en teen!", 
+    "Oren, ogen, puntje van je neus!",
+    "Hoofd, schouder, knie en teen, knie en teen!"
+]
+
+function TekstKnop()
+{
+    liedTekst.forEach(regel => 
+    {
+        document.getElementById("liedTekst1").innerHTML += regel + "&lt;br&gt;";
+    });
+}
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <button onclick="TekstKnop()">Tekst!</button>
+                        <p id="liedTekst1"></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="footer">
             <div class="footerNavBar">
