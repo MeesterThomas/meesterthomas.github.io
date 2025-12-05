@@ -1,13 +1,66 @@
-0000;???;
-0001;Aanval;
-0002;Korfbalworp;
-0003;Instructie;
-0004;Nablijven!;
-0005;Zwaard Aanval;
-0006;Zaadkanon;
-0007;Koninklijke Snelheid;
-0008;Aanval;
-0009;Aanval;
-0010;Aanval;
-0011;Aanval;
-0012;Aanval;
+0000;???;0;;;;;;;;;;;;;;;;;;;;;;
+0001;Vuurbal;Vuur;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0002;Hittegolf;Vuur;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0003;Waterpistool;Water;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0004;Waterval;Water;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0005;Bliksem;Donder;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0006;Ontlading;Donder;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0007;Flits;Licht;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0008;Zonnestraal;Licht;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0009;Duistere Gloed;Schaduw;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0010;Maanstraal;Schaduw;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0011;Windvlaag;Wind;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0012;Tornado;Wind;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0013;Kristalstorm;Aarde;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0014;Aardbeving;Aarde;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0015;Ijsstraal;Ijs;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0016;Sneeuwstorm;Ijs;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0017;Gifadem;Gif;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0018;Rookgordijn;Gif;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0019;Pitjeskanon;Natuur;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0020;Bladstorm;Natuur;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0021;Psychokracht;Focus;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0022;Telekinesis;Focus;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0023;Herstel;Genezing;;;;;;;;;2;;20;;;;;;;;;;;
+0024;Herstelgolf;Genezing;;;;;;;;;3;;10;;;;;;;;;;;
+0025;Energieslag;Fysiek;;12;;;;;5;1;0;;;;;;;;;;;;0;1
+0026;Energiebom;Fysiek;;8;;;;;5;1;1;;;;;;;;;;;;0;1
+0027;Geluksslag;Fysiek;;2;;;;;35;1;0;;;;;;;;;;;;0;1
+0028;Dubbele Trap;Fysiek;;6;;;;;5;2;0;;;;;;;;;;;;0;1
+0029;Sterrenstorm;Fysiek;;4;;;;;5;2;1;;;;;;;;;;;;0;1
+0030;Vierdubbele Trap;Fysiek;;3;;;;;5;4;0;;;;;;;;;;;;0;1
+0031;Vallende Sterren;Fysiek;;1;;;;;5;4;1;;;;;;;;;;;;0;1
+0032;Genezingsslag;Fysiek;;8;;;;;5;1;0;;;;;50;;;;;;;0;1
+0033;Genezingsbom;Fysiek;;4;;;;;5;1;1;;;;;50;;;;;;;0;1
+0034;Krachtboost;Versterken;;;;;;;;;2;;;;;;0;;;;;;;
+0035;Krachtgolf;Versterken;;;;;;;;;3;;;;;;0;;;;;;;
+0036;Schildboost;Versterken;;;;;;;;;2;;;;;;1;;;;;;;
+0037;Schildgolf;Versterken;;;;;;;;;3;;;;;;1;;;;;;;
+0038;Sprintboost;Versterken;;;;;;;;;2;;;;;;2;;;;;;;
+0039;Sprintgolf;Versterken;;;;;;;;;3;;;;;;2;;;;;;;
+0040;Energieboost;Versterken;;;;;;;;;2;;;;;;0,1,2;;;;;;;
+0041;Energiegolf;Versterken;;;;;;;;;3;;;;;;0,1,2;;;;;;;
+0042;Krachtschim;Verzwakken;;;;;;;;;0;;;;;;;;0;;;;;
+0043;Krachtmist;Verzwakken;;;;;;;;;1;;;;;;;;0;;;;;
+0044;Schildschim;Verzwakken;;;;;;;;;0;;;;;;;;1;;;;;
+0045;Schildmist;Verzwakken;;;;;;;;;1;;;;;;;;1;;;;;
+0046;Sprintschim;Verzwakken;;;;;;;;;0;;;;;;;;2;;;;;
+0047;Sprintmist;Verzwakken;;;;;;;;;1;;;;;;;;2;;;;;
+0048;Energieschim;Verzwakken;;;;;;;;;0;;;;;;;;0,1,2;;;;;
+0049;Energiemist;Verzwakken;;;;;;;;;1;;;;;;;;0,1,2;;;;;
+0050;Schimreset;Status;;;;;;;;;2;;;;;;;;;;1;;;
+0051;Boostreset;Status;;;;;;;;;0;;;;;;;;;;0;;;
+0052;Concentratie;Status;;;;;;;;;2;;;;;;;;;;;0;;
+0053;Bescherming;Status;;;;;;;;;4;;;;;;;;;;;1;;
+0054;Flare;Vuur;;10;;;;;0;;1;;;;;;;;;;;;0;1
+0055;Korfbalworp;Fysiek;;4;;;;;40;;0;;;;;;;;;;;;0;1
+0056;Instructie;Status;;;;;;;;;3;;10;;;;0;;;;;;;
+0057;Nablijven!;Status;;;;;;;;;4;;;;;;;;;;;2;;
+0058;Vuurbloem;Vuur;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0059;F.L.U.D.D.;Water;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0060;Luigi Cycloon;Wind;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0061;Ijsbloem;Ijs;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0062;Hartjesregen;Licht;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0063;Zweefslag;Focus;;12;;;;;0;1;0;;;;;;;;;;;;0;1
+0064;Daisyregen;Natuur;;8;;;;;0;1;1;;;;;;;;;;;;0;1
+0065;Boorpaddenstoel;Aarde;;12;;;;;0;1;0;;;;;;;;;;;;0;1
