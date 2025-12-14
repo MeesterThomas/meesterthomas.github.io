@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Extra les 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Extra les 4: Quiz</b></p><br>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Quiz</b></p>
+                    </div>
+                    <p>
+                        In deze les leer je via een stappenplan hoe je een quiz kan maken met HTML, CSS en Javascript. Ditzelfde stappenplan wordt ook gebruikt bij het maken van andere games.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 1: Game Design</b></p>
+                    </div>
+                    <p>
+                        We beginnen waar elke game begint: een idee. Het is belangrijk dat je een idee hebt hoe je game eruit komt te zien. Wat kan je allemaal doen in je game? Dit noemen we ook wel Game Design.
+                        <br><br>
+                        Voor de quiz begin je vooral met nadenken over de quiz zelf. Probeer de onderstaande vragen voor jezelf te beantwoorden:
+                        <br>- Welke vragen ga je stellen of welke soort vragen ga je stellen?
+                        <br>- Wat voor soort antwoord kan de speler geven, open vragen, gesloten vragen of allebei?
+                        <br>- Houd je een score bij? Zo ja, hoe doe je dat? Doe je dat op het scherm (dat de speler het kan zien), of geef je de resultaten aan het eind?
+                        <br>- Welke andere functies en elementen zou je toe willen voegen?
+                        <br><br>Tip: Liever goed gejat dan slecht bedacht. Kijk ook eens naar andere (online) quizzen. Hoe zien die eruit? Wat vind je er goed aan, en wat niet?
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 2: HTML</b></p>
+                    </div>
+                    <p>
+                        Nu je weet hoe je game eruit komt te zien en wat je erin wilt hebben, is het tijd om de HTML tags toe te voegen aan je webpagina. Kijk hierbij goed naar wat je nodig hebt.
+                        <br><br>
+                        Voor de quiz moet je weer teruggrijpen op je game design. Je zal en tekst (p) tag nodig hebben om de vraag in te stellen. Vervolgens ook een vlak waarin je antwoord kan geven. Het is niet erg dat het er nog niet uitziet als een game, dat komt later.
+                        <br><br>
+                        Denk aan de volgende elementen:
+                        <br>- Voor het begin van je quiz: Een startknop die de quiz laat beginnen.
+                        <br>- Tekst om je vragen in te vermelden.
+                        <br>- Voor open vragen: Een input vlak waar je tekst in kan vullen en een knop om het antwoord in te leveren.
+                        <br>- Voor gesloten vragen: Knoppen met tekst voor de gesloten vragen (denk na hoeveel mogelijkheden je wilt).
+                        <br>- Voor een zichtbare score: Een tekstelement waar de score in kan staan.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Quiz&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="css/quiz.css"&gt;
+        &lt;script src="js/quiz.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button&gt;Start&lt;/button&gt;
+        &lt;p&gt;Vraagtekst&lt;/p&gt;
+        &lt;button&gt;Optie 1&lt;/button&gt;
+        &lt;button&gt;Optie 2&lt;/button&gt;
+        &lt;button&gt;Optie 3&lt;/button&gt;
+        &lt;button&gt;Optie 4&lt;/button&gt;
+        &lt;p&gt;Score: 0&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 3: De noodzakelijke opmaak (CSS)</b></p>
+                    </div>
+                    <p>
+                        Je hebt het HTML bestand nu voor een groot deel klaar. Nu is het belangrijk om de noodzakelijke opmaak in orde te maken.
+                        <br><br>
+                        Met de noodzakelijke opmaak wordt de bedoeld dat je alleen moet kijken wat er echt moet veranderen om je game werkende te krijgen. Kleuren en mooi maken kan altijd nog.
+                        <br><br>
+                        Een voorbeeld voor de quiz is elementen die als eerst niet zichtbaar zijn, onzichtbaar maken. Je begint met een startknop, maar de vraagtekst, opties en score zijn nu nog niet zichtbaar. Gebruik hiervoor display: none in CSS.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.optieKnop
+{
+    display: none;
+}
+#vraagTekst
+{
+    display: none;
+}
+#scoreTekst
+{
+    display: none;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu je alle elementen op de juiste plaats hebt, is het tijd voor het programmeren van je game met javascript.
+                        <br><br>
+                        Het is belangrijk om stap voor stap op te bouwen. Als je naar je webpagina gaat met je quiz, zie je alleen maar een startknop die niks doet als je erop drukt. Laten we daar verandering in brengen!
+                        <br><br>
+                        Maak een function in je javascript bestand die ervoor zorgt dat de goede elementen zichtbaar worden. Gebruik hiervoor display.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu is het tijd om de goede vragen op te stellen voor de quiz. Dit doe je in een const variabele, want de vragen veranderen niet als je de code uitvoert.
+                        <br><br>
+                        Om het makkelijk te maken, maak je een array aan van alle vragen, waarin een array zit per vraag. In de array per vraag kan je verschillende punten kwijt. Bijvoorbeeld een vraagnummer, de vraag zelf, het goede antwoord en de foute antwoorden. Gebruik het voorbeeld hiernaast.
+                        <br><br>
+                        In het voorbeeld hiernaast zie je op elke regel een andere vraag. Binnen zo'n array, zie je verschillende variabelen tussen "", gescheiden met een ,. Deze staan voor variabelen.
+                        <br>- De eerste waarde is het nummer van de vraag. Zorg ervoor dat elke vraag een ander nummer heeft.
+                        <br>- De tweede waarde is de vraag.
+                        <br>- De derde waarde is het goede antwoord.
+                        <br>- De vierde, vijfde en zesde waardes zijn de andere antwoordopties. Deze zijn dus fout.
+                        <br><br>
+                        Maak je vragenlijst maar eens aan. Probeer minimaal 2 vragen te bedenken. Je kan later altijd nog terugkomen om vragen toe te voegen.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu we de vragen hebben, is het tijd om die vragen te gaan stellen. Hiervoor maken we een nieuwe function aan het einde van de start function.
+                        <br><br>
+                        In deze function gaan we een vraag kiezen om te stellen. Het is handig om deze vraag te onthouden in de code, zodat we later het antwoord kunnen controleren. Daarvoor gebruiken we een array variabele (in het voorbeeld huidigeVraag).
+                        <br><br>
+                        We beginnen door huidigeVraag leeg te maken. Daarna gaan we kijken naar alle vragen die we hebben opgesteld. Dit doen we met een forEach loop. In deze loop laten we de eerste vraag opnemen in huidigeVraag. Vervolgens laten we de vraag zien in het tekstelement met id "vraagTekst". Dit doen we ook met de antwoordopties.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    StelVraag();
+}
+function StelVraag()
+{
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0)
+        {
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    document.getElementById("optie0").innerHTML = huidigeVraag[2];
+    document.getElementById("optie1").innerHTML = huidigeVraag[3];
+    document.getElementById("optie2").innerHTML = huidigeVraag[4];
+    document.getElementById("optie3").innerHTML = huidigeVraag[5];
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        We kunnen de vragen en de antwoordopties nu laten zien. Tijd om ervoor te zorgen dat er wat gebeurd als je op een van de knoppen drukt. Hiervoor gebruiken we een nieuwe function. 
+                        <br><br>
+                        Eerst gaan we checken of het antwoord goed is. Hierbij vergelijken we de tekst op de knop waar de gebruiker net op heeft gedrukt, met het juiste antwoord. Als dit overeen komt, dan is het antwoord goed!
+                        <br><br>
+                        Als het antwoord goed is, moet de score omhoog. Dat betekent dat we ook een score moeten hebben. Deze hebben we bij verschillende functions nodig, dus we benoemen de variabele bovenaan met let. In de start function, resetten we de score nog eens naar 0. Verder voegen we 10 toe aan de huidige score in de antwoord function als het antwoord goed is.
+                        <br><br>
+                        Ook willen we dat de volgende vraag gelijk weer komt. Daarom sluiten we de function af met StelVraag().
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let score = 0;
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    score = 0;
+    StelVraag();
+}
+function StelVraag()
+{
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0)
+        {
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    document.getElementById("optie0").innerHTML = huidigeVraag[2];
+    document.getElementById("optie1").innerHTML = huidigeVraag[3];
+    document.getElementById("optie2").innerHTML = huidigeVraag[4];
+    document.getElementById("optie3").innerHTML = huidigeVraag[5];
+}
+function Antwoord(knopNummer)
+{
+    if (document.getElementById("optie" + knopNummer.toString()).innerHTML == huidigeVraag[2])
+    {
+        score += 10;
+    }
+    StelVraag();
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Als je je quiz nu probeert, merk je misschien dat hij dezelfde vraag blijft stellen. We moeten ervoor zorgen dat hij checkt of een vraag al gesteld is of niet. Dit doen we met een variabele genaamd gesteldeVragen.
+                        <br><br>
+                        Bovenin het document noemen we deze variabele met let, en zeggen we dat hij leeg is. Hierin komen de nummers van de vragen die we gehad hebben. In de Start() function zeggen we ook nog een keer dat hij leeg is, om er zeker van te zijn.
+                        <br><br>
+                        In de StelVraag() function kijken we eerste of we net zoveel vragen gesteld hebben als er zijn. Als dit zo is, dan is de quiz klaar. Dan hoeven we dus geen nieuwe vragen meer te stellen. Dan gebruiken we return.
+                        <br><br>
+                        In de forEach loop controleren we nu extra of de vraag niet al is opgenomen in gesteldeVragen. Dan hoeven we hem namelijk niet meer te stellen. In dat if statement gebruiken we gesteldeVragen.push om ervoor te zorgen dat het nummer van de huidigevraag ook in gesteldeVragen komt te staan.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let gesteldeVragen = [];
+let score = 0;
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    gesteldeVragen = [];
+    score = 0;
+    StelVraag();
+}
+function StelVraag()
+{
+    if (gesteldeVragen.length >= vragen.length)
+    {
+        return;
+    }
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0 && gesteldeVragen.includes(vraag[0]) == false)
+        {
+            gesteldeVragen.push(vraag[0]);
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    document.getElementById("optie0").innerHTML = huidigeVraag[2];
+    document.getElementById("optie1").innerHTML = huidigeVraag[3];
+    document.getElementById("optie2").innerHTML = huidigeVraag[4];
+    document.getElementById("optie3").innerHTML = huidigeVraag[5];
+}
+function Antwoord(knopNummer)
+{
+    if (document.getElementById("optie" + knopNummer.toString()).innerHTML == huidigeVraag[2])
+    {
+        score += 10;
+    }
+    StelVraag();
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        De quiz werkt al best goed, maar die score die de quiz bijhoudt kan de gebruiker nooit zien. Laten we een nieuwe function aanmaken genaamd UpdateScore() waarin we de score laten zien. Dit is een simpele function. Zie het voorbeeld hiernaast.
+                        <br><br>
+                        Nu moeten we nog aangeven wanneer de function wordt gebruikt. Dit doen we in de Antwoord() function, net voordat we doorgaan naar de volgende vraag. Ook doen we dit in de Start() function, om er zeker van te zijn dat de begin score klopt.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let gesteldeVragen = [];
+let score = 0;
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    gesteldeVragen = [];
+    score = 0;
+    UpdateScore();
+    StelVraag();
+}
+function StelVraag()
+{
+    if (gesteldeVragen.length >= vragen.length)
+    {
+        return;
+    }
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0 && gesteldeVragen.includes(vraag[0]) == false)
+        {
+            gesteldeVragen.push(vraag[0]);
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    document.getElementById("optie0").innerHTML = huidigeVraag[2];
+    document.getElementById("optie1").innerHTML = huidigeVraag[3];
+    document.getElementById("optie2").innerHTML = huidigeVraag[4];
+    document.getElementById("optie3").innerHTML = huidigeVraag[5];
+}
+function Antwoord(knopNummer)
+{
+    if (document.getElementById("optie" + knopNummer.toString()).innerHTML == huidigeVraag[2])
+    {
+        score += 10;
+    }
+    UpdateScore();
+    StelVraag();
+}
+function UpdateScore()
+{
+    document.getElementById("scoreTekst").innerHTML = "Score: " + score.toString();
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        We zijn al een heel eind! De quiz is wel wat makkelijk zeker? Dat komt omdat de goede antwoorden altijd als eerste staan. Laten we de antwoorden op een willekeurige plaats neerzetten.
+                        <br><br>
+                        Aan het einde van de StelVraag() function gaan we een variabele benoemen genaamd randomNummer. Dit wordt een getal van 0 tot 3 (dus 4 mogelijkheden).
+                        <br><br>
+                        Vervolgens benoemen we per mogelijkheid welke volgorde de antwoorden krijgen. De specifieke volgorde maakt niet veel uit, maar zorg ervoor dat het goede antwoord op alle 4 de knoppen terecht kan komen.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let gesteldeVragen = [];
+let score = 0;
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    gesteldeVragen = [];
+    score = 0;
+    UpdateScore();
+    StelVraag();
+}
+function StelVraag()
+{
+    if (gesteldeVragen.length >= vragen.length)
+    {
+        return;
+    }
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0 && gesteldeVragen.includes(vraag[0]) == false)
+        {
+            gesteldeVragen.push(vraag[0]);
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    let randomNummer = Math.floor(Math.random() * 4);
+    if (randomNummer == 0)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[2];
+        document.getElementById("optie1").innerHTML = huidigeVraag[3];
+        document.getElementById("optie2").innerHTML = huidigeVraag[4];
+        document.getElementById("optie3").innerHTML = huidigeVraag[5];
+    }
+    else if (randomNummer == 1)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[4];
+        document.getElementById("optie1").innerHTML = huidigeVraag[5];
+        document.getElementById("optie2").innerHTML = huidigeVraag[2];
+        document.getElementById("optie3").innerHTML = huidigeVraag[3];
+    }
+    else if (randomNummer == 2)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[3];
+        document.getElementById("optie1").innerHTML = huidigeVraag[2];
+        document.getElementById("optie2").innerHTML = huidigeVraag[5];
+        document.getElementById("optie3").innerHTML = huidigeVraag[4];
+    }
+    else if (randomNummer == 3)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[5];
+        document.getElementById("optie1").innerHTML = huidigeVraag[4];
+        document.getElementById("optie2").innerHTML = huidigeVraag[3];
+        document.getElementById("optie3").innerHTML = huidigeVraag[2];
+    }
+}
+function Antwoord(knopNummer)
+{
+    if (document.getElementById("optie" + knopNummer.toString()).innerHTML == huidigeVraag[2])
+    {
+        score += 10;
+    }
+    UpdateScore();
+    StelVraag();
+}
+function UpdateScore()
+{
+    document.getElementById("scoreTekst").innerHTML = "Score: " + score.toString();
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Goed gedaan, nog maar 1 ding te doen: het einde! Hiervoor maken we een nieuwe function. Deze function activeren we als er geen vragen meer over zijn (StelVraag()).
+                        <br><br>
+                        Vervolgens kan je je eigen opmaak maken voor het eindscherm. Dit is helemaal aan jou! Als je de startknop toevoegt, kan de gebruiker de quiz opnieuw spelen om een hogere score te halen!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let gesteldeVragen = [];
+let score = 0;
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    gesteldeVragen = [];
+    score = 0;
+    UpdateScore();
+    StelVraag();
+}
+function StelVraag()
+{
+    if (gesteldeVragen.length >= vragen.length)
+    {
+        return;
+    }
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0 && gesteldeVragen.includes(vraag[0]) == false)
+        {
+            gesteldeVragen.push(vraag[0]);
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    let randomNummer = Math.floor(Math.random() * 4);
+    if (randomNummer == 0)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[2];
+        document.getElementById("optie1").innerHTML = huidigeVraag[3];
+        document.getElementById("optie2").innerHTML = huidigeVraag[4];
+        document.getElementById("optie3").innerHTML = huidigeVraag[5];
+    }
+    else if (randomNummer == 1)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[4];
+        document.getElementById("optie1").innerHTML = huidigeVraag[5];
+        document.getElementById("optie2").innerHTML = huidigeVraag[2];
+        document.getElementById("optie3").innerHTML = huidigeVraag[3];
+    }
+    else if (randomNummer == 2)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[3];
+        document.getElementById("optie1").innerHTML = huidigeVraag[2];
+        document.getElementById("optie2").innerHTML = huidigeVraag[5];
+        document.getElementById("optie3").innerHTML = huidigeVraag[4];
+    }
+    else if (randomNummer == 3)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[5];
+        document.getElementById("optie1").innerHTML = huidigeVraag[4];
+        document.getElementById("optie2").innerHTML = huidigeVraag[3];
+        document.getElementById("optie3").innerHTML = huidigeVraag[2];
+    }
+}
+function Antwoord(knopNummer)
+{
+    if (document.getElementById("optie" + knopNummer.toString()).innerHTML == huidigeVraag[2])
+    {
+        score += 10;
+    }
+    UpdateScore();
+    StelVraag();
+}
+function UpdateScore()
+{
+    document.getElementById("scoreTekst").innerHTML = "Score: " + score.toString();
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stappen 5 en 6: Testen en aanpassen</b></p>
+                    </div>
+                    <p>
+                        Je game is nu zo goed als af! Nu komt de laatste fase: testen en aanpassen. In deze fase ga je je game spelen en aanpassingen maken die je nodig vindt.
+                        <br><br>
+                        In deze fase kan je CSS gebruiken om je webpagina en quiz er mooi uit te laten zien. Je kan ervoor zorgen dat je game helemaal van jou wordt. Veel succes!
+                    </p>
+                </div>
+            </div>
+            <div class="cbExample" id="cbEx_0">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Quiz</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Quiz&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="css/quiz.css"&gt;
+        &lt;script src="js/quiz.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button id="startKnop" onclick="Start()"&gt;Start&lt;/button&gt;
+        &lt;p id="vraagTekst"&gt;Vraagtekst&lt;/p&gt;
+        &lt;button class="optieKnop" id="optie0" onclick="Antwoord('0')"&gt;Optie 1&lt;/button&gt;
+        &lt;button class="optieKnop" id="optie1" onclick="Antwoord('1')"&gt;Optie 2&lt;/button&gt;
+        &lt;button class="optieKnop" id="optie2" onclick="Antwoord('2')"&gt;Optie 3&lt;/button&gt;
+        &lt;button class="optieKnop" id="optie3" onclick="Antwoord('3')"&gt;Optie 4&lt;/button&gt;
+        &lt;p id="scoreTekst"&gt;Score: 0&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+.optieKnop
+{
+    display: none;
+}
+#vraagTekst
+{
+    display: none;
+}
+#scoreTekst
+{
+    display: none;
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+const vragen = [
+    ["0", "1+1=", "2", "3", "4", "1"],
+    ["1", "2+2=", "4", "2", "5", "6"]
+];
+let gesteldeVragen = [];
+let score = 0;
+let huidigeVraag = [];
+
+function Start()
+{
+    document.getElementById("startKnop").style.display = "none";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("optie0").style.display = "inline";
+    document.getElementById("optie1").style.display = "inline";
+    document.getElementById("optie2").style.display = "inline";
+    document.getElementById("optie3").style.display = "inline";
+    document.getElementById("scoreTekst").style.display = "block";
+    gesteldeVragen = [];
+    score = 0;
+    UpdateScore();
+    StelVraag();
+}
+function StelVraag()
+{
+    if (gesteldeVragen.length >= vragen.length)
+    {
+        Einde();
+        return;
+    }
+    huidigeVraag = [];
+    vragen.forEach(vraag => {
+        if (huidigeVraag.length == 0 && gesteldeVragen.includes(vraag[0]) == false)
+        {
+            gesteldeVragen.push(vraag[0]);
+            huidigeVraag = vraag;
+        }
+    });
+    document.getElementById("vraagTekst").innerHTML = huidigeVraag[1];
+    let randomNummer = Math.floor(Math.random() * 4);
+    if (randomNummer == 0)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[2];
+        document.getElementById("optie1").innerHTML = huidigeVraag[3];
+        document.getElementById("optie2").innerHTML = huidigeVraag[4];
+        document.getElementById("optie3").innerHTML = huidigeVraag[5];
+    }
+    else if (randomNummer == 1)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[4];
+        document.getElementById("optie1").innerHTML = huidigeVraag[5];
+        document.getElementById("optie2").innerHTML = huidigeVraag[2];
+        document.getElementById("optie3").innerHTML = huidigeVraag[3];
+    }
+    else if (randomNummer == 2)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[3];
+        document.getElementById("optie1").innerHTML = huidigeVraag[2];
+        document.getElementById("optie2").innerHTML = huidigeVraag[5];
+        document.getElementById("optie3").innerHTML = huidigeVraag[4];
+    }
+    else if (randomNummer == 3)
+    {
+        document.getElementById("optie0").innerHTML = huidigeVraag[5];
+        document.getElementById("optie1").innerHTML = huidigeVraag[4];
+        document.getElementById("optie2").innerHTML = huidigeVraag[3];
+        document.getElementById("optie3").innerHTML = huidigeVraag[2];
+    }
+}
+function Antwoord(knopNummer)
+{
+    if (document.getElementById("optie" + knopNummer.toString()).innerHTML == huidigeVraag[2])
+    {
+        score += 10;
+    }
+    UpdateScore();
+    StelVraag();
+}
+function UpdateScore()
+{
+    document.getElementById("scoreTekst").innerHTML = "Score: " + score.toString();
+}
+function Einde()
+{
+    document.getElementById("startKnop").style.display = "inline";
+    document.getElementById("startKnop").innerHTML = "Start opnieuw";
+    document.getElementById("vraagTekst").style.display = "block";
+    document.getElementById("vraagTekst").innerHTML = "Goed gedaan! Je score is " + score.toString() + "!";
+    document.getElementById("optie0").style.display = "none";
+    document.getElementById("optie1").style.display = "none";
+    document.getElementById("optie2").style.display = "none";
+    document.getElementById("optie3").style.display = "none";
+    document.getElementById("scoreTekst").style.display = "none";
+}
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <button id="startKnop" onclick="Start()">Start</button>
+                        <p id="vraagTekst">Vraagtekst</p>
+                        <button class="optieKnop" id="optie0" onclick="Antwoord('0')">Optie 1</button>
+                        <button class="optieKnop" id="optie1" onclick="Antwoord('1')">Optie 2</button>
+                        <button class="optieKnop" id="optie2" onclick="Antwoord('2')">Optie 3</button>
+                        <button class="optieKnop" id="optie3" onclick="Antwoord('3')">Optie 4</button>
+                        <p id="scoreTekst">Score: 0</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
