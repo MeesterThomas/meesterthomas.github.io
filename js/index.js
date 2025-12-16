@@ -9,7 +9,7 @@ let score = 0;
 function CookieKnop()
 {
     score += 1;
-    document.getElementById("scoreTekst").innerHTML = score;
+    document.getElementById("scoreTekstQ").innerHTML = score;
 }
 
 let teller = 0;
@@ -64,7 +64,7 @@ function Start()
     document.getElementById("optie1").style.display = "inline";
     document.getElementById("optie2").style.display = "inline";
     document.getElementById("optie3").style.display = "inline";
-    document.getElementById("scoreTekst").style.display = "block";
+    document.getElementById("scoreTekstQ").style.display = "block";
     gesteldeVragen = [];
     score = 0;
     UpdateScore();
@@ -127,7 +127,7 @@ function Antwoord(knopNummer)
 }
 function UpdateScore()
 {
-    document.getElementById("scoreTekst").innerHTML = "Score: " + score.toString();
+    document.getElementById("scoreTekstQ").innerHTML = "Score: " + score.toString();
 }
 function Einde()
 {
@@ -139,5 +139,5 @@ function Einde()
     document.getElementById("optie1").style.display = "none";
     document.getElementById("optie2").style.display = "none";
     document.getElementById("optie3").style.display = "none";
-    document.getElementById("scoreTekst").style.display = "none";
+    document.getElementById("scoreTekstQ").style.display = "none";
 }
