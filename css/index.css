@@ -534,6 +534,13 @@ a
     width: 100%;
     display: none;
 }
+.attackDataRight
+{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    display: none;
+}
 .gameHPBar
 {
     width: 100%;
@@ -586,6 +593,27 @@ meter.gameHPBarRight::-webkit-meter-optimum-value
     padding-inline: 0%;
 }
 .gameButtonPortraitLeft:disabled
+{
+    background: none;
+}
+.gameButtonPortraitLeft:disabled:hover
+{
+    background: none;
+}
+.gameButtonPortraitRight
+{
+    background: rgb(102, 102, 200) center/cover url("../img/SelectRight.png") no-repeat;
+    border: none;
+    box-sizing: border-box;
+    padding: 0%;
+    padding-block: 0%;
+    padding-inline: 0%;
+}
+.gameButtonPortraitRight:disabled
+{
+    background: none;
+}
+.gameButtonPortraitRight:disabled:hover
 {
     background: none;
 }
@@ -671,4 +699,16 @@ meter.gameHPBarRight::-webkit-meter-optimum-value
     border-radius: 5px;
     padding: 0.5% 5% 2% 1%;
     margin: 2%;
+}
+.optieKnop
+{
+    display: none;
+}
+#vraagTekst
+{
+    display: none;
+}
+#scoreTekst
+{
+    display: none;
 }
