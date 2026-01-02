@@ -9,7 +9,7 @@ let score = 0;
 function CookieKnop()
 {
     score += 1;
-    document.getElementById("scoreTekstQ").innerHTML = score;
+    document.getElementById("scoreTekst").innerHTML = score;
 }
 
 let teller = 0;
@@ -140,4 +140,135 @@ function Einde()
     document.getElementById("optie2").style.display = "none";
     document.getElementById("optie3").style.display = "none";
     document.getElementById("scoreTekstQ").style.display = "none";
+}
+
+
+let ronde = 0;
+let zetten = [[], []];
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    document.getElementById("BKEKnop0").innerHTML = "";
+    document.getElementById("BKEKnop1").innerHTML = "";
+    document.getElementById("BKEKnop2").innerHTML = "";
+    document.getElementById("BKEKnop3").innerHTML = "";
+    document.getElementById("BKEKnop4").innerHTML = "";
+    document.getElementById("BKEKnop5").innerHTML = "";
+    document.getElementById("BKEKnop6").innerHTML = "";
+    document.getElementById("BKEKnop7").innerHTML = "";
+    document.getElementById("BKEKnop8").innerHTML = "";
+    zetten = [[], []];
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+
+function BKEKnop(knopNummer)
+{
+    if (ronde == 9)
+        return;
+    if (zetten[0].includes(knopNummer) || zetten[1].includes(knopNummer))
+        return;
+    if (ronde == 0)
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "X";
+        zetten[0].push(knopNummer);
+    }
+    else
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "O";
+        zetten[1].push(knopNummer);
+    }
+    CheckWin();
+    if (ronde == 0)
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+    else if (ronde == 1)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+}
+
+function CheckWin()
+{
+    if ((zetten[0].includes(0) && zetten[0].includes(1) && zetten[0].includes(2)) ||
+        (zetten[0].includes(3) && zetten[0].includes(4) && zetten[0].includes(5)) ||
+        (zetten[0].includes(6) && zetten[0].includes(7) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(3) && zetten[0].includes(6)) ||
+        (zetten[0].includes(1) && zetten[0].includes(4) && zetten[0].includes(7)) ||
+        (zetten[0].includes(2) && zetten[0].includes(5) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(4) && zetten[0].includes(8)) ||
+        (zetten[0].includes(2) && zetten[0].includes(4) && zetten[0].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler X heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if ((zetten[1].includes(0) && zetten[1].includes(1) && zetten[1].includes(2)) ||
+        (zetten[1].includes(3) && zetten[1].includes(4) && zetten[1].includes(5)) ||
+        (zetten[1].includes(6) && zetten[1].includes(7) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(3) && zetten[1].includes(6)) ||
+        (zetten[1].includes(1) && zetten[1].includes(4) && zetten[1].includes(7)) ||
+        (zetten[1].includes(2) && zetten[1].includes(5) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(4) && zetten[1].includes(8)) ||
+        (zetten[1].includes(2) && zetten[1].includes(4) && zetten[1].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler O heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if (zetten[0].length + zetten[1].length == 9)
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Gelijkspel!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+}
+
+
+let goed = [false, false, false];
+
+function StartER()
+{
+    document.getElementById("verborgen0").style.display = "none";
+    document.getElementById("verborgen1").style.display = "block";
+}
+
+function ERKnop(knopNummer)
+{
+    if (goed[knopNummer == true])
+        return;
+    if (knopNummer == 0 && document.getElementById("antwoord0").value == "3")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord0").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 1 && document.getElementById("antwoord1").value == "2")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord1").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 2 && document.getElementById("antwoord2").value == "1")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord2").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    if (goed[0] == true && goed[1] == true && goed[2] == true)
+    {
+        document.getElementById("verborgen1").style.display = "none";
+        document.getElementById("verborgen2").style.display = "block";
+    }
 }

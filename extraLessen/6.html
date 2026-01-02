@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Extra les 6</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Extra les 6: Escape Room</b></p><br>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Escape Room</b></p>
+                    </div>
+                    <p>
+                        In deze les leer je via een stappenplan hoe je een escape room kan maken met HTML, CSS en Javascript. Ditzelfde stappenplan wordt ook gebruikt bij het maken van andere games.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 1: Game Design</b></p>
+                    </div>
+                    <p>
+                        We beginnen waar elke game begint: een idee. Het is belangrijk dat je een idee hebt hoe je game eruit komt te zien. Wat kan je allemaal doen in je game? Dit noemen we ook wel Game Design.
+                        <br><br>
+                        Bij een escape room heb je veel vrijheid om zelf te bedenken hoe je hem in gaat vullen. Wat voor elementen wil je gebruiken? Denk daarover na. In de escape room die wij gaan maken moet de speler drie vragen beantwoorden. De antwoorden kan je op verschillende manieren vinden:
+                        <br>- Er is een stuk verborgen tekst. Deze tekst moet je selecteren om het te kunnen lezen.
+                        <br>- Er staat een antwoord op een andere webpagina. Je moet hiervoor op een linkje drukken.
+                        <br>- Een van de antwoorden staat tijdelijk in de invulbalk van een andere vraag.
+                        <br><br>Natuurlijk kan je zelf andere elementen kiezen, of een combinatie maken van. Zo wordt het helemaal jouw eigen escape room!
+                        <br><br>Tip: Liever goed gejat dan slecht bedacht. Kijk ook eens naar andere escape rooms. Hoe zien die eruit? Wat vind je er goed aan, en wat niet?
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 2: HTML</b></p>
+                    </div>
+                    <p>
+                        Nu je weet hoe je game eruit komt te zien en wat je erin wilt hebben, is het tijd om de HTML tags toe te voegen aan je webpagina. Kijk hierbij goed naar wat je nodig hebt.
+                        <br><br>
+                        Voor je escape room moet je goed kijken naar de elementen die je wilt toevoegen. Het is handig om je escape room in meerdere fases in te delen. Bijvoorbeeld, eerst moet je op start drukken (fase 1), daarna moet je 4 vragen beantwoorden (fase 2), daarna moet je nog een laatste vraag beantwoorden (fase 3) en tot slot krijg je een scherm dat je hebt gewonnen (fase 4).
+                        <br><br>
+                        Als je deze verschillende fases hebt, kan je ze makkelijk in aparte div elementen plaatsen (zoals hiernaast). De div elementen kan je dan verbergen en weer laten zien wanneer jij dat wilt.
+                        <br><br>
+                        Voor de escape room die ik ga maken heb je de elementen nodig die hiernaast staan.
+                        <br><br>
+                        Op regel 10 staat een input element. Hier kan je dus tekst invoeren. Hier wil ik dat tijdelijk een antwoord staat. Daarvoor gebruik ik het stukje placeholder="". Tussen de haakjes komt dan de tekst te staan.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+    &lt;body&gt;
+        &lt;div id="verborgen0"&gt;
+            &lt;button id="startKnopER" onclick="StartER()"&gt;Start&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div id="verborgen1"&gt;
+            &lt;input type="text" id="antwoord0"&gt;
+            &lt;button id="check0" onclick="ERKnop(0)"&gt;Check&lt;/button&gt;
+            &lt;br&gt;&lt;input type="text" id="antwoord1"&gt;
+            &lt;button id="check1" onclick="ERKnop(1)"&gt;Check&lt;/button&gt;
+            &lt;br&gt;&lt;input type="text" id="antwoord2" placeholder="Het tweede antwoord is 2."&gt;
+            &lt;button id="check2" onclick="ERKnop(2)"&gt;Check&lt;/button&gt;
+            &lt;p class="verborgenTekst"&gt;Het eerste antwoord is 3.&lt;/p&gt;
+            &lt;a href="6extra.html" target="_blank"&gt;Info!&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id="verborgen2"&gt;
+            &lt;p&gt;Het is gelukt!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 3: De noodzakelijke opmaak (CSS)</b></p>
+                    </div>
+                    <p>
+                        Je hebt het HTML bestand nu voor een groot deel klaar. Nu is het belangrijk om de noodzakelijke opmaak in orde te maken.
+                        <br><br>
+                        Met de noodzakelijke opmaak wordt de bedoeld dat je alleen moet kijken wat er echt moet veranderen om je game werkende te krijgen. Kleuren en mooi maken kan altijd nog.
+                        <br><br>
+                        Ik wil dat de div met id verborgen1 en verborgen2 nog even niet te zien zijn. Daarvoor gebruik ik display: none; De verborgentekst wordt verborgen als color en background-color dezelfde kleur hebben.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+#verborgen1
+{
+    display: none;
+}
+#verborgen2
+{
+    display: none;
+}
+.verborgenTekst
+{
+    color: rgb(11, 11, 177);
+    background-color: rgb(11, 11, 177);
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu je alle elementen op de juiste plaats hebt, is het tijd voor het programmeren van je game met javascript.
+                        <br><br>
+                        Het is belangrijk om stap voor stap op te bouwen. Als je naar je webpagina gaat met je escape room, zie je alleen maar een startknop die niks doet als je erop drukt. Laten we daar verandering in brengen!
+                        <br><br>
+                        Maak een function in je javascript bestand die ervoor zorgt dat de goede elementen zichtbaar worden. Gebruik hiervoor display.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+function StartER()
+{
+    document.getElementById("verborgen0").style.display = "none";
+    document.getElementById("verborgen1").style.display = "block";
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        De vragen en hints zijn al zichtbaar, dus we moeten er alleen maar voor zorgen dat de check knoppen hun werk doen. Daarvoor maken we een nieuwe function aan.
+                        <br><br>
+                        We gaan controleren of de antwoorden kloppen. Alleen als alle 3 de antwoorden goed zijn, gaat de escape room door naar de volgende fase. Dit moeten we dus wel ergens bijhouden. Dit doen we met de variabele goed. Dit wordt een array met 3 onderdelen. Voor nu zijn ze nog allemaal false (fout).
+                        <br><br>
+                        In onze nieuwe function checken we per vraag of het antwoord wat is opgegeven klopt. Als dit zo is, veranderen we de waarde uit de array goed van false (fout) naar true (juist). Ook veranderen we de achtergrondkleur zodat de speler weet dat het antwoord goed was.
+                        <br><br>
+                        Dit herhalen we voor de andere vragen.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let goed = [false, false, false];
+
+function StartER()
+{
+    document.getElementById("verborgen0").style.display = "none";
+    document.getElementById("verborgen1").style.display = "block";
+}
+
+function ERKnop(knopNummer)
+{
+    if (knopNummer == 0 && document.getElementById("antwoord0").value == "3")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord0").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 1 && document.getElementById("antwoord1").value == "2")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord1").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 2 && document.getElementById("antwoord2").value == "1")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord2").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        We zijn er al bijna! We moeten nog 2 dingen toevoegen.
+                        <br><br>
+                        Als eerste checken we aan het begin van de function of het antwoord hiervoor al goed was. Als dit zo is, dan hoeft er niks te gebeuren namelijk. Dan gebruiken we return.
+                        <br><br>
+                        Als tweede moeten we aan het einde van de function checken of alle antwoorden juist zijn. Als dit zo is, dan kunnen we door naar de volgende fase. Hierbij veranderen we dus weer welke elementen zichtbaar zijn. Dit doen we op dezelfde manier als bij de StartER() function.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let goed = [false, false, false];
+
+function StartER()
+{
+    document.getElementById("verborgen0").style.display = "none";
+    document.getElementById("verborgen1").style.display = "block";
+}
+
+function ERKnop(knopNummer)
+{
+    if (goed[knopNummer == true])
+        return;
+    if (knopNummer == 0 && document.getElementById("antwoord0").value == "3")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord0").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 1 && document.getElementById("antwoord1").value == "2")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord1").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 2 && document.getElementById("antwoord2").value == "1")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord2").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    if (goed[0] == true && goed[1] == true && goed[2] == true)
+    {
+        document.getElementById("verborgen1").style.display = "none";
+        document.getElementById("verborgen2").style.display = "block";
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stappen 5 en 6: Testen en aanpassen</b></p>
+                    </div>
+                    <p>
+                        Je game is nu zo goed als af! Nu komt de laatste fase: testen en aanpassen. In deze fase ga je je game spelen en aanpassingen maken die je nodig vindt.
+                        <br><br>
+                        In deze fase kan je CSS gebruiken om je webpagina en escape room er mooi uit te laten zien. Je kan ervoor zorgen dat je game helemaal van jou wordt. Veel succes!
+                    </p>
+                </div>
+            </div>
+            <div class="cbExample" id="cbEx_0">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Escape Room</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Quiz&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="css/quiz.css"&gt;
+        &lt;script src="js/quiz.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="verborgen0"&gt;
+            &lt;button id="startKnopER" onclick="StartER()"&gt;Start&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div id="verborgen1"&gt;
+            &lt;input type="text" id="antwoord0"&gt;
+            &lt;button id="check0" onclick="ERKnop(0)"&gt;Check&lt;/button&gt;
+            &lt;br&gt;&lt;input type="text" id="antwoord1"&gt;
+            &lt;button id="check1" onclick="ERKnop(1)"&gt;Check&lt;/button&gt;
+            &lt;br&gt;&lt;input type="text" id="antwoord2" placeholder="Het tweede antwoord is 2."&gt;
+            &lt;button id="check2" onclick="ERKnop(2)"&gt;Check&lt;/button&gt;
+            &lt;p class="verborgenTekst"&gt;Het eerste antwoord is 3.&lt;/p&gt;
+            &lt;a href="6extra.html" target="_blank"&gt;Info!&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id="verborgen2"&gt;
+            &lt;p&gt;Het is gelukt!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+#verborgen1
+{
+    display: none;
+}
+#verborgen2
+{
+    display: none;
+}
+.verborgenTekst
+{
+    color: rgb(11, 11, 177);
+    background-color: rgb(11, 11, 177);
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+let goed = [false, false, false];
+
+function StartER()
+{
+    document.getElementById("verborgen0").style.display = "none";
+    document.getElementById("verborgen1").style.display = "block";
+}
+
+function ERKnop(knopNummer)
+{
+    if (goed[knopNummer == true])
+        return;
+    if (knopNummer == 0 && document.getElementById("antwoord0").value == "3")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord0").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 1 && document.getElementById("antwoord1").value == "2")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord1").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    else if (knopNummer == 2 && document.getElementById("antwoord2").value == "1")
+    {
+        goed[knopNummer] = true;
+        document.getElementById("antwoord2").style.backgroundColor = "rgb(132, 132, 215)";
+    }
+    if (goed[0] == true && goed[1] == true && goed[2] == true)
+    {
+        document.getElementById("verborgen1").style.display = "none";
+        document.getElementById("verborgen2").style.display = "block";
+    }
+}
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <div id="verborgen0">
+                            <button id="startKnopER" onclick="StartER()">Start</button>
+                        </div>
+                        <div id="verborgen1">
+                            <input type="text" id="antwoord0">
+                            <button id="check0" onclick="ERKnop(0)">Check</button>
+                            <br><input type="text" id="antwoord1">
+                            <button id="check1" onclick="ERKnop(1)">Check</button>
+                            <br><input type="text" id="antwoord2" placeholder="Het tweede antwoord is 2.">
+                            <button id="check2" onclick="ERKnop(2)">Check</button>
+                            <p class="verborgenTekst">Het eerste antwoord is 3.</p>
+                            <a href="6extra.html" target="_blank">Info!</a>
+                        </div>
+                        <div id="verborgen2">
+                            <p>Het is gelukt!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

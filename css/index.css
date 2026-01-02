@@ -332,6 +332,14 @@ a
     padding: 0.5% 0px;
     margin: 0.5% 0px;
 }
+.gameBGR
+{
+    background-color: rgb(215, 132, 132);
+    color: black;
+    width: 100%;
+    padding: 0.5% 0px;
+    margin: 0.5% 0px;
+}
 .quiz
 {
     width: 80%;
@@ -391,6 +399,21 @@ a
 {
     background-color: rgb(70, 70, 70);
 }
+.gameContentR
+{
+    background-color: rgb(215, 132, 132);
+    color: black;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    font-size: 32px;
+    justify-content: center;
+    padding: 0%;
+}
+.gameContentR button:hover
+{
+    background-color: rgb(70, 70, 70);
+}
 .gameOption
 {
     display: flex;
@@ -422,6 +445,17 @@ a
     color: white;
     font-size: 64px;
     box-sizing: border-box;
+}
+.ERGameDiv
+{
+    width: 15%;
+    padding: 2% 0px;
+    margin: 0px 5%;
+    background-color: rgb(200, 72, 72);
+    border: 3px solid rgb(177, 11, 11);
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
 }
 .characterSelectionButton
 {
@@ -711,4 +745,26 @@ meter.gameHPBarRight::-webkit-meter-optimum-value
 #scoreTekstQ
 {
     display: none;
+}
+.BKEKnop
+{
+    width: 30%;
+    height: 100px;
+}
+.BKERij
+{
+    display: none;
+}
+#verborgen1
+{
+    display: none;
+}
+#verborgen2
+{
+    display: none;
+}
+.verborgenTekst
+{
+    color: rgb(11, 11, 177);
+    background-color: rgb(11, 11, 177);
 }

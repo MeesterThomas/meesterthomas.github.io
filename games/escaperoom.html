@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Escape Room</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/escaperoom.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="gameBGR">
+            <div id="Hidden0">
+                <p id="BKEText" style="font-size: 32px;text-align: center;display: block;"><b>Escape Room: De website is gehackt!</b></p>
+                <p id="BKEText" style="font-size: 20px;text-align: center;display: block;width: 60%;margin: 0% 20%;"><b>
+                    De website van meester Thomas is gehackt! Ben jij klaar om hem te helpen zijn website terug te krijgen? Gebruik de kennis die je hebt opgedaan met de lessen van deze website om de website terug te veroveren van de hackers!
+                </b></p><br>
+                <div class="gameContentR">
+                    <button class="gameOptionQ" id="gameStartER" onclick="StartER()" style="border-color: rgb(177, 11, 11);">Start Escape Room</button>
+                </div><br>
+            </div>
+            <div id="Hidden1" style="display: none;">
+                <p id="BKEText" style="font-size: 20px;text-align: center;display: block;width: 50%;margin: 0% 25%;background-color: rgb(200, 72, 72);color: rgb(200, 72, 72);"><b>
+                    Hoeveel h elementen (zoals h1, h2, etc.) heb je in HTML? Vul dit getal in bij het tweede slot van de rechterkant.
+                </b></p><br>
+                <div class="gameContentR">
+                    <div class="ERGameDiv" id="ERLock0">
+                        <input type="text" size="15" name="antwoord" id="ERAnswer0">
+                        <br><button class="ERButton" id="ERLockButton0" onclick="AnswerLock(0)">Check</button>
+                    </div>
+                    <div class="ERGameDiv" id="ERLock1">
+                        <input type="text" size="15" name="antwoord" placeholder="Wat staat hieronder?" id="ERAnswer1">
+                        <br><button class="ERButton" id="ERLockButton1" onclick="AnswerLock(1)">Check</button>
+                    </div>
+                    <div class="ERGameDiv" id="ERLock2">
+                        <input type="text" size="15" name="antwoord" id="ERAnswer2">
+                        <br><button class="ERButton" id="ERLockButton2" onclick="AnswerLock(2)">Check</button>
+                    </div>
+                    <div class="ERGameDiv" id="ERLock3">
+                        <input type="text" size="15" name="antwoord" id="ERAnswer3">
+                        <br><button class="ERButton" id="ERLockButton3" onclick="AnswerLock(3)">Check</button>
+                    </div>
+                </div>
+                <br><p id="BKEText" style="font-size: 20px;text-align: center;display: inline-block;max-width: 20%;margin: 0% 0% 0% 0%;background-color: rgb(200, 72, 72);color: rgb(200, 72, 72);"><b>
+                    .linkerkant de van slot vierde het bij in antwoord het Vul ?website deze op bod aan javascript en HTML naast er komt codeertaal Welke
+                </b></p>
+                <p id="BKEText" style="font-size: 20px;text-align: center;display: inline-block;max-width: 20%;max-height: 20%;margin: 0% 0% 0% 60%;background-color: rgb(200, 72, 72);color: rgb(200, 72, 72);writing-mode: vertical-rl;"><b>
+                    Hoeveel lessen zijn er in totaal te vinden op deze website? Vul het antwoord in bij het eerste slot van de linkerkant.
+                </b></p><br>
+            </div>
+            <br>
+            <div id="Hidden2" style="display: none;">
+                <p id="BKEText" style="font-size: 20px;text-align: center;display: block;width: 60%;margin: 0% 20%;"><b>
+                    Je bent er bijna! Kraak het wachtwoord van de website.
+                </b></p><br>
+                <div class="gameContentR">
+                    <div class="ERGameDiv" id="ERLock4" style="width: 80%;">
+                        <input type="text" size="75" name="antwoord" id="ERAnswer4">
+                        <br><button class="ERButton" id="ERLockButton4" onclick="AnswerLock(4)">Check</button>
+                    </div>
+                </div>
+                <br><br>
+                <p id="BKEText" style="font-size: 16px;display: block;width: 60%;margin: 0% 20%;background-color: rgb(200, 72, 72);color: rgb(200, 72, 72);"><b>
+                    - De H komt niet in het wachtwoord voor.
+                    <br>- De letter A staat tussen de 1 en de 5 in.
+                    <br>- Er staat een klinker op de zevende plek van links.
+                    <br>- 4 van de 6 letters uit de naam "Thomas" komen in het wachtwoord voor.
+                    <br>- Als je alle losse getallen bij elkaar optelt, kom je uit op 8.
+                    <br>- Het wachtwoord eindigt met 2.
+                    <br>- Links van de 1 staat een S.
+                    <br>- Het wachtwoord bestaat uit 4 cijfers en 4 letters. De letters zijn allemaal hoofdletters.
+                    <br>- De 5 staat op de vierde plek vanaf links.
+                    <br>- De letters op de tweede en derde plek van rechts staan van rechts naar links op alfabetische volgorde.
+                </b></p><br>
+            </div>
+        </div>
+        <div class="gameBG" id="Hidden3" style="display: none;">
+            <p id="BKEText" style="font-size: 20px;text-align: center;display: block;width: 60%;margin: 0% 20%;"><b>
+                <br>Goed gedaan! Je hebt de website terug kunnen hacken! Je prijs is de eeuwige roem!
+            </b></p><br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>

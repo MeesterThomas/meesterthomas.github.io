@@ -996,6 +996,228 @@ if (x &gt;= y)</code></pre>
 if (x == y || a == z)</code></pre>
                 </div>
             </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>return</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Hiermee stopt de function. Dit kan je gebruiken bij een if statement.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>DoeIets();
+return;</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>Array</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Dit is een lijst met variabelen.
+                        <br>- Wil je weten hoe lang een array is? Gebruik dan arrayNaam.length.
+                        <br>- Wil je een nieuwe variabele toevoegen aan het einde van de array? Gebruik dan arrayNaam.push(waardeVanNieuweVariabele).
+                        <br>- Wil je een variabele uit een array verwijderen? Gebruik arrayNaam.pop() als je de laatste variabele wilt verwijderen, en arrayNaam.shift() als je de eerste variabele wilt verwijderen.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>const vragen = ["1+1=", "2+2="]
+
+StelVraag(vragen[0]); // 1+1=</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>while Loop</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Een while loop loopt door zijn code heen zolang een bepaalde voorwaarde waar is. Eigenlijk werkt het hetzelfde als een if statement, maar dan loopt hij door zijn code heen.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>while (nummer &lt;= 10)
+{
+    CodeOmUitTeVoeren();
+    nummer += 1;
+}</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>for Loop</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Een for loop heeft zelf een ingebouwde teller die je benoemt aan het begin van de loop. Tussen de haakjes komen 3 onderdelen te staan. De onderdelen worden gescheiden door een ;.
+                        <br>- Bij het eerste onderdeel wordt een nieuwe variabele als teller benoemd. In het voorbeeld is dat i.
+                        <br>- Bij het tweede onderdeel wordt aangegeven hoelang de loop door blijft gaan. In het voorbeeld is dat zolang de teller i onder de lengte van de array blijft.
+                        <br>- Bij het derde onderdeel wordt aangegeven wat er gebeurt na 1 loop. In het voorbeeld komt er 1 bij de teller i erbij. Op die manier gaat de loop dus niet oneindig door.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>for (let i = 0; i &lt; array.length; i++) 
+{
+    CodeOmUitTeVoeren();
+}</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>forEach Loop</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Een forEach loop kan alleen gebruikt worden bij een array. Deze loop loopt namelijk door alle elementen van een array. Je zal dus ook niet zo snel problemen krijgen omdat de computer oneindig vaak loopt.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>array.forEach(element => 
+{
+    CodeOmUitTeVoeren();
+});</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>.toString()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Als een variabele een nummer of een bool is, kan je hem soms niet gelijk als tekst op je website zetten. Als dit niet lukt, kan je .toString() erachter zetten. Hiermee wordt de waarde een stukje tekst!
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>score.toString();</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>parseInt()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Als je de waarde van een string (een stuk tekst) om wilt zetten naar een nummer, bijvoorbeeld om ermee te rekenen, kan je parseInt(string) gebruiken. Het stukje string moet je dan vervangen met het stukje tekst.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>parseInt(scoreTekst);</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>Math.round()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Dit rond het getal tussen de haakjes af volgens de normale afrondingsregels.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>let getal = 1.5;
+Math.round(getal); //Dit wordt 2</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>Math.ceil()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Dit rond het getal tussen de haakjes altijd naar boven af (1.0001 wordt 2).
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>let getal = 1.5;
+Math.ceil(getal); //Dit wordt 2</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>Math.floor()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Dit rond het getal tussen de haakjes altijd naar beneden af (1.9999 wordt 1).
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>let getal = 1.5;
+Math.floor(getal); //Dit wordt 1</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>Math.random()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Dit genereert een getal van 0 tot 1. 0 is wel mogelijk, maar 1 niet.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>getal = Math.random; //Nu is getal een willekeurig getal tussen de 0 en 1</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>.split()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Met .split() kan je van een variabele een array maken door hem in stukjes te hakken. Tussen de haakjes geef je aan bij welk teken de tekst in stukken wordt gehakt. Let op dat je dit gebruikt om een array variabele te vullen.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>arrayNaam = vragenLijst.split('?');</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>.includes()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Als je wilt weten of een array een bepaalde waarde bevat, of als je wilt weten of er bepaalde tekst binnen een tekst variabele staat, kan je string.includes("tekst") gebruiken.
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>if (teamNamen.includes("Blauw-Wit"))
+{
+    codeOmUitTeVoeren();
+}</code></pre>
+                </div>
+            </div></a>
+            <a href="lessen/10.html" class="codebookLink"><div class="codebookListItem">
+                <div class="codebookListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b><code>console.log()</code></b></p>
+                    </div>
+                </div>
+                <div class="codebookListItemDesc">
+                    <p>
+                        Let op: Dit kan je niet doen op de Chromebook van school, aangezien deze beveiligd is voor deze functie. Dit moet je dus thuis proberen op een andere laptop of computer.
+                        <br>Soms wil je eens zien welke waarde een variabele heeft binnen je code, bijvoorbeeld als er iets niet werkt hoe het hoort. Daarvoor kan je console.log() gebruiken. Tussen de haakjes kan je de variabele zetten die je wilt weten. Als je de website vervolgens de code laat uitvoeren, kan je via inspecteren de waarde van de variabele zien in de console (onderaan).
+                        <br><i>Dit komt aan bod in les 10.</i>
+                    </p>
+                    <pre class="lessonCode"><code>console.log(score);</code></pre>
+                </div>
+            </div></a>
         </div>
         <footer class="footer">
             <div class="footerNavBar">

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Maken -> Extra les 5</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>
+    </head>
+    <body class="background">
+        <div class="navBar">
+            <a href=../index.html><img class="navBarIcon" id="navBarIconHome" src="../img/HomeIcon.png" width=8%></a>
+            <a href=../games.html><img class="navBarItem" id="navBarIconGames" src="../img/GamesIcon.png" width=8%></a>
+            <a href=../extralessen.html><img class="navBarItem" id="navBarIconExtraLessen" src="../img/ExtraLessenIcon.png" width=8%></a>
+            <a href=../lessen.html><img class="navBarItem" src="../img/LessenIcon.png" width=8%></a>
+            <a href=../codeboek.html><img class="navBarItem" id="navBarIconCodeboek" src="../img/CodeboekIcon.png" width=8%></a>
+        </div>
+        <div class="lessonList">
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>Extra les 5: Boter, kaas en eieren</b></p><br>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Boter, kaas en eieren</b></p>
+                    </div>
+                    <p>
+                        In deze les leer je via een stappenplan hoe je een boter, kaas en eieren spel kan maken met HTML, CSS en Javascript. Ditzelfde stappenplan wordt ook gebruikt bij het maken van andere games.
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 1: Game Design</b></p>
+                    </div>
+                    <p>
+                        We beginnen waar elke game begint: een idee. Het is belangrijk dat je een idee hebt hoe je game eruit komt te zien. Wat kan je allemaal doen in je game? Dit noemen we ook wel Game Design.
+                        <br><br>
+                        Boter kaas en eieren als spel is erg simpel. In deze les ga je de simpelste versie van het spel opzetten. Als je extra elementen toe wilt voegen kan je dat natuurlijk altijd doen. Hier zou je verder over na kunnen denken als je wilt.
+                        <br><br>Tip: Liever goed gejat dan slecht bedacht. Kijk ook eens naar andere spellen (boter kaas en eieren). Hoe zien die eruit? Wat vind je er goed aan, en wat niet?
+                    </p>
+                </div>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 2: HTML</b></p>
+                    </div>
+                    <p>
+                        Nu je weet hoe je game eruit komt te zien en wat je erin wilt hebben, is het tijd om de HTML tags toe te voegen aan je webpagina. Kijk hierbij goed naar wat je nodig hebt.
+                        <br><br>
+                        Voor boter kaas en eieren heb je niet heel veel elementen nodig. Het is handig om een tekstelement te hebben en een startknop. Daarnaast heb je natuurlijk de 9 knoppen nodig voor boter kaas en eieren. Meer niet!
+                        <br><br>
+                        De knoppen verdeel je in 3 rijen van 3 knoppen. Dit doe je door div te gebruiken voor elke rij. Binnen deze div zet je dan 3 knoppen.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Boter, kaas en eieren&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="css/boterkaaseieren.css"&gt;
+        &lt;script src="js/boterkaaseieren.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p id="BKETekst"&gt;Boter, kaas en eieren&lt;/p&gt;
+        &lt;button id="startKnopBKE" onclick="StartBKE()"&gt;Start&lt;/button&gt;
+        &lt;div id="BKERij0"&gt;
+            &lt;button class="BKEKnop" id="BKEKnop0" onclick="BKEKnop(0)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop1" onclick="BKEKnop(1)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop2" onclick="BKEKnop(2)"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div id="BKERij1"&gt;
+            &lt;button class="BKEKnop" id="BKEKnop3" onclick="BKEKnop(3)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop4" onclick="BKEKnop(4)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop5" onclick="BKEKnop(5)"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div id="BKERij2"&gt;
+            &lt;button class="BKEKnop" id="BKEKnop6" onclick="BKEKnop(6)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop7" onclick="BKEKnop(7)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop8" onclick="BKEKnop(8)"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 3: De noodzakelijke opmaak (CSS)</b></p>
+                    </div>
+                    <p>
+                        Je hebt het HTML bestand nu voor een groot deel klaar. Nu is het belangrijk om de noodzakelijke opmaak in orde te maken.
+                        <br><br>
+                        Met de noodzakelijke opmaak wordt de bedoeld dat je alleen moet kijken wat er echt moet veranderen om je game werkende te krijgen. Kleuren en mooi maken kan altijd nog.
+                        <br><br>
+                        Voor boter kaas en eieren kan het handig zijn om de knoppen alvast iets groter te maken. Ook kan je het speelveld nog onzichtbaar laten als je dit wilt. Dit is in het voorbeeld gedaan.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+.BKEKnop
+{
+    width: 30%;
+    height: 100px;
+}
+.BKERij
+{
+    display: none;
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu je alle elementen op de juiste plaats hebt, is het tijd voor het programmeren van je game met javascript.
+                        <br><br>
+                        Het is belangrijk om stap voor stap op te bouwen. Als je naar je webpagina gaat met je game, zie je alleen maar een startknop die niks doet als je erop drukt. Laten we daar verandering in brengen!
+                        <br><br>
+                        Maak een function in je javascript bestand die ervoor zorgt dat de goede elementen zichtbaar worden. Gebruik hiervoor display.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu is het tijd om de eerste speler een beurt te geven. Maar wie? Je kan ervoor kiezen om speler X altijd te laten starten, maar dat is niet heel eerlijk. Daarom gaan we het willekeurig maken!
+                        <br><br>
+                        Als eerste hebben we een variabele nodig. Deze noemen we ronde. Deze houdt bij wie er aan de beurt is, speler 0 of speler 1. Speler 0 is ook wel speler X, en speler 1 is ook wel speler O.
+                        <br><br>
+                        We gebruiken de formule om de computer een willekeurig getal te laten kiezen (Komt in les 10 ook nog extra aan bod). Als de uitkomst 0 is, is speler 0 (X) aan zet. Variabele ronde wordt dus 0, en de tekst passen we aan. Hieronder gebruiken we een else. Dan mag speler 1 (O) dus beginnen. Hiervoor doen we hetzelfde.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let ronde = 0;
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Nu zegt de tekst wie er begint, maar er gebeurt nog niks als we op de knoppen drukken. Laten we daar verschil in maken! Maak de function BKEKnop(knopNummer). Deze function wordt afgespeeld als een van de knoppen wordt ingedrukt.
+                        <br><br>
+                        Het is handig om een nieuwe array aan te maken voor beide spelers. Dit kan door een array in een array te maken. Deze noemen we zetten. Hierin kunnen we zien wie welke vakken heeft veroverd. zetten[0] geeft de vakken van speler 0 (X) en zetten[1] geeft de vakken van speler 1 (O).
+                        <br><br>
+                        Terug naar de nieuwe function. Als ronde=0 (X is aan de beurt), dan zetten we een X neer in het goede vakje. Ook wordt de nummer van dat vakje toegevoegd aan zetten[0]. Als ronde=1 doen we natuurlijk precies hetzelfde voor speler 1 (O).
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let ronde = 0;
+let zetten = [[], []];
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+
+function BKEKnop(knopNummer)
+{
+    if (ronde == 0)
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "X";
+        zetten[0].push(knopNummer);
+    }
+    else
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "O";
+        zetten[1].push(knopNummer);
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Hij werkt! Het enige probleem is dat hij niet van beurt verandert. Dan wordt het wel heel makkelijk... Tijd om dat onderaan de function in te voegen!
+                        <br><br>
+                        We checken hier opnieuw in welke ronde we zitten. Hier is een goede reden voor, maar die komt iets later aan bod. 
+                        <br><br>
+                        Als het nu ronde=0 (X) is, wordt het ronde=1. Ook veranderen we de tekst erboven zodat het klopt.
+                        <br><br>
+                        Nu werkt hij helemaal goed... totdat je op een verkeerde knop drukt. Als de knop al is ingedrukt door, dan gaat jouw beurt verloren. Tijd om daar verandering in te brengen. Bovenaan de function checken we of de knop al is ingedrukt door speler 0 (X) of speler 1 (O). Als dit zo is, gebruiken we return. Dat betekent dat de rest van de function niet meer wordt uitgevoerd, en dat er dus niks gebeurt!
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let ronde = 0;
+let zetten = [[], []];
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+
+function BKEKnop(knopNummer)
+{
+    if (zetten[0].includes(knopNummer) || zetten[1].includes(knopNummer))
+        return;
+    if (ronde == 0)
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "X";
+        zetten[0].push(knopNummer);
+    }
+    else
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "O";
+        zetten[1].push(knopNummer);
+    }
+    if (ronde == 0)
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+    else if (ronde == 1)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Hij is bijna klaar, maar hij herkent nog niet wie er gewonnen heeft. Daarvoor gebruiken we een nieuwe function, CheckWin(). Deze roepen we op middenin de BKEKnop() function.
+                        <br><br>
+                        In de CheckWin() function controleren we alle mogelijke combinaties. Vandaar dat de if erg lang lijkt. Deze zou je gewoon over kunnen nemen.
+                        <br><br>
+                        Als zetten[0], dus speler 0 (X) een goede combinatie heeft, dan heeft hij gewonnen! Dat betekent ook dat het spel voorbij is. Voor nu zetten we de variabele ronde dan even op 9. Hier kunnen we later nog meer mee doen. Vervolgens veranderen we de tekst bovenin en de tekst op de knop ook. Dit doen we precies hetzelfde als speler 1 (O) wint.
+                        <br><br>
+                        Maar wat nou als het gelijkspel is? Daarvoor checken we of er in totaal 9 vakjes zijn gevuld. Dit doen we door zetten[0].length en zetten[1].length bij elkaar op te tellen.
+                        <br><br>
+                        Omdat we de variabele ronde 9 hebben gemaakt, wordt er niet een andere speler gekozen om verder te gaan. Het spel is nu dus klaar.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let ronde = 0;
+let zetten = [[], []];
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+
+function BKEKnop(knopNummer)
+{
+    if (zetten[0].includes(knopNummer) || zetten[1].includes(knopNummer))
+        return;
+    if (ronde == 0)
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "X";
+        zetten[0].push(knopNummer);
+    }
+    else
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "O";
+        zetten[1].push(knopNummer);
+    }
+    CheckWin();
+    if (ronde == 0)
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+    else if (ronde == 1)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+}
+
+function CheckWin()
+{
+    if ((zetten[0].includes(0) && zetten[0].includes(1) && zetten[0].includes(2)) ||
+        (zetten[0].includes(3) && zetten[0].includes(4) && zetten[0].includes(5)) ||
+        (zetten[0].includes(6) && zetten[0].includes(7) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(3) && zetten[0].includes(6)) ||
+        (zetten[0].includes(1) && zetten[0].includes(4) && zetten[0].includes(7)) ||
+        (zetten[0].includes(2) && zetten[0].includes(5) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(4) && zetten[0].includes(8)) ||
+        (zetten[0].includes(2) && zetten[0].includes(4) && zetten[0].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler X heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if ((zetten[1].includes(0) && zetten[1].includes(1) && zetten[1].includes(2)) ||
+        (zetten[1].includes(3) && zetten[1].includes(4) && zetten[1].includes(5)) ||
+        (zetten[1].includes(6) && zetten[1].includes(7) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(3) && zetten[1].includes(6)) ||
+        (zetten[1].includes(1) && zetten[1].includes(4) && zetten[1].includes(7)) ||
+        (zetten[1].includes(2) && zetten[1].includes(5) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(4) && zetten[1].includes(8)) ||
+        (zetten[1].includes(2) && zetten[1].includes(4) && zetten[1].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler O heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if (zetten[0].length + zetten[1].length == 9)
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Gelijkspel!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stap 4: Javascript</b></p>
+                    </div>
+                    <p>
+                        Het laatste stukje nog! Als je de game hebt uitgeprobeerd, ben je er misschien achter gekomen dat het resetten niet goed werkt. Daar gaan we nu mee aan de slag.
+                        <br><br>
+                        Bij de startknop function zorgen we ervoor dat alle vakjes in de knoppen leeg zijn bij een nieuwe ronde. Ook resetten we zetten. Tot slot zorgen we ervoor dat er niks gebeurt als je op een knop drukt als het spel klaar is (ronde=9). Dit doen we door return te gebruiken bovenaan de function.
+                    </p>
+                </div>
+                <pre class="lessonCode"><code>
+let ronde = 0;
+let zetten = [[], []];
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    document.getElementById("BKEKnop0").innerHTML = "";
+    document.getElementById("BKEKnop1").innerHTML = "";
+    document.getElementById("BKEKnop2").innerHTML = "";
+    document.getElementById("BKEKnop3").innerHTML = "";
+    document.getElementById("BKEKnop4").innerHTML = "";
+    document.getElementById("BKEKnop5").innerHTML = "";
+    document.getElementById("BKEKnop6").innerHTML = "";
+    document.getElementById("BKEKnop7").innerHTML = "";
+    document.getElementById("BKEKnop8").innerHTML = "";
+    zetten = [[], []];
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+
+function BKEKnop(knopNummer)
+{
+    if (zetten[0].includes(knopNummer) || zetten[1].includes(knopNummer))
+        return;
+    if (ronde == 0)
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "X";
+        zetten[0].push(knopNummer);
+    }
+    else
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "O";
+        zetten[1].push(knopNummer);
+    }
+    CheckWin();
+    if (ronde == 0)
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+    else if (ronde == 1)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+}
+
+function CheckWin()
+{
+    if ((zetten[0].includes(0) && zetten[0].includes(1) && zetten[0].includes(2)) ||
+        (zetten[0].includes(3) && zetten[0].includes(4) && zetten[0].includes(5)) ||
+        (zetten[0].includes(6) && zetten[0].includes(7) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(3) && zetten[0].includes(6)) ||
+        (zetten[0].includes(1) && zetten[0].includes(4) && zetten[0].includes(7)) ||
+        (zetten[0].includes(2) && zetten[0].includes(5) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(4) && zetten[0].includes(8)) ||
+        (zetten[0].includes(2) && zetten[0].includes(4) && zetten[0].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler X heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if ((zetten[1].includes(0) && zetten[1].includes(1) && zetten[1].includes(2)) ||
+        (zetten[1].includes(3) && zetten[1].includes(4) && zetten[1].includes(5)) ||
+        (zetten[1].includes(6) && zetten[1].includes(7) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(3) && zetten[1].includes(6)) ||
+        (zetten[1].includes(1) && zetten[1].includes(4) && zetten[1].includes(7)) ||
+        (zetten[1].includes(2) && zetten[1].includes(5) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(4) && zetten[1].includes(8)) ||
+        (zetten[1].includes(2) && zetten[1].includes(4) && zetten[1].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler O heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if (zetten[0].length + zetten[1].length == 9)
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Gelijkspel!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+}
+                </code></pre>
+            </div>
+            <div class="lessonListItemExtra">
+                <div class="lessonListItemText">
+                    <div class="lessonListItemTextHeader">
+                        <p font-size="20px"><b>Stappen 5 en 6: Testen en aanpassen</b></p>
+                    </div>
+                    <p>
+                        Je game is nu zo goed als af! Nu komt de laatste fase: testen en aanpassen. In deze fase ga je je game spelen en aanpassingen maken die je nodig vindt.
+                        <br><br>
+                        In deze fase kan je CSS gebruiken om je webpagina en game er mooi uit te laten zien. Je kan ervoor zorgen dat je game helemaal van jou wordt. Veel succes!
+                    </p>
+                </div>
+            </div>
+            <div class="cbExample" id="cbEx_0">
+                <p style="font-size: 28px; margin: 1%;text-align: center;"><b>Boter, kaas en eieren</b></p><br>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>HTML</b></p>
+                        <pre class="lessonCode"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Boter, kaas en eieren&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;link rel="stylesheet" href="css/boterkaaseieren.css"&gt;
+        &lt;script src="js/boterkaaseieren.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p id="BKETekst"&gt;Boter, kaas en eieren&lt;/p&gt;
+        &lt;button id="startKnopBKE" onclick="StartBKE()"&gt;Start&lt;/button&gt;
+        &lt;div id="BKERij0"&gt;
+            &lt;button class="BKEKnop" id="BKEKnop0" onclick="BKEKnop(0)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop1" onclick="BKEKnop(1)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop2" onclick="BKEKnop(2)"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div id="BKERij1"&gt;
+            &lt;button class="BKEKnop" id="BKEKnop3" onclick="BKEKnop(3)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop4" onclick="BKEKnop(4)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop5" onclick="BKEKnop(5)"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div id="BKERij2"&gt;
+            &lt;button class="BKEKnop" id="BKEKnop6" onclick="BKEKnop(6)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop7" onclick="BKEKnop(7)"&gt;&lt;/button&gt;
+            &lt;button class="BKEKnop" id="BKEKnop8" onclick="BKEKnop(8)"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockCodeR">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>CSS</b></p>
+                        <pre class="lessonCode"><code>
+.BKEKnop
+{
+    width: 30%;
+    height: 100px;
+}
+.BKERij
+{
+    display: none;
+}
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cbExampleBlock">
+                    <div class="cbExampleBlockCodeL">
+                        <p style="font-size: 20px; margin: 1%;text-align: center;"><b>Javascript</b></p>
+                        <pre class="lessonCode"><code>
+let ronde = 0;
+let zetten = [[], []];
+
+function StartBKE()
+{
+    document.getElementById("BKERij0").style.display = "Block";
+    document.getElementById("BKERij1").style.display = "Block";
+    document.getElementById("BKERij2").style.display = "Block";
+    document.getElementById("BKEKnop0").innerHTML = "";
+    document.getElementById("BKEKnop1").innerHTML = "";
+    document.getElementById("BKEKnop2").innerHTML = "";
+    document.getElementById("BKEKnop3").innerHTML = "";
+    document.getElementById("BKEKnop4").innerHTML = "";
+    document.getElementById("BKEKnop5").innerHTML = "";
+    document.getElementById("BKEKnop6").innerHTML = "";
+    document.getElementById("BKEKnop7").innerHTML = "";
+    document.getElementById("BKEKnop8").innerHTML = "";
+    zetten = [[], []];
+    if (Math.floor(Math.random() * 2) == 0)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+    else
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+}
+
+function BKEKnop(knopNummer)
+{
+    if (ronde == 9)
+        return;
+    if (zetten[0].includes(knopNummer) || zetten[1].includes(knopNummer))
+        return;
+    if (ronde == 0)
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "X";
+        zetten[0].push(knopNummer);
+    }
+    else
+    {
+        document.getElementById("BKEKnop" + knopNummer.toString()).innerHTML = "O";
+        zetten[1].push(knopNummer);
+    }
+    CheckWin();
+    if (ronde == 0)
+    {
+        ronde = 1;
+        document.getElementById("BKETekst").innerHTML = "Speler O is aan zet";
+    }
+    else if (ronde == 1)
+    {
+        ronde = 0;
+        document.getElementById("BKETekst").innerHTML = "Speler X is aan zet";
+    }
+}
+
+function CheckWin()
+{
+    if ((zetten[0].includes(0) && zetten[0].includes(1) && zetten[0].includes(2)) ||
+        (zetten[0].includes(3) && zetten[0].includes(4) && zetten[0].includes(5)) ||
+        (zetten[0].includes(6) && zetten[0].includes(7) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(3) && zetten[0].includes(6)) ||
+        (zetten[0].includes(1) && zetten[0].includes(4) && zetten[0].includes(7)) ||
+        (zetten[0].includes(2) && zetten[0].includes(5) && zetten[0].includes(8)) ||
+        (zetten[0].includes(0) && zetten[0].includes(4) && zetten[0].includes(8)) ||
+        (zetten[0].includes(2) && zetten[0].includes(4) && zetten[0].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler X heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if ((zetten[1].includes(0) && zetten[1].includes(1) && zetten[1].includes(2)) ||
+        (zetten[1].includes(3) && zetten[1].includes(4) && zetten[1].includes(5)) ||
+        (zetten[1].includes(6) && zetten[1].includes(7) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(3) && zetten[1].includes(6)) ||
+        (zetten[1].includes(1) && zetten[1].includes(4) && zetten[1].includes(7)) ||
+        (zetten[1].includes(2) && zetten[1].includes(5) && zetten[1].includes(8)) ||
+        (zetten[1].includes(0) && zetten[1].includes(4) && zetten[1].includes(8)) ||
+        (zetten[1].includes(2) && zetten[1].includes(4) && zetten[1].includes(6)))
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Speler O heeft gewonnen!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+    if (zetten[0].length + zetten[1].length == 9)
+    {
+        ronde = 9;
+        document.getElementById("BKETekst").innerHTML = "Gelijkspel!";
+        document.getElementById("startKnopBKE").innerHTML = "Speel opnieuw";
+    }
+}
+                        </code></pre>
+                    </div>
+                    <div class="cbExampleBlockRes">
+                        <p id="BKETekst">Boter, kaas en eieren</p>
+                        <button id="startKnopBKE" onclick="StartBKE()">Start</button>
+                        <div class="BKERij" id="BKERij0">
+                            <button class="BKEKnop" id="BKEKnop0" onclick="BKEKnop(0)"></button>
+                            <button class="BKEKnop" id="BKEKnop1" onclick="BKEKnop(1)"></button>
+                            <button class="BKEKnop" id="BKEKnop2" onclick="BKEKnop(2)"></button>
+                        </div>
+                        <div class="BKERij" id="BKERij1">
+                            <button class="BKEKnop" id="BKEKnop3" onclick="BKEKnop(3)"></button>
+                            <button class="BKEKnop" id="BKEKnop4" onclick="BKEKnop(4)"></button>
+                            <button class="BKEKnop" id="BKEKnop5" onclick="BKEKnop(5)"></button>
+                        </div>
+                        <div class="BKERij" id="BKERij2">
+                            <button class="BKEKnop" id="BKEKnop6" onclick="BKEKnop(6)"></button>
+                            <button class="BKEKnop" id="BKEKnop7" onclick="BKEKnop(7)"></button>
+                            <button class="BKEKnop" id="BKEKnop8" onclick="BKEKnop(8)"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p style="color: black; font-size: 32px; margin: 1%;text-align: center;"><b>De les zit erop!</b></p>
+            <p style="color: black; font-size: 20px; margin: 1%;text-align: center;"><b>Op naar de volgende uitdaging!</b></p>
+            <br>
+        </div>
+        <footer class="footer">
+            <div class="footerNavBar">
+                <a href=../index.html class="footerButton" id="navBarIconHome">
+                    <div class="footerButtonImage">
+                        <img src="../img/HomeIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Home</p>
+                    </div>
+                </a>
+                <a href=../codeboek.html class="footerButton" id="navBarIconCodeboek">
+                    <div class="footerButtonImage">
+                        <img src="../img/CodeboekIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Codeboek</p>
+                    </div>
+                </a>
+                <a href=../lessen.html class="footerButton">
+                    <div class="footerButtonImage">
+                        <img src="../img/LessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Lessen</p>
+                    </div>
+                </a>
+                <a href=../extralessen.html class="footerButton" id="navBarIconExtraLessen">
+                    <div class="footerButtonImage">
+                        <img src="../img/ExtraLessenIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Extra Lessen</p>
+                    </div>
+                </a>
+                <a href=../games.html class="footerButton" id="navBarIconGames">
+                    <div class="footerButtonImage">
+                        <img src="../img/GamesIconSmall.png" style="width: 100%">
+                    </div>
+                    <div class="footerButtonText">
+                        <p style="margin: 1%;">Games</p>
+                    </div>
+                </a>
+            </div>
+            <br><br><br><br><br><br>
+        </footer>
+    </body>
+</html>
